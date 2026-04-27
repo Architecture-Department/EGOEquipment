@@ -1,4 +1,4 @@
-package architecture.example;
+package architecture.ego_equipment;
 
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
@@ -10,16 +10,16 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
-@Mod(value = Example.ID, dist = Dist.CLIENT)
-@EventBusSubscriber(modid = Example.ID, value = Dist.CLIENT)
-public class ExampleClient {
-	public ExampleClient(ModContainer container) {
+@Mod(value = EGOEquipment.ID, dist = Dist.CLIENT)
+@EventBusSubscriber(modid = EGOEquipment.ID, value = Dist.CLIENT)
+public class EGOEquipmentClient {
+	public EGOEquipmentClient(ModContainer container) {
 		container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
 	}
 
 	@SubscribeEvent
 	static void onClientSetup(FMLClientSetupEvent event) {
-		Example.LOGGER.info("HELLO FROM CLIENT SETUP");
-		Example.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+		EGOEquipment.LOGGER.info("HELLO FROM CLIENT SETUP");
+		EGOEquipment.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
 	}
 }
