@@ -1,4 +1,4 @@
-package architecture.ego_equipment;
+package architecture.ego_equipment.core;
 
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
