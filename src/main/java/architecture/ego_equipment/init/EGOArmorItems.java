@@ -31,7 +31,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("penitence")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("penitence"))),
 		0.9, 0.8, 0.9, 2.0);
 
 	public static final Armors<EgoArmorItem> SODA = registerSuit(
@@ -39,7 +39,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("soda")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("soda"))),
 		0.8, 1.0, 1.0, 2.0);
 
 	public static final Armors<EgoArmorItem> WINGBEAT = registerSuit(
@@ -47,7 +47,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("wingbeat")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("wingbeat"))),
 		0.8, 0.8, 1.0, 2.0);
 	//endregion
 
@@ -58,7 +58,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("standard_training_ego")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("standard_training_ego"))),
 		0.5, 1.0, 1.5, 2.0);
 
 	public static final Armors<EgoArmorItem> FOURTH_MATCH_FLAME = registerSuit(
@@ -66,7 +66,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("fourth_match_flame")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("fourth_match_flame"))),
 		0.6, 1.0, 1.5, 2.0);
 
 	public static final Armors<EgoArmorItem> IN_THE_NAME_OF_LOVE_AND_HATE = registerSuit(
@@ -74,7 +74,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("in_the_name_of_love_and_hate")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("in_the_name_of_love_and_hate"))),
 		0.7, 0.8, 0.4, 2.0);
 
 	public static final Armors<EgoArmorItem> RED_EYES = registerSuit(
@@ -82,7 +82,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("red_eyes")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("red_eyes"))),
 		0.8, 0.8, 0.8, 2.0);
 
 	public static final Armors<EgoArmorItem> HORN = registerSuit(
@@ -90,7 +90,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("horn")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("horn"))),
 		0.8, 0.8, 1.5, 2.0);
 
 	public static final Armors<EgoArmorItem> SOLITUDE = registerSuit(
@@ -98,7 +98,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("solitude")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("solitude"))),
 		1.5, 0.8, 0.8, 2.0);
 
 	public static final Armors<EgoArmorItem> SCREAMING_WEDGE = registerSuit(
@@ -106,7 +106,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("screaming_wedge")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("screaming_wedge"))),
 		1.2, 0.6, 1.0, 2.0);
 
 	public static final Armors<EgoArmorItem> NOISE = registerSuit(
@@ -114,7 +114,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("noise")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("noise"))),
 		1.2, 0.7, 0.6, 2.0);
 
 	public static final Armors<EgoArmorItem> WRIST_CUTTER = registerSuit(
@@ -122,7 +122,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("wrist_cutter")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("wrist_cutter"))),
 		1.0, 0.6, 1.2, 2.0);
 
 	public static final Armors<EgoArmorItem> FRAGMENTS_FROM_SOMEWHERE = registerSuit(
@@ -130,7 +130,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("fragments_from_somewhere")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("fragments_from_somewhere"))),
 		1.0, 1.2, 0.6, 2.0);
 
 	public static final Armors<EgoArmorItem> REGRET = registerSuit(
@@ -138,7 +138,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("regret")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("regret"))),
 		0.7, 1.2, 0.8, 2.0);
 
 	public static final Armors<EgoArmorItem> BEAK = registerSuit(
@@ -146,7 +146,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("beak")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("beak"))),
 		0.7, 0.8, 1.2, 2.0);
 
 	public static final Armors<EgoArmorItem> LANTERN = registerSuit(
@@ -154,7 +154,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("lantern")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("lantern"))),
 		0.8, 0.7, 1.2, 2.0);
 
 	public static final Armors<EgoArmorItem> TODAY_IS_EXPRESSION = registerSuit(
@@ -162,7 +162,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("today_is_expression")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("today_is_expression"))),
 		0.7, 0.6, 1.5, 2.0);
 
 	public static final Armors<EgoArmorItem> SO_CUTE = registerSuit(
@@ -170,7 +170,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("so_cute")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("so_cute"))),
 		0.8, 1.5, 0.8, 2.0);
 
 	public static final Armors<EgoArmorItem> LIFE_FOR_A_DAREDEVIL = registerSuit(
@@ -178,7 +178,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("life_for_a_daredevil")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("life_for_a_daredevil"))),
 		0.6, 0.9, 0.9, 2.0);
 
 	public static final Armors<EgoArmorItem> ENGULFING_DREAM = registerSuit(
@@ -186,7 +186,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("engulfing_dream")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("engulfing_dream"))),
 		1.2, 0.8, 0.7, 2.0);
 
 	public static final Armors<EgoArmorItem> CHERRY_BLOSSOMS = registerSuit(
@@ -194,7 +194,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("cherry_blossoms")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("cherry_blossoms"))),
 		1.2, 0.6, 0.7, 2.0);
 
 	public static final Armors<EgoArmorItem> TOUGH = registerSuit(
@@ -202,7 +202,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("tough")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("tough"))),
 		1.0, 1.0, 0.8, 2.0);
 	//endregion
 
@@ -213,7 +213,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("bear_paws")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("bear_paws"))),
 		0.8, 1.0, 1.0, 1.5);
 
 	public static final Armors<EgoArmorItem> SANGUINE_DESIRE = registerSuit(
@@ -221,7 +221,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("sanguine_desire")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("sanguine_desire"))),
 		0.5, 1.2, 0.8, 1.5);
 
 	public static final Armors<EgoArmorItem> SYRINX = registerSuit(
@@ -229,7 +229,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("syrinx")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("syrinx"))),
 		1.2, 0.5, 0.8, 1.5);
 
 	public static final Armors<EgoArmorItem> DA_CAPO = registerSuit(
@@ -237,7 +237,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("da_capo")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("da_capo"))),
 		0.5, 0.2, 0.5, 1.5);
 
 	public static final Armors<EgoArmorItem> LOGGING = registerSuit(
@@ -245,7 +245,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("logging")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("logging"))),
 		0.8, 1.2, 0.8, 1.5);
 
 	public static final Armors<EgoArmorItem> FROST_SPLINTER = registerSuit(
@@ -253,7 +253,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("frost_splinter")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("frost_splinter"))),
 		1.3, 0.6, 0.8, 1.5);
 
 	public static final Armors<EgoArmorItem> GRINDER_MK4 = registerSuit(
@@ -261,7 +261,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("grinder_mk4")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("grinder_mk4"))),
 		0.6, 1.3, 0.9, 1.5);
 
 	public static final Armors<EgoArmorItem> CHRISTMAS = registerSuit(
@@ -269,7 +269,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("christmas")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("christmas"))),
 		0.8, 0.6, 1.3, 1.5);
 
 	public static final Armors<EgoArmorItem> HORNET = registerSuit(
@@ -277,7 +277,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("hornet")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("hornet"))),
 		0.7, 0.7, 0.7, 1.5);
 
 	public static final Armors<EgoArmorItem> OUR_GALAXY = registerSuit(
@@ -285,7 +285,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("our_galaxy")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("our_galaxy"))),
 		0.8, 0.8, 1.2, 1.5);
 
 	public static final Armors<EgoArmorItem> LAETITIA = registerSuit(
@@ -293,7 +293,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("laetitia")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("laetitia"))),
 		0.7, 0.7, 0.7, 1.5);
 
 	public static final Armors<EgoArmorItem> SOLEMN_LAMENT = registerSuit(
@@ -301,7 +301,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("solemn_lament")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("solemn_lament"))),
 		1.2, 0.8, 0.5, 1.5);
 
 	// TODO 披风适配
@@ -310,7 +310,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("magic_bullet")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("magic_bullet"))),
 		0.7, 0.7, 0.7, 1.5);
 
 	public static final Armors<EgoArmorItem> BLACK_SWAN = registerSuit(
@@ -318,7 +318,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("black_swan")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("black_swan"))),
 		0.6, 1.2, 0.8, 1.5);
 
 	public static final Armors<EgoArmorItem> PLEASURE = registerSuit(
@@ -326,7 +326,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("pleasure")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("pleasure"))),
 		1.2, 0.8, 0.8, 1.5);
 
 	public static final Armors<EgoArmorItem> GAZE = registerSuit(
@@ -334,7 +334,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("gaze")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("gaze"))),
 		1.0, 0.8, 1.0, 1.5);
 
 	public static final Armors<EgoArmorItem> HARVEST = registerSuit(
@@ -342,7 +342,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("harvest")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("harvest"))),
 		0.6, 0.8, 1.3, 1.5);
 	//endregion
 
@@ -353,7 +353,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("lamp")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("lamp"))),
 		0.8, 0.7, 0.4, 1.5);
 
 	public static final Armors<EgoArmorItem> GREEN_STEM = registerSuit(
@@ -361,7 +361,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("green_stem")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("green_stem"))),
 		0.8, 1.2, 0.6, 1.5);
 
 	public static final Armors<EgoArmorItem> CRIMSON_SCAR = registerSuit(
@@ -369,7 +369,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("crimson_scar")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("crimson_scar"))),
 		0.6, 0.6, 0.6, 1.5);
 
 	public static final Armors<EgoArmorItem> COBALT_SCAR = registerSuit(
@@ -377,7 +377,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("cobalt_scar")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("cobalt_scar"))),
 		0.4, 0.8, 0.7, 2.0);
 
 	public static final Armors<EgoArmorItem> FAINT_AROMA = registerSuit(
@@ -385,7 +385,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("faint_aroma")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("faint_aroma"))),
 		1.2, 0.6, 0.8, 1.5);
 
 	public static final Armors<EgoArmorItem> GOLD_RUSH = registerSuit(
@@ -393,7 +393,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("gold_rush")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("gold_rush"))),
 		0.4, 0.7, 0.8, 2.0);
 
 	public static final Armors<EgoArmorItem> SPORE = registerSuit(
@@ -401,7 +401,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("spore")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("spore"))),
 		0.8, 0.6, 1.2, 1.5);
 
 	public static final Armors<EgoArmorItem> ECSTASY = registerSuit(
@@ -409,7 +409,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("ecstasy")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("ecstasy"))),
 		0.8, 0.8, 0.8, 1.5);
 
 	public static final Armors<EgoArmorItem> HEAVEN = registerSuit(
@@ -417,7 +417,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("heaven")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("heaven"))),
 		1.2, 0.8, 0.6, 1.5);
 
 	public static final Armors<EgoArmorItem> THE_SWORD_SHARPENED_WITH_TEARS = registerSuit(
@@ -425,7 +425,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("the_sword_sharpened_with_tears")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("the_sword_sharpened_with_tears"))),
 		0.8, 0.8, 0.8, 0.8);
 
 	public static final Armors<EgoArmorItem> EXUVIAE = registerSuit(
@@ -433,7 +433,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("exuviae")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("exuviae"))),
 		0.6, 0.8, 1.2, 1.5);
 
 	public static final Armors<EgoArmorItem> FEATHER_OF_HONOR = registerSuit(
@@ -441,7 +441,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("feather_of_honor")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("feather_of_honor"))),
 		0.6, 0.6, 1.3, 2.0);
 
 	public static final Armors<EgoArmorItem> DISCORD = registerSuit(
@@ -449,7 +449,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("discord")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("discord"))),
 		1.2, 0.8, 0.6, 1.5);
 
 	public static final Armors<EgoArmorItem> MOONLIGHT = registerSuit(
@@ -457,7 +457,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("moonlight")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("moonlight"))),
 		0.8, 0.4, 0.7, 2.0);
 
 	public static final Armors<EgoArmorItem> HYPOCRISY = registerSuit(
@@ -465,7 +465,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("hypocrisy")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("hypocrisy"))),
 		0.7, 0.5, 1.3, 1.5);
 
 	public static final Armors<EgoArmorItem> AMITA = registerSuit(
@@ -473,7 +473,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("amita")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("amita"))),
 		0.5, 1.3, 0.7, 1.5);
 	//endregion
 
@@ -484,7 +484,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("mimicry")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("mimicry"))),
 		0.2, 0.5, 0.5, 1.0);
 
 	public static final Armors<EgoArmorItem> PARADISE_LOST = registerSuit(
@@ -492,7 +492,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("paradise_lost")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("paradise_lost"))),
 		0.5, 0.5, 0.5, 0.3);
 
 	public static final Armors<EgoArmorItem> JUSTITIA = registerSuit(
@@ -500,7 +500,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("justitia")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("justitia"))),
 		0.5, 0.5, 0.5, 0.5);
 
 	public static final Armors<EgoArmorItem> TWILIGHT = registerSuit(
@@ -508,7 +508,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("twilight")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("twilight"))),
 		0.3, 0.3, 0.3, 0.5);
 
 	public static final Armors<EgoArmorItem> SMILE = registerSuit(
@@ -516,7 +516,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("smile")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("smile"))),
 		0.5, 0.5, 0.2, 1.0);
 
 	public static final Armors<EgoArmorItem> SOUND_OF_A_STAR = registerSuit(
@@ -524,7 +524,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("sound_of_a_star")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("sound_of_a_star"))),
 		0.4, 0.4, 0.4, 1.0);
 
 	public static final Armors<EgoArmorItem> ADORATION = registerSuit(
@@ -532,7 +532,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("adoration")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("adoration"))),
 		0.3, 0.6, 0.3, 1.0);
 
 	public static final Armors<EgoArmorItem> PINK = registerSuit(
@@ -540,7 +540,7 @@ public final class EGOArmorItems {
 		new ItemVirtueUsageReq.Builder(),
 		new EgoArmorItem.Builder(),
 		new Item.Properties(),
-		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>("pink")),
+		new GeoArmourRenderProvider<>(new ModGeoArmorModel<>(EGOEquipment.modRl("pink"))),
 		0.5, 0.3, 0.4, 1.0);
 	//endregion
 

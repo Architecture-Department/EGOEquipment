@@ -1,9 +1,10 @@
 package architecture.ego_equipment.common.entity.projectile;
 
+import architecture.ego_equipment.core.EGOEquipment;
 import architecture.ego_equipment.init.EGOEquipmentProjectileEntityTypes;
 import architecture.goldenboughs_lib.api.LcDamageType;
 import architecture.goldenboughs_lib.api.LcLevel;
-import architecture.goldenboughs_lib.client.model.entity.ModGeoEntityModel;
+import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel;
 import architecture.goldenboughs_lib.init.LibDamageTypes;
 import architecture.goldenboughs_lib.util.RationalityUtil;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -290,12 +291,12 @@ public class ParadiseLostSpikeweed extends Entity implements TraceableEntity, Ge
 
 	public static class TrainingRabbitsRenderer extends GeoEntityRenderer<ParadiseLostSpikeweed> {
 		public TrainingRabbitsRenderer(EntityRendererProvider.Context context) {
-			super(context, new ModGeoEntityModel<>("paradise_lost_spikeweed"));
+			super(context, new GeoEntityModel<>(EGOEquipment.modRl("paradise_lost_spikeweed")));
 		}
 
 		@Override
 		public @NotNull ResourceLocation getTextureLocation(@NotNull ParadiseLostSpikeweed animatable) {
-			return ModGeoEntityModel.texturePath("paradise_lost_spikeweed");
+			return GeoEntityModel.texturePath(EGOEquipment.modRl("paradise_lost_spikeweed"));
 		}
 	}
 }

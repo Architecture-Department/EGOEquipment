@@ -1,8 +1,9 @@
 package architecture.ego_equipment.common.item.weapon.remote;
 
-import architecture.goldenboughs_lib.client.model.item.GuiItemModel;
-import architecture.goldenboughs_lib.client.model.item.ModGeoItemModel;
+import architecture.goldenboughs_lib.client.model.item.GeoItemModel;
+import architecture.goldenboughs_lib.client.model.item.GuiGeoItemModel;
 import architecture.goldenboughs_lib.client.renderer.GeoItemRenderProvider;
+import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -22,8 +23,8 @@ public abstract class RemoteEgoWeaponGeoItem extends RemoteEgoWeaponItem impleme
 	private final GeoModel<RemoteEgoWeaponGeoItem> model;
 	private final @Nullable GeoModel<RemoteEgoWeaponGeoItem> guiModel;
 
-	public RemoteEgoWeaponGeoItem(Properties itemProperties, Builder egoWeaponBuilder, String modPath) {
-		this(itemProperties, egoWeaponBuilder, new ModGeoItemModel<>(modPath), new GuiItemModel<>(modPath));
+	public RemoteEgoWeaponGeoItem(Properties itemProperties, Builder egoWeaponBuilder, ResourceLocation modPath) {
+		this(itemProperties, egoWeaponBuilder, new GeoItemModel<>(modPath), new GuiGeoItemModel<>(modPath));
 	}
 
 	public RemoteEgoWeaponGeoItem(Properties itemProperties, Builder egoWeaponBuilder, GeoModel<RemoteEgoWeaponGeoItem> geoModel, GeoModel<RemoteEgoWeaponGeoItem> guiModel) {

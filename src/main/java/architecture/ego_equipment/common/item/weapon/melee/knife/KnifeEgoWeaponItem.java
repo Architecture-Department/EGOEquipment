@@ -2,6 +2,7 @@ package architecture.ego_equipment.common.item.weapon.melee.knife;
 
 import architecture.ego_equipment.common.item.weapon.melee.MeleeEgoWeaponGeoItem;
 import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
+import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.GeoModel;
 
 public class KnifeEgoWeaponItem extends MeleeEgoWeaponGeoItem {
@@ -10,7 +11,7 @@ public class KnifeEgoWeaponItem extends MeleeEgoWeaponGeoItem {
 		super(itemProperties, egoWeaponBuilder, geoModel, guiModel);
 	}
 
-	public KnifeEgoWeaponItem(Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, String modPath) {
+	public KnifeEgoWeaponItem(Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, ResourceLocation modPath) {
 		super(itemProperties, egoWeaponBuilder, modPath);
 	}
 }

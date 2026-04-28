@@ -27,7 +27,7 @@ public class InTheNameOfLoveAndHateWeaponItem extends RemoteEgoWeaponGeoItem {
 		super(itemProperties, egoWeaponBuilder, geoModel, guiModel);
 	}
 
-	public InTheNameOfLoveAndHateWeaponItem(Properties itemProperties, Builder egoWeaponBuilder, String modPath) {
+	public InTheNameOfLoveAndHateWeaponItem(Properties itemProperties, Builder egoWeaponBuilder, ResourceLocation modPath) {
 		super(itemProperties, egoWeaponBuilder, modPath);
 	}
 

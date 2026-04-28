@@ -7,6 +7,7 @@ import architecture.ego_equipment.mixin.MobEffectInstanceAccessorMixin;
 import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
 import architecture.goldenboughs_lib.client.renderer.GeoItemRenderProvider;
 import architecture.goldenboughs_lib.mixin.world.entity.LivingEntityAccessorMixin;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -28,7 +29,7 @@ public class RedEyesTachiItem extends MeleeEgoWeaponGeoItem {
 		GeoItem.registerSyncedAnimatable(this);
 	}
 
-	public RedEyesTachiItem(Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, String modPath) {
+	public RedEyesTachiItem(Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, ResourceLocation modPath) {
 		super(itemProperties, egoWeaponBuilder, modPath);
 		GeoItem.registerSyncedAnimatable(this);
 	}

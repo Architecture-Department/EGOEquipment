@@ -2,6 +2,7 @@ package architecture.ego_equipment.common.item.weapon.remote.cannon;
 
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem;
 import architecture.ego_equipment.common.item.weapon.remote.gun.GunEgoWeaponItem;
+import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.GeoModel;
 
 /**
@@ -13,7 +14,7 @@ public class CannonEgoWeaponItem extends GunEgoWeaponItem {
 		super(itemProperties, egoWeaponBuilder, geoModel, guiModel);
 	}
 
-	public CannonEgoWeaponItem(Properties itemProperties, Builder egoWeaponBuilder, String modPath) {
+	public CannonEgoWeaponItem(Properties itemProperties, Builder egoWeaponBuilder, ResourceLocation modPath) {
 		super(itemProperties, egoWeaponBuilder, modPath);
 	}
 }

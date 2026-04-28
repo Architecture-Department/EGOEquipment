@@ -2,9 +2,10 @@ package architecture.ego_equipment.common.item.weapon.melee.swords;
 
 import architecture.ego_equipment.common.item.weapon.melee.MeleeEgoWeaponGeoItem;
 import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
-import architecture.goldenboughs_lib.client.model.item.GuiItemModel;
-import architecture.goldenboughs_lib.client.model.item.ModGeoItemModel;
+import architecture.goldenboughs_lib.client.model.item.GeoItemModel;
+import architecture.goldenboughs_lib.client.model.item.GuiGeoItemModel;
 import architecture.goldenboughs_lib.client.renderer.GeoItemRenderProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Tier;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -25,8 +26,8 @@ public class SwordsEgoWeaponGeoItem extends SwordsEgoWeaponItem implements GeoIt
 	protected final @Nullable GeoModel<MeleeEgoWeaponGeoItem> guiModel;
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-	public SwordsEgoWeaponGeoItem(Tier tier, Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, String modPath) {
-		this(tier, itemProperties, egoWeaponBuilder, new ModGeoItemModel<>(modPath), new GuiItemModel<>(modPath));
+	public SwordsEgoWeaponGeoItem(Tier tier, Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, ResourceLocation modPath) {
+		this(tier, itemProperties, egoWeaponBuilder, new GeoItemModel<>(modPath), new GuiGeoItemModel<>(modPath));
 	}
 
 	public SwordsEgoWeaponGeoItem(Tier tier, Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, GeoModel<MeleeEgoWeaponGeoItem> geoModel, GeoModel<MeleeEgoWeaponGeoItem> guiModel) {

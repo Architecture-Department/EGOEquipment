@@ -1,6 +1,7 @@
 package architecture.ego_equipment.common.item.weapon.remote.special;
 
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Projectile;
 import org.jetbrains.annotations.Nullable;
@@ -12,7 +13,7 @@ public class FeatherOfHonorWeaponItem extends RemoteEgoWeaponGeoItem {
 		super(itemProperties, egoWeaponBuilder, geoModel, guiModel);
 	}
 
-	public FeatherOfHonorWeaponItem(Properties itemProperties, Builder egoWeaponBuilder, String modPath) {
+	public FeatherOfHonorWeaponItem(Properties itemProperties, Builder egoWeaponBuilder, ResourceLocation modPath) {
 		super(itemProperties, egoWeaponBuilder, modPath);
 	}
 

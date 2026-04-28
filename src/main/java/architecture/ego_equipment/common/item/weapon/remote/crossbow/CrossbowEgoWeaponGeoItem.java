@@ -2,9 +2,10 @@ package architecture.ego_equipment.common.item.weapon.remote.crossbow;
 
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem;
 import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem;
-import architecture.goldenboughs_lib.client.model.item.GuiItemModel;
-import architecture.goldenboughs_lib.client.model.item.ModGeoItemModel;
+import architecture.goldenboughs_lib.client.model.item.GeoItemModel;
+import architecture.goldenboughs_lib.client.model.item.GuiGeoItemModel;
 import architecture.goldenboughs_lib.client.renderer.GeoItemRenderProvider;
+import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -24,8 +25,8 @@ public class CrossbowEgoWeaponGeoItem extends CrossbowEgoWeaponItem implements G
 	private final GeoModel<RemoteEgoWeaponGeoItem> model;
 	private final @Nullable GeoModel<RemoteEgoWeaponGeoItem> guiModel;
 
-	public CrossbowEgoWeaponGeoItem(Properties itemProperties, IRemoteEgoWeaponItem.Builder egoWeaponBuilder, String modPath) {
-		this(itemProperties, egoWeaponBuilder, new ModGeoItemModel<>(modPath), new GuiItemModel<>(modPath));
+	public CrossbowEgoWeaponGeoItem(Properties itemProperties, IRemoteEgoWeaponItem.Builder egoWeaponBuilder, ResourceLocation modPath) {
+		this(itemProperties, egoWeaponBuilder, new GeoItemModel<>(modPath), new GuiGeoItemModel<>(modPath));
 	}
 
 	public CrossbowEgoWeaponGeoItem(Properties itemProperties, IRemoteEgoWeaponItem.Builder egoWeaponBuilder, GeoModel<RemoteEgoWeaponGeoItem> geoModel, GeoModel<RemoteEgoWeaponGeoItem> guiModel) {

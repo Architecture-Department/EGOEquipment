@@ -5,6 +5,7 @@ import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoIt
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -38,7 +39,7 @@ public class ParadiseLostWeaponItem extends RemoteEgoWeaponGeoItem {
 		super(itemProperties, egoWeaponBuilder, geoModel, guiModel);
 	}
 
-	public ParadiseLostWeaponItem(Properties itemProperties, Builder egoWeaponBuilder, String modPath) {
+	public ParadiseLostWeaponItem(Properties itemProperties, Builder egoWeaponBuilder, ResourceLocation modPath) {
 		super(itemProperties, egoWeaponBuilder, modPath);
 	}
 

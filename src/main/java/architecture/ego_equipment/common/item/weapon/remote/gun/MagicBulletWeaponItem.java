@@ -34,7 +34,7 @@ public class MagicBulletWeaponItem extends GunEgoWeaponItem {
 		super(itemProperties, egoWeaponBuilder, geoModel, guiModel);
 	}
 
-	public MagicBulletWeaponItem(Properties itemProperties, Builder egoWeaponBuilder, String modPath) {
+	public MagicBulletWeaponItem(Properties itemProperties, Builder egoWeaponBuilder, ResourceLocation modPath) {
 		super(itemProperties, egoWeaponBuilder, modPath);
 	}
 

@@ -4,6 +4,7 @@ import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoIt
 import architecture.goldenboughs_lib.api.DelayTaskHolder;
 import architecture.goldenboughs_lib.api.world.item.IGunWeapon;
 import architecture.goldenboughs_lib.util.GunWeaponUtil;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -28,7 +29,7 @@ public abstract class GunEgoWeaponItem extends RemoteEgoWeaponGeoItem implements
 		super(itemProperties, egoWeaponBuilder, geoModel, guiModel);
 	}
 
-	public GunEgoWeaponItem(Properties itemProperties, Builder egoWeaponBuilder, String modPath) {
+	public GunEgoWeaponItem(Properties itemProperties, Builder egoWeaponBuilder, ResourceLocation modPath) {
 		super(itemProperties, egoWeaponBuilder, modPath);
 	}
 

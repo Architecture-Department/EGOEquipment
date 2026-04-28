@@ -1,9 +1,10 @@
 package architecture.ego_equipment.common.item.weapon.melee;
 
 import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
-import architecture.goldenboughs_lib.client.model.item.GuiItemModel;
-import architecture.goldenboughs_lib.client.model.item.ModGeoItemModel;
+import architecture.goldenboughs_lib.client.model.item.GeoItemModel;
+import architecture.goldenboughs_lib.client.model.item.GuiGeoItemModel;
 import architecture.goldenboughs_lib.client.renderer.GeoItemRenderProvider;
+import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -20,8 +21,8 @@ public abstract class MeleeEgoWeaponGeoItem extends MeleeEgoWeaponItem implement
 	protected final @Nullable GeoModel<MeleeEgoWeaponGeoItem> guiModel;
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-	public MeleeEgoWeaponGeoItem(Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, String modPath) {
-		this(itemProperties, egoWeaponBuilder, new ModGeoItemModel<>(modPath), new GuiItemModel<>(modPath));
+	public MeleeEgoWeaponGeoItem(Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, ResourceLocation modPath) {
+		this(itemProperties, egoWeaponBuilder, new GeoItemModel<>(modPath), new GuiGeoItemModel<>(modPath));
 	}
 
 	public MeleeEgoWeaponGeoItem(Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, GeoModel<MeleeEgoWeaponGeoItem> geoModel, @Nullable GeoModel<MeleeEgoWeaponGeoItem> guiModel) {
