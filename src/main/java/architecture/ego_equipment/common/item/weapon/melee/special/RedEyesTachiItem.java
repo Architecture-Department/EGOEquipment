@@ -12,7 +12,6 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
-import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animation.AnimatableManager;
 import software.bernie.geckolib.animation.AnimationController;
@@ -26,12 +25,10 @@ public class RedEyesTachiItem extends MeleeEgoWeaponGeoItem {
 
 	public RedEyesTachiItem(Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, GeoModel<MeleeEgoWeaponGeoItem> geoModel, GeoModel<MeleeEgoWeaponGeoItem> guiModel) {
 		super(itemProperties, egoWeaponBuilder, geoModel, guiModel);
-		GeoItem.registerSyncedAnimatable(this);
 	}
 
 	public RedEyesTachiItem(Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, ResourceLocation modPath) {
 		super(itemProperties, egoWeaponBuilder, modPath);
-		GeoItem.registerSyncedAnimatable(this);
 	}
 
 	public static void phaseSwitch() {
