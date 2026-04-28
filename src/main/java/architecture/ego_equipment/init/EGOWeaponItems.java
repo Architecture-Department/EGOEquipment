@@ -56,7 +56,7 @@ public final class EGOWeaponItems {
 			.damage(0.667f)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/soda"))
+		.model(EGOEquipment.modRl("weapon/soda"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> PENITENCE = onMelee()
@@ -69,7 +69,7 @@ public final class EGOWeaponItems {
 			.damage(6)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/penitence"))
+		.model(EGOEquipment.modRl("weapon/penitence"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> WINGBEAT = onMelee()
@@ -82,7 +82,7 @@ public final class EGOWeaponItems {
 			.damage(6)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/wingbeat"))
+		.model(EGOEquipment.modRl("weapon/wingbeat"))
 		.buildAndRegister();
 	//endregion
 
@@ -99,7 +99,7 @@ public final class EGOWeaponItems {
 			.damage(6)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/comprehension_teth"))
+		.model(EGOEquipment.modRl("weapon/comprehension_teth"))
 		.buildAndRegister();
 	// TODO 理解 的数值需要调整
 	// TODO 实装效果
@@ -113,7 +113,7 @@ public final class EGOWeaponItems {
 			.damage(6)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/comprehension_he"))
+		.model(EGOEquipment.modRl("weapon/comprehension_he"))
 		.buildAndRegister();
 	public static final DeferredItem<?> FOURTH_MATCH_FLAME = onRemote()
 		.id("fourth_match_flame_weapon")
@@ -125,7 +125,7 @@ public final class EGOWeaponItems {
 			.damage(25)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/fourth_match_flame"))
+		.model(EGOEquipment.modRl("weapon/fourth_match_flame"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> SOLITUDE = onRemote()
@@ -138,7 +138,7 @@ public final class EGOWeaponItems {
 			.damage(2.5f)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/solitude"))
+		.model(EGOEquipment.modRl("weapon/solitude"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> BEAK = onRemote()
@@ -151,7 +151,7 @@ public final class EGOWeaponItems {
 			.damage(2.5f)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/beak"))
+		.model(EGOEquipment.modRl("weapon/beak"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> TODAY_IS_EXPRESSION = onRemote()
@@ -164,7 +164,7 @@ public final class EGOWeaponItems {
 			.damage(2.5f)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/today_is_expression"))
+		.model(EGOEquipment.modRl("weapon/today_is_expression"))
 		.buildAndRegister();
 
 	// TODO 只有秃顶或是地中海的帅气员工才能使用这件屌爆的装备！
@@ -193,7 +193,7 @@ public final class EGOWeaponItems {
 			.attackDistance(8)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/engulfing_dream"))
+		.model(EGOEquipment.modRl("weapon/engulfing_dream"))
 		.buildAndRegister((p, b) -> new EngulfingDreamWeaponItem(p, b, EGOEquipment.modRl("weapon/engulfing_dream")));
 
 	// TODO 这把武器一次攻击动画会造成三次伤害。
@@ -208,7 +208,7 @@ public final class EGOWeaponItems {
 			.attackDistance(5)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/cherry_blossoms"))
+		.model(EGOEquipment.modRl("weapon/cherry_blossoms"))
 		.buildAndRegister((p, b) -> new CherryBlossomsWeaponItem(p, b, EGOEquipment.modRl("weapon/cherry_blossoms")));
 
 	// TODO 如果持有者的勇气等级高于2级，进入战斗后会提高2.5点移动速度。
@@ -222,7 +222,7 @@ public final class EGOWeaponItems {
 			.damage(8)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/red_eyes"))
+		.model(EGOEquipment.modRl("weapon/red_eyes"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> RED_EYES_TACHI = onMelee()
@@ -247,7 +247,7 @@ public final class EGOWeaponItems {
 			.damage(7)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/horn"))
+		.model(EGOEquipment.modRl("weapon/horn"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> WRIST_CUTTER = onMelee()
@@ -260,7 +260,7 @@ public final class EGOWeaponItems {
 			.damage(2.5f)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/wrist_cutter"))
+		.model(EGOEquipment.modRl("weapon/wrist_cutter"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> REGRET = onMelee()
@@ -273,7 +273,7 @@ public final class EGOWeaponItems {
 			.damage(15)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/regret"))
+		.model(EGOEquipment.modRl("weapon/regret"))
 		.buildAndRegister();
 
 	// TODO 如果持有者的谨慎等级低于5级，进入战斗后有10%的概率提升40%的最大精神值。该效果持续30秒。
@@ -287,7 +287,7 @@ public final class EGOWeaponItems {
 			.damage(7)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/fragments_from_somewhere"))
+		.model(EGOEquipment.modRl("weapon/fragments_from_somewhere"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> LANTERN = onMelee()
@@ -300,7 +300,7 @@ public final class EGOWeaponItems {
 			.damage(15)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/lantern"))
+		.model(EGOEquipment.modRl("weapon/lantern"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> SO_CUTE = onMelee()
@@ -313,7 +313,7 @@ public final class EGOWeaponItems {
 			.damage(5)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/so_cute"))
+		.model(EGOEquipment.modRl("weapon/so_cute"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> STANDARD_TRAINING_EGO = onMelee()
@@ -326,7 +326,7 @@ public final class EGOWeaponItems {
 			.damage(6)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/standard_training_ego"))
+		.model(EGOEquipment.modRl("weapon/standard_training_ego"))
 		.buildAndRegister();
 	//endregion
 
@@ -341,7 +341,7 @@ public final class EGOWeaponItems {
 			.damage(12)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, VirtueRating.II, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/screaming_wedge"))
+		.model(EGOEquipment.modRl("weapon/screaming_wedge"))
 		.buildAndRegister();
 
 	// TODO 如果持有者的生命值维持在10%及以上，那么持有者将消耗一定生命值发动更加强大的攻击。（造成30%的额外伤害）
@@ -355,7 +355,7 @@ public final class EGOWeaponItems {
 			.damage(40)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(VirtueRating.II, null, null, null, VirtueRating.II))
-		.modelPath(EGOEquipment.modRl("weapon/harmony"))
+		.model(EGOEquipment.modRl("weapon/harmony"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> LAETITIA = onRemote()
@@ -368,7 +368,7 @@ public final class EGOWeaponItems {
 			.damage(5.5f)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, null, VirtueRating.II, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/laetitia"))
+		.model(EGOEquipment.modRl("weapon/laetitia"))
 		.buildAndRegister();
 
 	public static final DeferredItem<SyrinxWeaponItem> SYRINX = onRemote()
@@ -382,7 +382,7 @@ public final class EGOWeaponItems {
 			.attackDistance(10)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, VirtueRating.III, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/syrinx"))
+		.model(EGOEquipment.modRl("weapon/syrinx"))
 		.buildAndRegister((p, b) -> new SyrinxWeaponItem(p, b, EGOEquipment.modRl("weapon/syrinx")));
 
 	// TODO 这把武器一次攻击会造成6次伤害。
@@ -397,7 +397,7 @@ public final class EGOWeaponItems {
 			.attackDistance(4)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(VirtueRating.II, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/grinder_mk4"))
+		.model(EGOEquipment.modRl("weapon/grinder_mk4"))
 		.buildAndRegister((p, b) -> new GrinderMk4WeaponItem(p, b, EGOEquipment.modRl("weapon/grinder_mk4")));
 
 	public static final DeferredItem<OurGalaxyWeaponItem> OUR_GALAXY = onMelee()
@@ -411,7 +411,7 @@ public final class EGOWeaponItems {
 			.attackDistance(8)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, VirtueRating.II, null, null, VirtueRating.II))
-		.modelPath(EGOEquipment.modRl("weapon/our_galaxy"))
+		.model(EGOEquipment.modRl("weapon/our_galaxy"))
 		.buildAndRegister((p, b) -> new OurGalaxyWeaponItem(p, b, EGOEquipment.modRl("weapon/our_galaxy")));
 
 	public static final DeferredItem<LifeForADaredevilWeaponItem> LIFE_FOR_A_DAREDEVIL = onMelee()
@@ -425,7 +425,7 @@ public final class EGOWeaponItems {
 			.attackDistance(4)
 			.meleeLcDamageType(LcDamageType.THE_SOUL)
 			.virtueUsageReq(null, null, null, VirtueRating.II, null))
-		.modelPath(EGOEquipment.modRl("weapon/life_for_a_daredevil"))
+		.model(EGOEquipment.modRl("weapon/life_for_a_daredevil"))
 		.buildAndRegister((p, b) -> new LifeForADaredevilWeaponItem(p, b, EGOEquipment.modRl("weapon/life_for_a_daredevil")));
 
 	// TODO 这把武器每次攻击会造成9次伤害。
@@ -441,7 +441,7 @@ public final class EGOWeaponItems {
 			.attackDistance(4)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, VirtueRating.II, VirtueRating.II, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/gaze"))
+		.model(EGOEquipment.modRl("weapon/gaze"))
 		.buildAndRegister((p, b) -> new GazeWeaponItem(p, b, EGOEquipment.modRl("weapon/gaze")));
 
 	// TODO 这把武器击中目标时，会给目标附加每秒受到2点精神伤害的dot，持续5秒，不可叠加。
@@ -456,7 +456,7 @@ public final class EGOWeaponItems {
 			.attackDistance(5)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, null, VirtueRating.III, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/pleasure"))
+		.model(EGOEquipment.modRl("weapon/pleasure"))
 		.buildAndRegister((p, b) -> new PleasureWeaponItem(p, b, EGOEquipment.modRl("weapon/pleasure")));
 
 	public static final DeferredItem<?> BEAR_PAWS = onMelee()
@@ -469,7 +469,7 @@ public final class EGOWeaponItems {
 			.damage(7)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(VirtueRating.II, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/bear_paws"))
+		.model(EGOEquipment.modRl("weapon/bear_paws"))
 		.buildAndRegister();
 
 	// TODO 如果持有者的自律等级低于3级，每次攻击都会提高最大与最小攻击力。但代价是每次攻击都会丧失等同于最大精神值4%的精神值。
@@ -483,7 +483,7 @@ public final class EGOWeaponItems {
 			.damage(6)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/sanguine_desire"))
+		.model(EGOEquipment.modRl("weapon/sanguine_desire"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> LOGGING = onMelee()
@@ -496,7 +496,7 @@ public final class EGOWeaponItems {
 			.damage(17)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, VirtueRating.II, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/logging"))
+		.model(EGOEquipment.modRl("weapon/logging"))
 		.buildAndRegister();
 
 	// TODO 被这支武器刺中的目标会减少30%的移动速度，持续3秒。需要单独效果。
@@ -510,7 +510,7 @@ public final class EGOWeaponItems {
 			.damage(7)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/frost_splinter"))
+		.model(EGOEquipment.modRl("weapon/frost_splinter"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> CHRISTMAS = onMelee()
@@ -523,7 +523,7 @@ public final class EGOWeaponItems {
 			.damage(12)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/christmas"))
+		.model(EGOEquipment.modRl("weapon/christmas"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> HARVEST = onMelee()
@@ -536,7 +536,7 @@ public final class EGOWeaponItems {
 			.damage(8)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/harvest"))
+		.model(EGOEquipment.modRl("weapon/harvest"))
 		.buildAndRegister();
 	//endregion
 
@@ -551,7 +551,7 @@ public final class EGOWeaponItems {
 			.damage(7.5f)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(VirtueRating.III, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/hornet"))
+		.model(EGOEquipment.modRl("weapon/hornet"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> FAINT_AROMA = onRemote()
@@ -564,7 +564,7 @@ public final class EGOWeaponItems {
 			.damage(15)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, VirtueRating.III, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/faint_aroma"))
+		.model(EGOEquipment.modRl("weapon/faint_aroma"))
 		.buildAndRegister();
 
 	// TODO 攻击时有25%的概率给目标添加一个易伤效果，使其受到的物理伤害加深。
@@ -578,7 +578,7 @@ public final class EGOWeaponItems {
 			.damage(42.5f)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, null, null, VirtueRating.IV))
-		.modelPath(EGOEquipment.modRl("weapon/exuviae"))
+		.model(EGOEquipment.modRl("weapon/exuviae"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> HYPOCRISY = onRemote()
@@ -591,7 +591,7 @@ public final class EGOWeaponItems {
 			.damage(15)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, VirtueRating.III, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/hypocrisy"))
+		.model(EGOEquipment.modRl("weapon/hypocrisy"))
 		.buildAndRegister();
 
 	// TODO 这件E.G.O在攻击时会造成随机类型的伤害。这件E.G.O命中员工时，会根据伤害类型为员工恢复生命值和精神值。
@@ -606,7 +606,7 @@ public final class EGOWeaponItems {
 			.attackDistance(80)
 			.meleeLcDamageType(null, LcDamageType.PHYSICS, LcDamageType.SPIRIT, LcDamageType.EROSION, LcDamageType.THE_SOUL)
 			.virtueUsageReq(VirtueRating.III, null, null, VirtueRating.III, VirtueRating.IV))
-		.modelPath(EGOEquipment.modRl("weapon/in_the_name_of_love_and_hate"))
+		.model(EGOEquipment.modRl("weapon/in_the_name_of_love_and_hate"))
 		.buildAndRegister((p, b) -> new InTheNameOfLoveAndHateWeaponItem(p, b, EGOEquipment.modRl("weapon/in_the_name_of_love_and_hate")));
 
 	// TODO 如果持有者的生命值低于50%，武器的伤害会额外增加50%。但是，持有者在该状态下攻击时会对其他员工造成无差别伤害。
@@ -621,7 +621,7 @@ public final class EGOWeaponItems {
 			.attackDistance(-12) // 3 - 15 = -12
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(VirtueRating.III, null, null, VirtueRating.III, VirtueRating.III))
-		.modelPath(EGOEquipment.modRl("weapon/crimson_scar"))
+		.model(EGOEquipment.modRl("weapon/crimson_scar"))
 		.buildAndRegister((p, b) -> new CrimsonScarWeaponItem(p, b, EGOEquipment.modRl("weapon/crimson_scar")));
 
 	// TODO 持有者攻击时会在一定时间内增加物理伤害。如果持有者的生命值小于或等于50%，武器的伤害会额外增加50%。但是，持有者在该状态下攻击时会对其他员工造成无差别伤害。
@@ -636,7 +636,7 @@ public final class EGOWeaponItems {
 			.attackDistance(0)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(VirtueRating.III, null, VirtueRating.III, null, VirtueRating.II))
-		.modelPath(EGOEquipment.modRl("weapon/cobalt_scar"))
+		.model(EGOEquipment.modRl("weapon/cobalt_scar"))
 		.buildAndRegister((p, b) -> new CobaltScarWeaponItem(p, b, EGOEquipment.modRl("weapon/cobalt_scar")));
 
 	public static final DeferredItem<SolemnLamentWeaponItem> SOLEMN_LAMENT_BLACK = onRemote()
@@ -650,7 +650,7 @@ public final class EGOWeaponItems {
 			.attackDistance(10)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, null, null, VirtueRating.III, null))
-		.modelPath(EGOEquipment.modRl("weapon/solemn_lament_black"))
+		.model(EGOEquipment.modRl("weapon/solemn_lament_black"))
 		.buildAndRegister((p, b) -> new SolemnLamentWeaponItem(p, b, EGOEquipment.modRl("weapon/solemn_lament_black")));
 
 	public static final DeferredItem<SolemnLamentWeaponItem> SOLEMN_LAMENT_WHITE = onRemote()
@@ -664,7 +664,7 @@ public final class EGOWeaponItems {
 			.attackDistance(10)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, null, VirtueRating.III, null))
-		.modelPath(EGOEquipment.modRl("weapon/solemn_lament_white"))
+		.model(EGOEquipment.modRl("weapon/solemn_lament_white"))
 		.buildAndRegister((p, b) -> new SolemnLamentWeaponItem(p, b, EGOEquipment.modRl("weapon/solemn_lament_white")));
 
 	public static final DeferredItem<MagicBulletWeaponItem> MAGIC_BULLET = onRemote()
@@ -678,7 +678,7 @@ public final class EGOWeaponItems {
 			.attackDistance(50)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, null, VirtueRating.III, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/magic_bullet"))
+		.model(EGOEquipment.modRl("weapon/magic_bullet"))
 		.buildAndRegister((p, b) -> new MagicBulletWeaponItem(p, b, EGOEquipment.modRl("weapon/magic_bullet")));
 
 	// TODO 这把武器一次攻击动画会造成2次侵蚀伤害。
@@ -694,7 +694,7 @@ public final class EGOWeaponItems {
 			.attackDistance(0)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, VirtueRating.III, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/black_swan"))
+		.model(EGOEquipment.modRl("weapon/black_swan"))
 		.buildAndRegister((p, b) -> new BlackSwanWeaponItem(p, b, EGOEquipment.modRl("weapon/black_swan")));
 
 	public static final DeferredItem<EcstasyWeaponItem> ECSTASY = onMelee()
@@ -708,7 +708,7 @@ public final class EGOWeaponItems {
 			.attackDistance(10)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(VirtueRating.II, null, null, null, VirtueRating.II))
-		.modelPath(EGOEquipment.modRl("weapon/ecstasy"))
+		.model(EGOEquipment.modRl("weapon/ecstasy"))
 		.buildAndRegister((p, b) -> new EcstasyWeaponItem(p, b, EGOEquipment.modRl("weapon/ecstasy")));
 
 	// TODO 这把武器攻击时有30%的概率使用特殊攻击，持有者先举起刺剑，然后对目标进行快速戳刺，造成9次1-2点精神伤害和1次9-12点精神伤害。
@@ -723,7 +723,7 @@ public final class EGOWeaponItems {
 			.attackDistance(4)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, null, null, VirtueRating.IV))
-		.modelPath(EGOEquipment.modRl("weapon/the_sword_sharpened_with_tears"))
+		.model(EGOEquipment.modRl("weapon/the_sword_sharpened_with_tears"))
 		.buildAndRegister((p, b) -> new TheSwordSharpenedWithTearsWeaponItem(p, b, EGOEquipment.modRl("weapon/the_sword_sharpened_with_tears")));
 
 	public static final DeferredItem<FeatherOfHonorWeaponItem> FEATHER_OF_HONOR = onRemote()
@@ -737,7 +737,7 @@ public final class EGOWeaponItems {
 			.attackDistance(15)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(VirtueRating.III, null, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/feather_of_honor"))
+		.model(EGOEquipment.modRl("weapon/feather_of_honor"))
 		.buildAndRegister((p, b) -> new FeatherOfHonorWeaponItem(p, b, EGOEquipment.modRl("weapon/feather_of_honor")));
 
 	// TODO 这把武器在攻击时有10%的概率使用特殊攻击，具体效果为：持有者对目标进行4次快速戳刺和一次劈砍，造成4次2.5点侵蚀伤害和一次9-12点侵蚀伤害。
@@ -752,7 +752,7 @@ public final class EGOWeaponItems {
 			.attackDistance(5)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, null, VirtueRating.III, null, VirtueRating.III))
-		.modelPath(EGOEquipment.modRl("weapon/discord"))
+		.model(EGOEquipment.modRl("weapon/discord"))
 		.buildAndRegister((p, b) -> new DiscordWeaponItem(p, b, EGOEquipment.modRl("weapon/discord")));
 
 	// TODO 这把武器在攻击时有15%的概率使用特殊攻击，持有者对目标进行一次快速上挑和下砸然后以拐杖点地，造成2次5.5点侵蚀伤害和10点侵蚀伤害。
@@ -768,7 +768,7 @@ public final class EGOWeaponItems {
 			.attackDistance(0)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(VirtueRating.III, null, null, null, VirtueRating.IV))
-		.modelPath(EGOEquipment.modRl("weapon/moonlight"))
+		.model(EGOEquipment.modRl("weapon/moonlight"))
 		.buildAndRegister((p, b) -> new MoonlightWeaponItem(p, b, EGOEquipment.modRl("weapon/moonlight")));
 
 	// TODO 这把武器每次攻击时会造成3次物理伤害。
@@ -783,7 +783,7 @@ public final class EGOWeaponItems {
 			.attackDistance(4)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, VirtueRating.III, null, VirtueRating.III))
-		.modelPath(EGOEquipment.modRl("weapon/amita"))
+		.model(EGOEquipment.modRl("weapon/amita"))
 		.buildAndRegister((p, b) -> new AmitaWeaponItem(p, b, EGOEquipment.modRl("weapon/amita")));
 
 	public static final DeferredItem<?> LAMP = onMelee()
@@ -796,7 +796,7 @@ public final class EGOWeaponItems {
 			.damage(24)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(VirtueRating.III, VirtueRating.III, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/lamp"))
+		.model(EGOEquipment.modRl("weapon/lamp"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> GREEN_STEM = onMelee()
@@ -809,7 +809,7 @@ public final class EGOWeaponItems {
 			.damage(12)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, null, VirtueRating.III, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/green_stem"))
+		.model(EGOEquipment.modRl("weapon/green_stem"))
 		.buildAndRegister();
 
 	// TODO 持有者攻击时有25%的概率给目标添加一个易伤效果，使其受到的精神伤害加深。
@@ -823,7 +823,7 @@ public final class EGOWeaponItems {
 			.damage(12)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, VirtueRating.II, null, VirtueRating.II))
-		.modelPath(EGOEquipment.modRl("weapon/spore"))
+		.model(EGOEquipment.modRl("weapon/spore"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> HEAVEN = onMelee()
@@ -836,7 +836,7 @@ public final class EGOWeaponItems {
 			.damage(10)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, null, null, VirtueRating.III))
-		.modelPath(EGOEquipment.modRl("weapon/heaven"))
+		.model(EGOEquipment.modRl("weapon/heaven"))
 		.buildAndRegister();
 
 	public static final DeferredItem<?> DIFFRACTION = onMelee()
@@ -849,7 +849,7 @@ public final class EGOWeaponItems {
 			.damage(16)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, VirtueRating.III, null, null, null))
-		.modelPath(EGOEquipment.modRl("weapon/diffraction"))
+		.model(EGOEquipment.modRl("weapon/diffraction"))
 		.buildAndRegister();
 	//endregion
 
@@ -866,7 +866,7 @@ public final class EGOWeaponItems {
 			.attackDistance(4)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(VirtueRating.V, null, null, null, VirtueRating.V))
-		.modelPath(EGOEquipment.modRl("weapon/mimicry"))
+		.model(EGOEquipment.modRl("weapon/mimicry"))
 		.buildAndRegister((p, b) -> new MimicryWeaponItem(p, b, EGOEquipment.modRl("weapon/mimicry")));
 
 	// TODO 这把武器每次攻击时会造成5次灵魂伤害。
@@ -881,7 +881,7 @@ public final class EGOWeaponItems {
 			.attackDistance(4)
 			.meleeLcDamageType(LcDamageType.THE_SOUL)
 			.virtueUsageReq(null, null, null, VirtueRating.V, VirtueRating.V))
-		.modelPath(EGOEquipment.modRl("weapon/justitia"))
+		.model(EGOEquipment.modRl("weapon/justitia"))
 		.buildAndRegister((p, b) -> new JustitiaWeaponItem(p, b, EGOEquipment.modRl("weapon/justitia")));
 
 	// TODO 持有者无法通过各部门的"再生反应堆"恢复生命值和精神值。
@@ -898,7 +898,7 @@ public final class EGOWeaponItems {
 			.attackDistance(80)
 			.meleeLcDamageType(LcDamageType.THE_SOUL)
 			.virtueUsageReq(VirtueRating.V, VirtueRating.V, VirtueRating.V, VirtueRating.V, null))
-		.modelPath(EGOEquipment.modRl("weapon/paradise_lost"))
+		.model(EGOEquipment.modRl("weapon/paradise_lost"))
 		.buildAndRegister((p, b) -> new ParadiseLostWeaponItem(p, b, EGOEquipment.modRl("weapon/paradise_lost")));
 
 	// TODO 只有全属性超过110的员工才能拿起这把武器。
@@ -919,7 +919,7 @@ public final class EGOWeaponItems {
 				LcDamageType.EROSION,
 				LcDamageType.THE_SOUL)
 			.virtueUsageReq(111, 111, 111, 111, 0))
-		.modelPath(EGOEquipment.modRl("weapon/twilight"))
+		.model(EGOEquipment.modRl("weapon/twilight"))
 		.buildAndRegister((p, b) -> new TwilightWeaponItem(p, b, EGOEquipment.modRl("weapon/twilight")));
 
 	// TODO 持有者每次攻击时都有10%的概提高5点最大与最小攻击力，该效果持续12秒。代价是，120秒内，持有者的自律相关属性会降低50%。
@@ -935,7 +935,7 @@ public final class EGOWeaponItems {
 			.attackDistance(2)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(VirtueRating.V, null, null, null, VirtueRating.V))
-		.modelPath(EGOEquipment.modRl("weapon/gold_rush"))
+		.model(EGOEquipment.modRl("weapon/gold_rush"))
 		.buildAndRegister((p, b) -> new GoldRushWeaponItem(p, b, EGOEquipment.modRl("weapon/gold_rush")));
 
 	// TODO 每击杀一个目标，持有者的勇气与正义的相关属性会提高3点。该效果仅在当天有效。
@@ -953,7 +953,7 @@ public final class EGOWeaponItems {
 			.attackDistance(5)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(null, null, VirtueRating.V, null, VirtueRating.V))
-		.modelPath(EGOEquipment.modRl("weapon/smile"))
+		.model(EGOEquipment.modRl("weapon/smile"))
 		.buildAndRegister((p, b) -> new SmileWeaponItem(p, b, EGOEquipment.modRl("weapon/smile")));
 
 	// TODO 每次攻击造成2次伤害
@@ -970,7 +970,7 @@ public final class EGOWeaponItems {
 			.attackDistance(0)
 			.meleeLcDamageType(LcDamageType.EROSION)
 			.virtueUsageReq(VirtueRating.V, null, null, null, VirtueRating.V))
-		.modelPath(EGOEquipment.modRl("weapon/censored"))
+		.model(EGOEquipment.modRl("weapon/censored"))
 		.buildAndRegister((p, b) -> new CensoredWeaponItem(p, b, EGOEquipment.modRl("weapon/censored")));
 
 	// TODO 这把武器在攻击时会造成贯穿伤害，但该武器的伤害不会伤害到中立目标和友方目标。
@@ -989,7 +989,7 @@ public final class EGOWeaponItems {
 			.attackDistance(25)
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, VirtueRating.V, VirtueRating.V, null, VirtueRating.V))
-		.modelPath(EGOEquipment.modRl("weapon/sound_of_a_star"))
+		.model(EGOEquipment.modRl("weapon/sound_of_a_star"))
 		.buildAndRegister((p, b) -> new SoundOfAStarWeaponItem(p, b, EGOEquipment.modRl("weapon/sound_of_a_star")));
 
 	// TODO 这把武器每次攻击之前需要花费等同于一次攻击间隔的时间趴下来准备攻击；若目标始终处于射程范围内且保持与武器持有者相对方向相同，则不需要再次准备。
@@ -1004,7 +1004,7 @@ public final class EGOWeaponItems {
 			.attackDistance(35)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, VirtueRating.V, null, null, VirtueRating.V))
-		.modelPath(EGOEquipment.modRl("weapon/pink"))
+		.model(EGOEquipment.modRl("weapon/pink"))
 		.buildAndRegister((p, b) -> new PinkWeaponItem(p, b, EGOEquipment.modRl("weapon/pink")));
 
 	// TODO 这把武器的子弹命中时，会给目标附加每秒受到 2 点侵蚀伤害的dot，持续 5 秒，不可叠加。
@@ -1020,7 +1020,7 @@ public final class EGOWeaponItems {
 			.attackDistance(15)
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, VirtueRating.V, null, VirtueRating.V))
-		.modelPath(EGOEquipment.modRl("weapon/adoration"))
+		.model(EGOEquipment.modRl("weapon/adoration"))
 		.buildAndRegister((p, b) -> new AdorationWeaponItem(p, b, EGOEquipment.modRl("weapon/adoration")));
 	//endregion
 
@@ -1238,7 +1238,7 @@ public final class EGOWeaponItems {
 			return (I) this;
 		}
 
-		public I modelPath(ResourceLocation modelPath) {
+		public I model(ResourceLocation modelPath) {
 			this.modelPath = modelPath;
 			return (I) this;
 		}

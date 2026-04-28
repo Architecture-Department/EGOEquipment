@@ -31,6 +31,7 @@ public class EGOEquipment {
 		EGOEquipmentMobEffects.REGISTRY.register(modEventBus);
 		EGOEquipmentSoundEvents.REGISTRY.register(modEventBus);
 		EGOWeaponItems.REGISTRY.register(modEventBus);
+		EGOEquipmentParticleTypes.REGISTRY.register(modEventBus);
 		EGOEquipmentCreativeModeTabs.REGISTRY.register(modEventBus);
 		EGOEquipmentProjectileEntityTypes.REGISTRY.register(modEventBus);
 		EntityRenderEventExecute.INSTANCE.add(EGOArmorItems.IN_THE_NAME_OF_LOVE_AND_HATE);

@@ -21,7 +21,7 @@ public final class ZhCn extends DatagenI18n {
 	private static final Map<Supplier<? extends EntityType<?>>, String> ENTITY = new HashMap<>();
 
 	public ZhCn(final PackOutput output) {
-		super(output, "zh_cn");
+		super(output, EGOEquipment.ID, "zh_cn");
 	}
 
 	public static void addI18nText(String zhCn, String key) {
