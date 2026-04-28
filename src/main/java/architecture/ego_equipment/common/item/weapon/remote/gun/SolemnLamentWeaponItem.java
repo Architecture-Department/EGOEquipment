@@ -2,10 +2,10 @@ package architecture.ego_equipment.common.item.weapon.remote.gun;
 
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem;
 import architecture.ego_equipment.core.EGOEquipment;
+import architecture.ego_equipment.init.EGOEquipmentParticleTypes;
 import architecture.ego_equipment.init.EGOEquipmentSoundEvents;
 import architecture.goldenboughs_lib.api.LcDamageType;
 import architecture.goldenboughs_lib.init.LibDamageSources;
-import architecture.goldenboughs_lib.init.LibParticleTypes;
 import architecture.goldenboughs_lib.util.LcDamageTypeUtil;
 import architecture.goldenboughs_lib.util.LcLevelUtil;
 import net.minecraft.core.particles.SimpleParticleType;
@@ -89,7 +89,7 @@ public class SolemnLamentWeaponItem extends GunEgoWeaponItem {
 			isBlack = true;
 		}
 
-		SimpleParticleType particleType = (isBlack ? LibParticleTypes.SOLEMN_LAMENT_BUTTERFLY_BLACK : LibParticleTypes.SOLEMN_LAMENT_BUTTERFLY_WHITE).get();
+		SimpleParticleType particleType = (isBlack ? EGOEquipmentParticleTypes.SOLEMN_LAMENT_BUTTERFLY_BLACK : EGOEquipmentParticleTypes.SOLEMN_LAMENT_BUTTERFLY_WHITE).get();
 		Vec3 hitResultLocationPos = hitResult.getLocation();
 		RandomSource random = shooterEntity.getRandom();
 

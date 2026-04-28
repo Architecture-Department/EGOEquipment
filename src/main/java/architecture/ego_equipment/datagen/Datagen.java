@@ -37,6 +37,7 @@ public final class Datagen {
 		buildServer(event, generator, new DatagenItemTag(output, completableFuture, blockTag.contentsGetter(), existingFileHelper));
 
 		// 客户端数据生成
+		buildClient(event, generator, new DatagenParticle(output, existingFileHelper));
 		buildClient(event, generator, new ZhCn(output));
 		buildClient(event, generator, new DatagenItemModel(output, existingFileHelper));
 	}
