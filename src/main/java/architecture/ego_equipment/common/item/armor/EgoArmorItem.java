@@ -1,8 +1,8 @@
 package architecture.ego_equipment.common.item.armor;
 
+import architecture.goldenboughs_lib.api.capability.item.IItemUsageReq;
 import architecture.goldenboughs_lib.api.world.item.IEgoItem;
 import architecture.goldenboughs_lib.common.components.ItemVirtueUsageReq;
-import architecture.goldenboughs_lib.core.capability.item.IItemUsageReq;
 import architecture.goldenboughs_lib.init.LibAttributes;
 import architecture.goldenboughs_lib.init.LibDataComponents;
 import architecture.goldenboughs_lib.util.ItemBuilderUtil;

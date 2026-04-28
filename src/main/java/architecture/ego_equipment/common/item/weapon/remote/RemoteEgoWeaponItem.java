@@ -1,9 +1,9 @@
 package architecture.ego_equipment.common.item.weapon.remote;
 
 import architecture.goldenboughs_lib.api.LcDamageType;
+import architecture.goldenboughs_lib.api.capability.item.IItemUsageReq;
 import architecture.goldenboughs_lib.api.world.item.IEgoWeaponItem;
 import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem;
-import architecture.goldenboughs_lib.core.capability.item.IItemUsageReq;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
