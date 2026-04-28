@@ -16,6 +16,7 @@ import architecture.ego_equipment.common.item.weapon.remote.gun.PistolEgoWeaponI
 import architecture.ego_equipment.common.item.weapon.remote.gun.SolemnLamentWeaponItem;
 import architecture.ego_equipment.common.item.weapon.remote.gun.pistol.PinkWeaponItem;
 import architecture.ego_equipment.common.item.weapon.remote.gun.rifle.RifleEgoWeaponItem;
+import architecture.ego_equipment.common.item.weapon.remote.special.*;
 import architecture.ego_equipment.core.EGOEquipment;
 import architecture.ego_equipment.core.EGOEquipmentConstants;
 import architecture.ego_equipment.datagen.i18n.ZhCn;
@@ -181,7 +182,7 @@ public final class EGOWeaponItems {
 		.buildAndRegister();
 
 	// TODO 这把武器一次攻击动画会造成三次伤害。
-	public static final DeferredItem<architecture.ego_equipment.common.item.weapon.remote.special.EngulfingDreamWeaponItem> ENGULFING_DREAM = onRemote()
+	public static final DeferredItem<EngulfingDreamWeaponItem> ENGULFING_DREAM = onRemote()
 		.id("engulfing_dream_weapon")
 		.zhName("迷魂梦境")
 		.lcLevelType(LcLevel.TETH)
@@ -193,10 +194,10 @@ public final class EGOWeaponItems {
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, null, null, null))
 		.modelPath(EGOEquipment.modRl("weapon/engulfing_dream"))
-		.buildAndRegister((p, b) -> new architecture.ego_equipment.common.item.weapon.remote.special.EngulfingDreamWeaponItem(p, b, EGOEquipment.modRl("weapon/engulfing_dream")));
+		.buildAndRegister((p, b) -> new EngulfingDreamWeaponItem(p, b, EGOEquipment.modRl("weapon/engulfing_dream")));
 
 	// TODO 这把武器一次攻击动画会造成三次伤害。
-	public static final DeferredItem<architecture.ego_equipment.common.item.weapon.remote.special.CherryBlossomsWeaponItem> CHERRY_BLOSSOMS = onRemote()
+	public static final DeferredItem<CherryBlossomsWeaponItem> CHERRY_BLOSSOMS = onRemote()
 		.id("cherry_blossoms_weapon")
 		.zhName("落樱")
 		.lcLevelType(LcLevel.TETH)
@@ -208,7 +209,7 @@ public final class EGOWeaponItems {
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, null, null, null))
 		.modelPath(EGOEquipment.modRl("weapon/cherry_blossoms"))
-		.buildAndRegister((p, b) -> new architecture.ego_equipment.common.item.weapon.remote.special.CherryBlossomsWeaponItem(p, b, EGOEquipment.modRl("weapon/cherry_blossoms")));
+		.buildAndRegister((p, b) -> new CherryBlossomsWeaponItem(p, b, EGOEquipment.modRl("weapon/cherry_blossoms")));
 
 	// TODO 如果持有者的勇气等级高于2级，进入战斗后会提高2.5点移动速度。
 	public static final DeferredItem<?> RED_EYES = onMelee()
@@ -370,7 +371,7 @@ public final class EGOWeaponItems {
 		.modelPath(EGOEquipment.modRl("weapon/laetitia"))
 		.buildAndRegister();
 
-	public static final DeferredItem<architecture.ego_equipment.common.item.weapon.remote.special.SyrinxWeaponItem> SYRINX = onRemote()
+	public static final DeferredItem<SyrinxWeaponItem> SYRINX = onRemote()
 		.id("syrinx_weapon")
 		.zhName("泣婴")
 		.lcLevelType(LcLevel.HE)
@@ -382,7 +383,7 @@ public final class EGOWeaponItems {
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, null, VirtueRating.III, null, null))
 		.modelPath(EGOEquipment.modRl("weapon/syrinx"))
-		.buildAndRegister((p, b) -> new architecture.ego_equipment.common.item.weapon.remote.special.SyrinxWeaponItem(p, b, EGOEquipment.modRl("weapon/syrinx")));
+		.buildAndRegister((p, b) -> new SyrinxWeaponItem(p, b, EGOEquipment.modRl("weapon/syrinx")));
 
 	// TODO 这把武器一次攻击会造成6次伤害。
 	public static final DeferredItem<GrinderMk4WeaponItem> GRINDER_MK4 = onMelee()
@@ -594,7 +595,7 @@ public final class EGOWeaponItems {
 		.buildAndRegister();
 
 	// TODO 这件E.G.O在攻击时会造成随机类型的伤害。这件E.G.O命中员工时，会根据伤害类型为员工恢复生命值和精神值。
-	public static final DeferredItem<architecture.ego_equipment.common.item.weapon.remote.special.InTheNameOfLoveAndHateWeaponItem> IN_THE_NAME_OF_LOVE_AND_HATE = onRemote()
+	public static final DeferredItem<InTheNameOfLoveAndHateWeaponItem> IN_THE_NAME_OF_LOVE_AND_HATE = onRemote()
 		.id("in_the_name_of_love_and_hate_weapon")
 		.zhName("以爱与恨之名")
 		.lcLevelType(LcLevel.WAW)
@@ -606,7 +607,7 @@ public final class EGOWeaponItems {
 			.meleeLcDamageType(null, LcDamageType.PHYSICS, LcDamageType.SPIRIT, LcDamageType.EROSION, LcDamageType.THE_SOUL)
 			.virtueUsageReq(VirtueRating.III, null, null, VirtueRating.III, VirtueRating.IV))
 		.modelPath(EGOEquipment.modRl("weapon/in_the_name_of_love_and_hate"))
-		.buildAndRegister((p, b) -> new architecture.ego_equipment.common.item.weapon.remote.special.InTheNameOfLoveAndHateWeaponItem(p, b, EGOEquipment.modRl("weapon/in_the_name_of_love_and_hate")));
+		.buildAndRegister((p, b) -> new InTheNameOfLoveAndHateWeaponItem(p, b, EGOEquipment.modRl("weapon/in_the_name_of_love_and_hate")));
 
 	// TODO 如果持有者的生命值低于50%，武器的伤害会额外增加50%。但是，持有者在该状态下攻击时会对其他员工造成无差别伤害。
 	public static final DeferredItem<CrimsonScarWeaponItem> CRIMSON_SCAR = onMelee()
@@ -725,7 +726,7 @@ public final class EGOWeaponItems {
 		.modelPath(EGOEquipment.modRl("weapon/the_sword_sharpened_with_tears"))
 		.buildAndRegister((p, b) -> new TheSwordSharpenedWithTearsWeaponItem(p, b, EGOEquipment.modRl("weapon/the_sword_sharpened_with_tears")));
 
-	public static final DeferredItem<architecture.ego_equipment.common.item.weapon.remote.special.FeatherOfHonorWeaponItem> FEATHER_OF_HONOR = onRemote()
+	public static final DeferredItem<FeatherOfHonorWeaponItem> FEATHER_OF_HONOR = onRemote()
 		.id("feather_of_honor_weapon")
 		.zhName("荣耀之羽")
 		.lcLevelType(LcLevel.WAW)
@@ -737,7 +738,7 @@ public final class EGOWeaponItems {
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(VirtueRating.III, null, null, null, null))
 		.modelPath(EGOEquipment.modRl("weapon/feather_of_honor"))
-		.buildAndRegister((p, b) -> new architecture.ego_equipment.common.item.weapon.remote.special.FeatherOfHonorWeaponItem(p, b, EGOEquipment.modRl("weapon/feather_of_honor")));
+		.buildAndRegister((p, b) -> new FeatherOfHonorWeaponItem(p, b, EGOEquipment.modRl("weapon/feather_of_honor")));
 
 	// TODO 这把武器在攻击时有10%的概率使用特殊攻击，具体效果为：持有者对目标进行4次快速戳刺和一次劈砍，造成4次2.5点侵蚀伤害和一次9-12点侵蚀伤害。
 	public static final DeferredItem<DiscordWeaponItem> DISCORD = onMelee()
@@ -886,7 +887,7 @@ public final class EGOWeaponItems {
 	// TODO 持有者无法通过各部门的"再生反应堆"恢复生命值和精神值。
 	// TODO 发起普通攻击时，这把武器能减少被击中单位的移动速度，同时恢复持有者的生命值和精神值。(伤害量和恢复量取决于击中单位的数量。)
 	// TODO 发起特殊攻击时，这把武器会生成一个力场盾，减少受到的所有类型的伤害。(如果设施内没有收容"白夜"，就不能发起特殊攻击。)
-	public static final DeferredItem<architecture.ego_equipment.common.item.weapon.remote.special.ParadiseLostWeaponItem> PARADISE_LOST = onRemote()
+	public static final DeferredItem<ParadiseLostWeaponItem> PARADISE_LOST = onRemote()
 		.id("paradise_lost_weapon")
 		.zhName("失乐园")
 		.lcLevelType(LcLevel.ALEPH)
@@ -898,7 +899,7 @@ public final class EGOWeaponItems {
 			.meleeLcDamageType(LcDamageType.THE_SOUL)
 			.virtueUsageReq(VirtueRating.V, VirtueRating.V, VirtueRating.V, VirtueRating.V, null))
 		.modelPath(EGOEquipment.modRl("weapon/paradise_lost"))
-		.buildAndRegister((p, b) -> new architecture.ego_equipment.common.item.weapon.remote.special.ParadiseLostWeaponItem(p, b, EGOEquipment.modRl("weapon/paradise_lost")));
+		.buildAndRegister((p, b) -> new ParadiseLostWeaponItem(p, b, EGOEquipment.modRl("weapon/paradise_lost")));
 
 	// TODO 只有全属性超过110的员工才能拿起这把武器。
 	// TODO 这把武器会同时造成物理，精神，侵蚀和灵魂伤害。
@@ -977,7 +978,7 @@ public final class EGOWeaponItems {
 	// TODO 持有者的精神值在低于最大精神值的30%时，武器产生的"新星之声"仅有一个，伤害为和面板相同的8-12点精神伤害。
 	// TODO 持有者的精神值大于最大精神值的30%且小于60%时，每次攻击时武器产生的"新星之声"变为2个，增加的"新星之声"伤害为9-11点精神伤害
 	// TODO 持有者的精神值大于最大精神值的60%时，每次攻击时武器产生的"新星之声"变为3个，再额外增加的"新星之声"伤害为11-16点精神伤害
-	public static final DeferredItem<architecture.ego_equipment.common.item.weapon.remote.special.SoundOfAStarWeaponItem> SOUND_OF_A_STAR = onRemote()
+	public static final DeferredItem<SoundOfAStarWeaponItem> SOUND_OF_A_STAR = onRemote()
 		.id("sound_of_a_star_weapon")
 		.zhName("新星之声")
 		.lcLevelType(LcLevel.ALEPH)
@@ -989,7 +990,7 @@ public final class EGOWeaponItems {
 			.meleeLcDamageType(LcDamageType.SPIRIT)
 			.virtueUsageReq(null, VirtueRating.V, VirtueRating.V, null, VirtueRating.V))
 		.modelPath(EGOEquipment.modRl("weapon/sound_of_a_star"))
-		.buildAndRegister((p, b) -> new architecture.ego_equipment.common.item.weapon.remote.special.SoundOfAStarWeaponItem(p, b, EGOEquipment.modRl("weapon/sound_of_a_star")));
+		.buildAndRegister((p, b) -> new SoundOfAStarWeaponItem(p, b, EGOEquipment.modRl("weapon/sound_of_a_star")));
 
 	// TODO 这把武器每次攻击之前需要花费等同于一次攻击间隔的时间趴下来准备攻击；若目标始终处于射程范围内且保持与武器持有者相对方向相同，则不需要再次准备。
 	public static final DeferredItem<PinkWeaponItem> PINK = onRemote()
@@ -1008,7 +1009,7 @@ public final class EGOWeaponItems {
 
 	// TODO 这把武器的子弹命中时，会给目标附加每秒受到 2 点侵蚀伤害的dot，持续 5 秒，不可叠加。
 	// TODO 这把武器的子弹命中时，会使目标的移动速度在 5 秒内降低 30%。
-	public static final DeferredItem<architecture.ego_equipment.common.item.weapon.remote.special.AdorationWeaponItem> ADORATION = onRemote()
+	public static final DeferredItem<AdorationWeaponItem> ADORATION = onRemote()
 		.id("adoration_weapon")
 		.zhName("爱慕")
 		.lcLevelType(LcLevel.ALEPH)
@@ -1020,7 +1021,7 @@ public final class EGOWeaponItems {
 			.meleeLcDamageType(LcDamageType.PHYSICS)
 			.virtueUsageReq(null, null, VirtueRating.V, null, VirtueRating.V))
 		.modelPath(EGOEquipment.modRl("weapon/adoration"))
-		.buildAndRegister((p, b) -> new architecture.ego_equipment.common.item.weapon.remote.special.AdorationWeaponItem(p, b, EGOEquipment.modRl("weapon/adoration")));
+		.buildAndRegister((p, b) -> new AdorationWeaponItem(p, b, EGOEquipment.modRl("weapon/adoration")));
 	//endregion
 
 	/**
@@ -1215,7 +1216,7 @@ public final class EGOWeaponItems {
 		protected String zhName;
 		protected LcLevel lcLevel;
 		protected Item.Properties properties;
-		protected ResourceLocation modelPath;
+		protected ResourceLocation modelPath = ResourceLocation.parse("");
 
 		public I id(String id) {
 			this.id = id;
