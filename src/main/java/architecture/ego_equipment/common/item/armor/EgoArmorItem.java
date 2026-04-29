@@ -62,6 +62,10 @@ public class EgoArmorItem extends ArmorItem implements GeoItem, IItemUsageReq, I
 		public Builder() {
 		}
 
+		private static @NotNull ResourceLocation getArmorModifierId(final Type armorType) {
+			return ResourceLocation.withDefaultNamespace("armor." + armorType.getName());
+		}
+
 		public ItemAttributeModifiers getItemAttributeModifiers(Type armorType, Holder<ArmorMaterial> material) {
 			ItemAttributeModifiers.Builder attributeBuilder = ItemAttributeModifiers.builder();
 			ArmorMaterial armorMaterial = material.value();
@@ -76,10 +80,6 @@ public class EgoArmorItem extends ArmorItem implements GeoItem, IItemUsageReq, I
 			ItemBuilderUtil.addAttributeModifier(attributeBuilder, Attributes.ARMOR_TOUGHNESS, id, armorMaterial.toughness(), AttributeModifier.Operation.ADD_VALUE, equipmentSlotGroup);
 			ItemBuilderUtil.addAttributeModifier(attributeBuilder, Attributes.KNOCKBACK_RESISTANCE, id, armorMaterial.knockbackResistance(), AttributeModifier.Operation.ADD_VALUE, equipmentSlotGroup);
 			return attributeBuilder.build();
-		}
-
-		private static @NotNull ResourceLocation getArmorModifierId(final Type armorType) {
-			return ResourceLocation.withDefaultNamespace("armor." + armorType.getName());
 		}
 
 		public Builder virtueUsageReqBuilder(ItemVirtueUsageReq.Builder virtueRequirementBuilder) {

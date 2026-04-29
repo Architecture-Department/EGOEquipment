@@ -1,17 +1,17 @@
 {
-  "required": true,
-  "package": "architecture.ego_equipment.mixin",
-  "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "MobEffectInstanceAccessorMixin"
-  ],
-  "injectors": {
-    "defaultRequire": 1
-  },
-  "overwrites": {
-    "requireAnnotations": true
-  },
-  "mixinextras": {
-    "minVersion": "0.5.0"
+	"required": true,
+	"package": "architecture.ego_equipment.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"MobEffectInstanceAccessorMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	},
+	"mixinextras": {
+		"minVersion": "0.5.0"
 	}
 }

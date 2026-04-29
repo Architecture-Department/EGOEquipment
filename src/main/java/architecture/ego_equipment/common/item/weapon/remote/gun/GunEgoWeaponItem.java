@@ -33,6 +33,14 @@ public abstract class GunEgoWeaponItem extends RemoteEgoWeaponGeoItem implements
 		super(itemProperties, egoWeaponBuilder, modPath);
 	}
 
+	protected static int gunShootTickRun(int tick, int gunShootExecuteTick, int maxTick, @NotNull Player playerEntity, @NotNull ItemStack itemStack, @NotNull InteractionHand handUsed) {
+		int value = gunShootExecuteTick / maxTick;
+		GunWeaponUtil.modifyChargeUpValue(playerEntity, value, handUsed);
+		return tick + 1;
+	}
+
+	//region Using
+
 	/**
 	 * 处理物品使用操作
 	 * 当玩家使用物品时触发，根据是否可以瞄准来决定执行瞄准操作还是其他操作
@@ -55,8 +63,6 @@ public abstract class GunEgoWeaponItem extends RemoteEgoWeaponGeoItem implements
 
 		return InteractionResultHolder.success(itemStack);
 	}
-
-	//region Using
 
 	@Override
 	public boolean isOffHandShoot(@NotNull Player player, @NotNull ItemStack stack) {
@@ -106,6 +112,7 @@ public abstract class GunEgoWeaponItem extends RemoteEgoWeaponGeoItem implements
 	public void onStopUsing(ItemStack stack, LivingEntity entity, int count) {
 		onStopUsing(stack, entity);
 	}
+	//endregion
 
 	/**
 	 * 停止使用物品的统一处理方法
@@ -123,7 +130,6 @@ public abstract class GunEgoWeaponItem extends RemoteEgoWeaponGeoItem implements
 			gunEndAim(player, stack, entity.getUsedItemHand());
 		}
 	}
-	//endregion
 
 	/**
 	 * 结束瞄准状态
@@ -193,6 +199,9 @@ public abstract class GunEgoWeaponItem extends RemoteEgoWeaponGeoItem implements
 	protected boolean gunBasEAimShootCondition(@NotNull Player playerEntity, @NotNull ItemStack itemStack, @NotNull InteractionHand handUsed, float chargeUpPercentage) {
 		return chargeUpPercentage >= 1;
 	}
+	//endregion
+
+	//region Shoot
 
 	/**
 	 * 执行瞄准射击的具体操作
@@ -220,9 +229,6 @@ public abstract class GunEgoWeaponItem extends RemoteEgoWeaponGeoItem implements
 		}
 		return true;
 	}
-	//endregion
-
-	//region Shoot
 
 	/**
 	 * 直接发射自定义弹射物
@@ -314,12 +320,6 @@ public abstract class GunEgoWeaponItem extends RemoteEgoWeaponGeoItem implements
 		GunWeaponUtil.setIsAttack(playerEntity, true, handUsed);
 		GunWeaponUtil.resetChargeUp(playerEntity, handUsed);
 		return 0;
-	}
-
-	protected static int gunShootTickRun(int tick, int gunShootExecuteTick, int maxTick, @NotNull Player playerEntity, @NotNull ItemStack itemStack, @NotNull InteractionHand handUsed) {
-		int value = gunShootExecuteTick / maxTick;
-		GunWeaponUtil.modifyChargeUpValue(playerEntity, value, handUsed);
-		return tick + 1;
 	}
 
 	/**
