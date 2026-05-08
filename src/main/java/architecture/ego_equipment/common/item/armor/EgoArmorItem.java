@@ -4,7 +4,7 @@ import architecture.goldenboughs_lib.api.capability.item.IItemUsageReq;
 import architecture.goldenboughs_lib.api.world.item.IEgoItem;
 import architecture.goldenboughs_lib.common.components.ItemVirtueUsageReq;
 import architecture.goldenboughs_lib.init.LibAttributes;
-import architecture.goldenboughs_lib.init.LibDataComponents;
+import architecture.goldenboughs_lib.init.LibDataComponentTypes;
 import architecture.goldenboughs_lib.util.ItemBuilderUtil;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
@@ -32,8 +32,8 @@ public class EgoArmorItem extends ArmorItem implements GeoItem, IItemUsageReq, I
 		super(armorMaterial, armorType, itemProperties
 			.stacksTo(1)
 			.attributes(egoArmorBuilder.getItemAttributeModifiers(armorType, armorMaterial))
-			.component(LibDataComponents.IS_RESTRAIN, false)
-			.component(LibDataComponents.ITEM_VIRTUE_USAGE_REQ, egoArmorBuilder.virtueUsageReqBuilder.build()));
+			.component(LibDataComponentTypes.IS_RESTRAIN, false)
+			.component(LibDataComponentTypes.ITEM_VIRTUE_USAGE_REQ, egoArmorBuilder.virtueUsageReqBuilder.build()));
 		this.renderProvider = geoRendererProvider;
 	}
 
