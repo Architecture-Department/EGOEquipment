@@ -1,7 +1,6 @@
 package architecture.ego_equipment.common.item.weapon.remote.crossbow;
 
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem;
-import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem;
 import architecture.goldenboughs_lib.client.model.item.GeoItemModel;
 import architecture.goldenboughs_lib.client.model.item.GuiGeoItemModel;
 import architecture.goldenboughs_lib.client.renderer.GeoItemRenderProvider;
@@ -25,11 +24,11 @@ public class CrossbowEgoWeaponGeoItem extends CrossbowEgoWeaponItem implements G
 	private final GeoModel<RemoteEgoWeaponGeoItem> model;
 	private final @Nullable GeoModel<RemoteEgoWeaponGeoItem> guiModel;
 
-	public CrossbowEgoWeaponGeoItem(Properties itemProperties, IRemoteEgoWeaponItem.Builder egoWeaponBuilder, ResourceLocation modPath) {
+	public CrossbowEgoWeaponGeoItem(Properties itemProperties, Builder egoWeaponBuilder, ResourceLocation modPath) {
 		this(itemProperties, egoWeaponBuilder, new GeoItemModel<>(modPath), new GuiGeoItemModel<>(modPath));
 	}
 
-	public CrossbowEgoWeaponGeoItem(Properties itemProperties, IRemoteEgoWeaponItem.Builder egoWeaponBuilder, GeoModel<RemoteEgoWeaponGeoItem> geoModel, GeoModel<RemoteEgoWeaponGeoItem> guiModel) {
+	public CrossbowEgoWeaponGeoItem(Properties itemProperties, Builder egoWeaponBuilder, GeoModel<RemoteEgoWeaponGeoItem> geoModel, GeoModel<RemoteEgoWeaponGeoItem> guiModel) {
 		super(itemProperties, egoWeaponBuilder);
 		this.model = geoModel;
 		this.guiModel = guiModel;

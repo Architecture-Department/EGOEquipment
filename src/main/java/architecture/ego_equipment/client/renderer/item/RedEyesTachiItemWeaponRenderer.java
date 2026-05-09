@@ -31,7 +31,7 @@ public class RedEyesTachiItemWeaponRenderer extends GeoItemRendererExpand<RedEye
 		RedEyesTachiItemWeaponRenderer weaponRenderer = RedEyesTachiItemWeaponRenderer.this;
 		addRenderLayer(new AutoGlowingGeoLayer<>(this) {
 			@Override
-			protected RenderType getRenderType(RedEyesTachiItem animatable, @Nullable MultiBufferSource bufferSource) {
+			public RenderType getRenderType(RedEyesTachiItem animatable, @Nullable MultiBufferSource bufferSource) {
 				if (weaponRenderer.renderPerspective != ItemDisplayContext.GUI) {
 					return RenderType.eyes(GLOWMASK_TEXTURE);
 				}

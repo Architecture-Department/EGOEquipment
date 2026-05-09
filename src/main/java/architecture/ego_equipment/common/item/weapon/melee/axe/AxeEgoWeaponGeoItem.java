@@ -1,7 +1,6 @@
 package architecture.ego_equipment.common.item.weapon.melee.axe;
 
 import architecture.ego_equipment.common.item.weapon.melee.MeleeEgoWeaponGeoItem;
-import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
 import architecture.goldenboughs_lib.client.model.item.GeoItemModel;
 import architecture.goldenboughs_lib.client.model.item.GuiGeoItemModel;
 import architecture.goldenboughs_lib.client.renderer.GeoItemRenderProvider;
@@ -23,11 +22,11 @@ public class AxeEgoWeaponGeoItem extends AxeEgoWeaponItem implements GeoItem {
 	private final GeoModel<MeleeEgoWeaponGeoItem> model;
 	private final @Nullable GeoModel<MeleeEgoWeaponGeoItem> guiModel;
 
-	public AxeEgoWeaponGeoItem(Tier tier, Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, ResourceLocation modPath) {
+	public AxeEgoWeaponGeoItem(Tier tier, Properties itemProperties, Builder egoWeaponBuilder, ResourceLocation modPath) {
 		this(tier, itemProperties, egoWeaponBuilder, new GeoItemModel<>(modPath), new GuiGeoItemModel<>(modPath));
 	}
 
-	public AxeEgoWeaponGeoItem(Tier tier, Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, GeoModel<MeleeEgoWeaponGeoItem> geoModel, GeoModel<MeleeEgoWeaponGeoItem> guiModel) {
+	public AxeEgoWeaponGeoItem(Tier tier, Properties itemProperties, Builder egoWeaponBuilder, GeoModel<MeleeEgoWeaponGeoItem> geoModel, GeoModel<MeleeEgoWeaponGeoItem> guiModel) {
 		super(tier, itemProperties, egoWeaponBuilder);
 		this.model = geoModel;
 		this.guiModel = guiModel;
