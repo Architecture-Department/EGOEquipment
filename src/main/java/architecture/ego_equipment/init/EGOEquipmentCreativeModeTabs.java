@@ -28,7 +28,7 @@ public final class EGOEquipmentCreativeModeTabs {
 		"ego_armor", "E.G.O护甲", (name, zhCn) ->
 			createCreativeModeTab(name, zhCn, (parameters, output) ->
 				addRegistryItem(EGOArmorItems.REGISTRY, output), () ->
-				EGOArmorItems.IN_THE_NAME_OF_LOVE_AND_HATE.chestplate().get().getDefaultInstance()));
+				EGOArmorItems.IN_THE_NAME_OF_LOVE_AND_HATE.getChestplate().get().getDefaultInstance()));
 
 	private static DeferredHolder<CreativeModeTab, CreativeModeTab> register(
 		String name,

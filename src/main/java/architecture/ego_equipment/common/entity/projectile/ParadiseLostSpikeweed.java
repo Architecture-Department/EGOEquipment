@@ -142,7 +142,7 @@ public class ParadiseLostSpikeweed extends Entity implements TraceableEntity, Ge
 		int value = livingentity.getRandom().nextInt(2, 4 + 1);
 		livingentity.heal(value);
 		if (livingentity instanceof Player player) {
-			RationalityUtil.modifyValue(player, value, true, true);
+			RationalityUtil.modifyRationalityValue(player, value, true, true);
 		}
 	}
 

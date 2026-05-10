@@ -171,7 +171,7 @@ public abstract class GunEgoWeaponItem extends RemoteEgoWeaponGeoItem implements
 	}
 
 	@Override
-	public boolean isGunAimMove(Player player, ItemStack itemStack) {
+	public boolean isGunAimMove(@NotNull Player player, @NotNull ItemStack itemStack) {
 		return true;
 	}
 
