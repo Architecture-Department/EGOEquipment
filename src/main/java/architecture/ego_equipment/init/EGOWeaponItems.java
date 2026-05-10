@@ -1357,7 +1357,7 @@ public final class EGOWeaponItems {
 		}
 
 		private @NotNull SimpleTier getSimpleTier(IMeleeEgoWeaponItem.Builder b) {
-			return new SimpleTier(getIncorrectBlocksForDrops(), 0, b.attackSpeed, b.weaponDamage, getEnchantmentValue(), Ingredient::of);
+			return new SimpleTier(getIncorrectBlocksForDrops(), 0, b.getAttackSpeed(), b.getWeaponDamage(), getEnchantmentValue(), Ingredient::of);
 		}
 
 		private void validateRequiredFields() {

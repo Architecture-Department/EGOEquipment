@@ -32,10 +32,10 @@ public abstract class RemoteEgoWeaponItem extends ProjectileWeaponItem implement
 
 	public RemoteEgoWeaponItem(@NotNull Properties itemProperties, @NotNull Builder builder) {
 		super(IEgoWeaponItem.add(itemProperties, builder));
-		this.attackDistance = builder.attackDistance;
-		this.createProjectile = builder.createProjectile;
-		this.lcDamageType = builder.lcDamageType;
-		this.canCauseLcDamageTypes = builder.canCauseLcDamageTypes;
+		this.attackDistance = builder.getAttackDistance();
+		this.createProjectile = builder.getCreateProjectile();
+		this.lcDamageType = builder.getLcDamageType();
+		this.canCauseLcDamageTypes = builder.getCanCauseLcDamageTypes();
 	}
 
 	/**

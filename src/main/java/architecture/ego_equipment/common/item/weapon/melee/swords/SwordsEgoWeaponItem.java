@@ -17,8 +17,8 @@ public class SwordsEgoWeaponItem extends SwordItem implements IMeleeEgoWeaponIte
 
 	public SwordsEgoWeaponItem(Tier tier, Properties itemProperties, Builder builder) {
 		super(tier, IEgoWeaponItem.add(itemProperties, builder));
-		this.lcDamageType = builder.lcDamageType;
-		this.canCauseLcDamageTypes = builder.canCauseLcDamageTypes;
+		this.lcDamageType = builder.getLcDamageType();
+		this.canCauseLcDamageTypes = builder.getCanCauseLcDamageTypes();
 	}
 
 	@Override

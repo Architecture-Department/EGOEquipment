@@ -24,8 +24,8 @@ public abstract class EgoWeaponItem extends Item implements IEgoWeaponItem, IIte
 
 	public EgoWeaponItem(Properties itemProperties, Builder<?> builder) {
 		super(IEgoWeaponItem.add(itemProperties, builder));
-		this.lcDamageType = builder.lcDamageType;
-		this.canCauseLcDamageTypes = builder.canCauseLcDamageTypes;
+		this.lcDamageType = builder.getLcDamageType();
+		this.canCauseLcDamageTypes = builder.getCanCauseLcDamageTypes();
 	}
 
 	/// 是否可以挖掘方块

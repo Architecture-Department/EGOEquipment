@@ -25,8 +25,8 @@ public class CrossbowEgoWeaponItem extends CrossbowItem implements IRemoteEgoWea
 
 	public CrossbowEgoWeaponItem(Properties itemProperties, Builder builder) {
 		super(IEgoWeaponItem.add(itemProperties, builder));
-		this.attackDistance = builder.attackDistance;
-		this.createProjectile = builder.createProjectile;
+		this.attackDistance = builder.getAttackDistance();
+		this.createProjectile = builder.getCreateProjectile();
 	}
 
 	/**
