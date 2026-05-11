@@ -29,7 +29,7 @@ public class RedEyesTachiChopFlavor extends ChopFlavorLayer.ChopFlavorBar {
 		pose.scale(2, 2, 2);
 		pose.translate(-WIDTH / 2, 0, 0);
 
-		LocalPlayer player = ChopFlavorLayer.INSTANCE.getPlayer();
+		LocalPlayer player = ChopFlavorLayer.INSTANCE.getPlayerThrow();
 		MobEffectInstance effect = player.getEffect(EGOEquipmentMobEffects.RED_EYES_HUNTING);
 		guiGraphics.blitSprite(BOTTOM, 0, 0, WIDTH, HEIGHT);
 
@@ -74,7 +74,7 @@ public class RedEyesTachiChopFlavor extends ChopFlavorLayer.ChopFlavorBar {
 
 	@Override
 	public void castSkill() {
-		LocalPlayer player = ChopFlavorLayer.INSTANCE.getPlayer();
+		LocalPlayer player = ChopFlavorLayer.INSTANCE.getPlayerThrow();
 		MobEffectInstance effect = player.getEffect(EGOEquipmentMobEffects.RED_EYES_HUNTING);
 		if (effect == null) {
 			castSkill = 1;
