@@ -38,8 +38,8 @@ object EGOEquipment {
 		EGOEquipmentParticleTypes.REGISTRY.register(modBus)
 		EGOEquipmentCreativeModeTabs.REGISTRY.register(modBus)
 		EGOEquipmentProjectileEntityTypes.REGISTRY.register(modBus)
-		EntityRenderEventExecute.INSTANCE.add(EGOArmorItems.IN_THE_NAME_OF_LOVE_AND_HATE)
-		EntityRenderEventExecute.INSTANCE.add(EGOArmorItems.MAGIC_BULLET)
+		EntityRenderEventExecute.add(EGOArmorItems.IN_THE_NAME_OF_LOVE_AND_HATE)
+		EntityRenderEventExecute.add(EGOArmorItems.MAGIC_BULLET)
 	}
 
 	@SubscribeEvent
