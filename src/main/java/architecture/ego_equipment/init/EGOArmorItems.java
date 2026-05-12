@@ -8,7 +8,7 @@ import architecture.goldenboughs_lib.api.Armors;
 import architecture.goldenboughs_lib.api.LcLevel;
 import architecture.goldenboughs_lib.client.model.armor.ModGeoArmorModel;
 import architecture.goldenboughs_lib.client.renderer.GeoArmourRenderProvider;
-import architecture.goldenboughs_lib.common.components.ItemVirtueUsageReq;
+import architecture.goldenboughs_lib.common.data_component.ItemVirtueUsageReq;
 import architecture.goldenboughs_lib.init.LibAttributes;
 import architecture.goldenboughs_lib.util.LcLevelUtil;
 import com.mojang.datafixers.util.Function5;
