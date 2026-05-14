@@ -31,7 +31,7 @@ public class GunChargeUpHudLayer extends BasicHudLayer {
 	private final AttackIndicatorStatus attackIndicatorStatus;
 	private float mainHandValue;
 	private float offHandValue;
-	private HumanoidArm mainArm = HumanoidArm.RIGHT;
+	private HumanoidArm humanoidArm = HumanoidArm.RIGHT;
 
 	public GunChargeUpHudLayer(AttackIndicatorStatus attackIndicatorStatus) {
 		super();
@@ -47,7 +47,7 @@ public class GunChargeUpHudLayer extends BasicHudLayer {
 		ItemStack offHandItem = getPlayerThrow().getOffhandItem();
 		final Item mainHandItemItem = mainHandItem.getItem();
 		final Item offHandItemItem = offHandItem.getItem();
-		final boolean isMainArmRight = mainArm == HumanoidArm.RIGHT;
+		final boolean isMainArmRight = humanoidArm == HumanoidArm.RIGHT;
 
 		final int y = getY();
 		switch (attackIndicatorStatus) {
@@ -105,8 +105,8 @@ public class GunChargeUpHudLayer extends BasicHudLayer {
 		}
 
 		HumanoidArm mainArm = getPlayerThrow().getMainArm();
-		if (mainArm != this.mainArm) {
-			this.mainArm = mainArm;
+		if (mainArm != this.humanoidArm) {
+			this.humanoidArm = mainArm;
 		}
 	}
 
