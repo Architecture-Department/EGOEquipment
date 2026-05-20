@@ -108,7 +108,7 @@ dependencies {
 	compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:${mixinsquared_version}"))
 	implementation(jarJar("com.github.bawnorton.mixinsquared:mixinsquared-neoforge:${mixinsquared_version}"))
 
-	implementation "maven.modrinth:eyelib:${eyelib_version}"
+	implementation "maven.modrinth:eyelib:${eyelib_api_version}"
 
 	// Jade
 	implementation "maven.modrinth:jade:${jade_version}+neoforge"
@@ -146,6 +146,8 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
 					minecraft_version_range: minecraft_version_range,
 					neo_version            : neo_version,
 					loader_version_range   : loader_version_range,
+					geckolib_version: geckolib_version,
+					eyelib_version  : eyelib_version,
 					mod_id                 : mod_id,
 					mod_name               : mod_name,
 					mod_license            : mod_license,
