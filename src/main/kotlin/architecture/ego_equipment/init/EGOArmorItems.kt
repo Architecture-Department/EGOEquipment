@@ -429,7 +429,7 @@ object EGOArmorItems {
 		val t = splitIntoThree(theSoul - LibAttributes.THE_SOUL_VULNERABLE_DEFAULT_VALUE)
 		return Armors(
 			register(
-				id + "_" + ArmorItem.Type.CHESTPLATE.name,
+				id + "_" + ArmorItem.Type.CHESTPLATE.getName(),
 				zhName,
 				lcLevel,
 				ArmorItem.Type.CHESTPLATE,
@@ -444,7 +444,7 @@ object EGOArmorItems {
 				t.third
 			),
 			register(
-				id + "_" + ArmorItem.Type.LEGGINGS.name,
+				id + "_" + ArmorItem.Type.LEGGINGS.getName(),
 				zhName,
 				lcLevel,
 				ArmorItem.Type.LEGGINGS,
@@ -459,7 +459,7 @@ object EGOArmorItems {
 				t.second
 			),
 			register(
-				id + "_" + ArmorItem.Type.BOOTS.name,
+				id + "_" + ArmorItem.Type.BOOTS.getName(),
 				zhName,
 				lcLevel,
 				ArmorItem.Type.BOOTS,

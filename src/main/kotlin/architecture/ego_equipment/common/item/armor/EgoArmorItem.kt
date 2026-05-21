@@ -137,7 +137,7 @@ class EgoArmorItem(
 
 		companion object {
 			private fun getArmorModifierId(armorType: Type): ResourceLocation =
-				ResourceLocation.withDefaultNamespace("armor.${armorType.name}")
+				ResourceLocation.withDefaultNamespace("armor.${armorType.getName()}")
 		}
 	}
 }
