@@ -67,7 +67,7 @@ class RedEyesTachiItem : MeleeEgoWeaponGeoItem {
 			val increase = 10
 			val max = 100
 			(effect as MobEffectInstanceAccessorMixin).`ego_equipment$setDuration`(
-			(effectDuration + increase).coerceIn(0, Math.max(effectDuration, max))
+				(effectDuration + increase).coerceIn(0, Math.max(effectDuration, max))
 			)
 			(attacker as LivingEntityAccessorMixin).`goldenboughs_lib$onEffectUpdated`(effect, true, attacker)
 		}

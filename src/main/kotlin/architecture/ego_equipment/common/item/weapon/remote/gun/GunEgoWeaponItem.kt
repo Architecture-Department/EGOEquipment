@@ -185,12 +185,12 @@ abstract class GunEgoWeaponItem : RemoteEgoWeaponGeoItem, IGunWeapon {
 			val gunShootExecuteTick = gunShootExecuteTick(playerEntity, itemStack, handUsed)
 			DelayTaskHolder.of(playerEntity).addTask(
 				handUsed, DelayTaskHolder.createTaskBilder()
-				.tickRun { tick, maxTick, _ ->
-					gunShootTickRun(tick, gunShootExecuteTick, maxTick, playerEntity, itemStack, handUsed)
-				}
-				.resultRun { gunShootExecute(playerEntity, itemStack, handUsed, serverLevel) }
-				.removedTick(gunShootExecuteTick)
-				.build())
+					.tickRun { tick, maxTick, _ ->
+						gunShootTickRun(tick, gunShootExecuteTick, maxTick, playerEntity, itemStack, handUsed)
+					}
+					.resultRun { gunShootExecute(playerEntity, itemStack, handUsed, serverLevel) }
+					.removedTick(gunShootExecuteTick)
+					.build())
 		}
 
 		GunWeaponUtil.setIsAttack(playerEntity, false, handUsed)
