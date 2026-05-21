@@ -5,7 +5,7 @@ import architecture.goldenboughs_lib.api.world.item.IEgoItem
 import architecture.goldenboughs_lib.common.data_component.ItemVirtueUsageReq
 import architecture.goldenboughs_lib.init.LibAttributes
 import architecture.goldenboughs_lib.init.LibDataComponentTypes
-import architecture.goldenboughs_lib.util.ItemBuilderUtil
+import architecture.goldenboughs_lib.util.world.item.ItemBuilderUtil
 import net.minecraft.core.Holder
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.entity.EquipmentSlotGroup

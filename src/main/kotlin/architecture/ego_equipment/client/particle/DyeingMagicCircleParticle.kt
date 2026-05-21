@@ -63,7 +63,7 @@ open class DyeingMagicCircleParticle : TextureSheetParticle {
 	override fun getRenderType(): ParticleRenderType = LibParticleRenderTypes.MAGIC_CIRCLE_PARTICLE
 
 	@AllOpe
-	open class Builder(
+	class Builder(
 		protected val xRot: Float,
 		protected val yRot: Float
 	) {

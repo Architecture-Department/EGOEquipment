@@ -4,6 +4,8 @@ import architecture.ego_equipment.core.EGOEquipment
 import architecture.ego_equipment.datagen.i18n.ZhCn
 import architecture.ego_equipment.datagen.tag.DatagenBlockTag
 import architecture.ego_equipment.datagen.tag.DatagenItemTag
+import architecture.goldenboughs_lib.util.buildClient
+import architecture.goldenboughs_lib.util.buildServer
 import net.minecraft.core.RegistrySetBuilder
 import net.minecraft.data.DataGenerator
 import net.minecraft.data.DataProvider
@@ -20,19 +22,19 @@ object Datagen {
 		val completableFuture = event.lookupProvider
 		val existingFileHelper = event.existingFileHelper
 
-		buildServer(event, generator, ModDatagenDatapackBuiltinEntries(output, completableFuture, RegistrySetBuilder()))
+		event.buildServer(ModDatagenDatapackBuiltinEntries(output, completableFuture, RegistrySetBuilder()))
 
 		val blockTag = DatagenBlockTag(output, completableFuture, existingFileHelper)
-		buildServer(event, generator, blockTag)
+		event.buildServer(blockTag)
 		buildServer(
 			event,
 			generator,
 			DatagenItemTag(output, completableFuture, blockTag.contentsGetter(), existingFileHelper)
 		)
 
-		buildClient(event, generator, DatagenParticle(output, existingFileHelper))
-		buildClient(event, generator, ZhCn(output))
-		buildClient(event, generator, DatagenItemModel(output, existingFileHelper))
+		event.buildClient(DatagenParticle(output, existingFileHelper))
+		event.buildClient(ZhCn(output))
+		event.buildClient(DatagenItemModel(output, existingFileHelper))
 	}
 
 	private fun <T : DataProvider> buildClient(event: GatherDataEvent, generator: DataGenerator, provider: T): T =
