@@ -17,19 +17,19 @@ object ParticleProvidersRegistry {
 	fun registry(event: RegisterParticleProvidersEvent) {
 		event.registerSpriteSet(
 			EGOEquipmentParticleTypes.DYEING_MAGIC_CIRCLE.get(),
-			DyeingMagicCircleParticle.Provider::new
+			DyeingMagicCircleParticle::Provider
 		)
 		event.registerSpriteSet(
 			EGOEquipmentParticleTypes.MAGIC_BULLET_MAGIC_CIRCLE.get(),
-			MagicBulletMagicCircleParticle.Provider::new
+			MagicBulletMagicCircleParticle::Provider
 		)
 		event.registerSpriteSet(
 			EGOEquipmentParticleTypes.SOLEMN_LAMENT_BUTTERFLY_BLACK.get(),
-			ButterflyParticle.Provider::new
+			ButterflyParticle::Provider
 		)
 		event.registerSpriteSet(
 			EGOEquipmentParticleTypes.SOLEMN_LAMENT_BUTTERFLY_WHITE.get(),
-			ButterflyParticle.Provider::new
+			ButterflyParticle::Provider
 		)
 	}
 }

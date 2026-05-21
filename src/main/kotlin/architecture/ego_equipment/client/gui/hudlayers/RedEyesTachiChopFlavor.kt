@@ -3,8 +3,7 @@ package architecture.ego_equipment.client.gui.hudlayers
 import architecture.ego_equipment.core.EGOEquipment
 import architecture.ego_equipment.init.EGOEquipmentMobEffects
 import architecture.goldenboughs_lib.client.gui.hudlayers.chop_flavor.ChopFlavorLayer
-import architecture.goldenboughs_lib.client.gui.widget.ImageProgressBar
-import com.mojang.blaze3d.vertex.PoseStack
+import architecture.goldenboughs_lib.client.gui.widget.ImageProgressBar.Companion.renderProgressBar
 import net.minecraft.client.DeltaTracker
 import net.minecraft.client.gui.GuiGraphics
 import net.minecraft.client.player.LocalPlayer
@@ -30,10 +29,11 @@ class RedEyesTachiChopFlavor : ChopFlavorLayer.ChopFlavorBar() {
 		pose.scale(2f, 2f, 2f)
 		pose.translate(-WIDTH.toFloat() / 2, 0f, 0f)
 
-		val player: LocalPlayer = ChopFlavorLayer.INSTANCE.playerThrow
+		val player: LocalPlayer = ChopFlavorLayer.INSTANCE.getPlayerThrow()
 		val effect = player.getEffect(EGOEquipmentMobEffects.RED_EYES_HUNTING)
 		guiGraphics.blitSprite(BOTTOM, 0, 0, WIDTH, HEIGHT)
 
+		// TODO
 		if (false) {
 			guiGraphics.setColor(2f, 2f, 2f, 1f)
 			guiGraphics.blitSprite(BOTTOM_GLOWMASK, 0, 0, WIDTH, HEIGHT)
@@ -51,8 +51,7 @@ class RedEyesTachiChopFlavor : ChopFlavorLayer.ChopFlavorBar() {
 		}
 
 		if (castSkill != 1) {
-			ImageProgressBar.renderProgressBar(
-				guiGraphics,
+			guiGraphics.renderProgressBar(
 				SCABBARD,
 				11,
 				0,
@@ -60,8 +59,8 @@ class RedEyesTachiChopFlavor : ChopFlavorLayer.ChopFlavorBar() {
 				0,
 				WIDTH,
 				HEIGHT,
-				value,
-				maxValue,
+				value.toFloat(),
+				maxValue.toFloat(),
 				false,
 				true
 			)
@@ -81,7 +80,7 @@ class RedEyesTachiChopFlavor : ChopFlavorLayer.ChopFlavorBar() {
 	}
 
 	override fun castSkill() {
-		val player: LocalPlayer = ChopFlavorLayer.INSTANCE.playerThrow
+		val player: LocalPlayer = ChopFlavorLayer.INSTANCE.getPlayerThrow()
 		val effect = player.getEffect(EGOEquipmentMobEffects.RED_EYES_HUNTING)
 		if (effect == null) {
 			castSkill = 1

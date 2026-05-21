@@ -4,9 +4,10 @@ import architecture.ego_equipment.core.EGOEquipment
 import architecture.ego_equipment.init.EGOEquipmentProjectileEntityTypes
 import architecture.goldenboughs_lib.api.LcDamageType
 import architecture.goldenboughs_lib.api.LcLevel
+import architecture.goldenboughs_lib.client.model.GeoModelExpand
 import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel
 import architecture.goldenboughs_lib.init.LibDamageTypes
-import architecture.goldenboughs_lib.util.RationalityUtil
+import architecture.goldenboughs_lib.util.RationalityUtil.modifyRationalityValue
 import net.minecraft.client.renderer.entity.EntityRendererProvider
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.network.syncher.SynchedEntityData
@@ -136,7 +137,7 @@ class ParadiseLostSpikeweed(
 		val value = livingentity.random.nextInt(2, 4 + 1)
 		livingentity.heal(value.toFloat())
 		if (livingentity is Player) {
-			RationalityUtil.modifyRationalityValue(livingentity, value.toFloat(), true, true)
+			livingentity.modifyRationalityValue(value.toFloat(), true, true)
 		}
 	}
 
@@ -157,8 +158,8 @@ class ParadiseLostSpikeweed(
 		livingentity: LivingEntity?
 	): DamageSource {
 		val source = damageSources().source(theSoul, this, livingentity)
-		source.goldenboughs_lib$setLcDamageType(LcDamageType.THE_SOUL)
-		source.goldenboughs_lib$setDamageLevel(LcLevel.ALEPH)
+		source.`goldenboughs_lib$setLcDamageType`(LcDamageType.THE_SOUL)
+		source.`goldenboughs_lib$setDamageLevel`(LcLevel.ALEPH)
 		return source
 	}
 
@@ -264,6 +265,6 @@ class ParadiseLostSpikeweed(
 		GeoEntityRenderer<ParadiseLostSpikeweed>(context, GeoEntityModel(EGOEquipment.modRl("paradise_lost_spikeweed"))) {
 
 		override fun getTextureLocation(animatable: ParadiseLostSpikeweed): ResourceLocation =
-			GeoEntityModel.texturePath(EGOEquipment.modRl("paradise_lost_spikeweed"))
+			GeoModelExpand.texturePath(EGOEquipment.modRl("paradise_lost_spikeweed"))
 	}
 }

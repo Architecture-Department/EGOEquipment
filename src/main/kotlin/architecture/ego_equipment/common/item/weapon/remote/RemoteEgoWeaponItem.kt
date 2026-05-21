@@ -10,7 +10,6 @@ import net.minecraft.world.InteractionHand
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.ai.attributes.Attributes
 import net.minecraft.world.entity.player.Player
-import net.minecraft.world.entity.projectile.AbstractArrow
 import net.minecraft.world.entity.projectile.Projectile
 import net.minecraft.world.item.*
 import net.minecraft.world.level.Level
@@ -34,15 +33,15 @@ abstract class RemoteEgoWeaponItem : ProjectileWeaponItem, IItemUsageReq, IRemot
 
 	override fun getDefaultProjectileRange(): Int = attackDistance.toInt()
 
-	open fun getDamage(entity: LivingEntity, itemStack: ItemStack, handUsed: InteractionHand): Float =
+	fun getDamage(entity: LivingEntity, itemStack: ItemStack, handUsed: InteractionHand): Float =
 		entity.getAttributeValue(Attributes.ATTACK_DAMAGE).toFloat()
 
-	open fun getProjectileRange(entity: LivingEntity, itemStack: ItemStack, handUsed: InteractionHand): Float =
+	fun getProjectileRange(entity: LivingEntity, itemStack: ItemStack, handUsed: InteractionHand): Float =
 		attackDistance
 
-	open fun getProjectileInaccuracy(entity: LivingEntity, itemStack: ItemStack, handUsed: InteractionHand): Float = 0f
+	fun getProjectileInaccuracy(entity: LivingEntity, itemStack: ItemStack, handUsed: InteractionHand): Float = 0f
 
-	open fun getProjectileVelocity(entity: LivingEntity, itemStack: ItemStack, handUsed: InteractionHand): Float = 10.0F
+	fun getProjectileVelocity(entity: LivingEntity, itemStack: ItemStack, handUsed: InteractionHand): Float = 10.0F
 
 	protected fun notConsumingShoot(
 		world: ServerLevel, shooterEntity: LivingEntity, handUsed: InteractionHand, weaponItem: ItemStack,
@@ -53,17 +52,17 @@ abstract class RemoteEgoWeaponItem : ProjectileWeaponItem, IItemUsageReq, IRemot
 		world.addFreshEntity(projectile)
 	}
 
-	protected open fun createProjectile(
+	protected fun createProjectile(
 		world: Level, shooterEntity: LivingEntity, weaponItem: ItemStack,
 		ammoItem: ItemStack?
 	): Projectile {
-		if (this.createProjectile != null) {
+		if (this.createProjectile != null && ammoItem != null) {
 			return this.createProjectile.createProjectile(world, shooterEntity, weaponItem, ammoItem)
 		}
 		val ammo1 = Items.ARROW.defaultInstance
 		val arrowitem = ammo1.item as? ArrowItem ?: Items.ARROW as ArrowItem
 		val abstractarrow = arrowitem.createArrow(world, ammo1, shooterEntity, weaponItem)
-		abstractarrow.setCritArrow(true)
+		abstractarrow.isCritArrow = true
 		return customArrow(abstractarrow, ammo1, weaponItem)
 	}
 
@@ -81,7 +80,7 @@ abstract class RemoteEgoWeaponItem : ProjectileWeaponItem, IItemUsageReq, IRemot
 
 	override fun createProjectile(
 		world: Level, shooterEntity: LivingEntity, weaponItem: ItemStack,
-		ammoItem: ItemStack?, isCrit: Boolean
+		ammoItem: ItemStack, isCrit: Boolean
 	): Projectile = if (this.createProjectile != null)
 		this.createProjectile.createProjectile(world, shooterEntity, weaponItem, ammoItem)
 	else

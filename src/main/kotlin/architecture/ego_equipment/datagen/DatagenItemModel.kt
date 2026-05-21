@@ -13,9 +13,8 @@ import net.neoforged.neoforge.client.model.generators.ItemModelBuilder
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider
 import net.neoforged.neoforge.client.model.generators.ModelFile
 import net.neoforged.neoforge.common.data.ExistingFileHelper
-import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
-import java.util.Objects
+import java.util.*
 
 class DatagenItemModel(output: PackOutput, existingFileHelper: ExistingFileHelper) :
 	ItemModelProvider(output, EGOEquipment.ID, existingFileHelper) {
@@ -44,10 +43,9 @@ class DatagenItemModel(output: PackOutput, existingFileHelper: ExistingFileHelpe
 	}
 
 	private fun withExistingParent(registry: DeferredRegister.Items, pathPrefix: String) {
-		registry.entries.map { it.id }.forEach { itemId ->
-			IModelBuilder.of(this.withExistingParent(itemId.path, "item/generated"))
-				.goldenboughs_lib$getTexture()
-			.put("layer0", itemId.withPrefix(pathPrefix).toString())
+		registry.entries.map { it.id }.forEach {
+			IModelBuilder.of(this.withExistingParent(it.path, "item/generated"))
+				.`goldenboughs_lib$getTexture`()["layer0"] = it.withPrefix(pathPrefix).toString()
 		}
 	}
 

@@ -25,7 +25,7 @@ object EGOEquipmentCreativeModeTabs {
 		"ego_armor", "E.G.O护甲"
 	) { name, zhCn ->
 		createCreativeModeTab(name, zhCn, { _, output -> addRegistryItem(EGOArmorItems.REGISTRY, output) }) {
-			EGOArmorItems.IN_THE_NAME_OF_LOVE_AND_HATE.chestplate.get().defaultInstance
+			EGOArmorItems.IN_THE_NAME_OF_LOVE_AND_HATE.chestplate!!.get().defaultInstance
 		}
 	}
 
@@ -34,7 +34,7 @@ object EGOEquipmentCreativeModeTabs {
 		zhCn: String,
 		builder: (String, String) -> CreativeModeTab.Builder
 	): DeferredHolder<CreativeModeTab, CreativeModeTab> =
-		REGISTRY.register(name) { builder(name, zhCn).build() }
+		REGISTRY.register(name) { -> builder(name, zhCn).build() }
 
 	@Suppress("unused")
 	private fun createCreativeModeTab(

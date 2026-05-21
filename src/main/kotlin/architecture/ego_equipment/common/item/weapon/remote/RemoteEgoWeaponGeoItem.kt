@@ -1,5 +1,6 @@
 package architecture.ego_equipment.common.item.weapon.remote
 
+import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
 import architecture.goldenboughs_lib.client.model.item.GeoItemModel
 import architecture.goldenboughs_lib.client.model.item.GuiGeoItemModel
 import architecture.goldenboughs_lib.client.renderer.GeoItemRenderProvider
@@ -10,6 +11,7 @@ import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.animation.AnimatableManager
 import software.bernie.geckolib.model.GeoModel
 import software.bernie.geckolib.util.GeckoLibUtil
+import java.util.function.Consumer
 
 abstract class RemoteEgoWeaponGeoItem : RemoteEgoWeaponItem, GeoItem {
 	private val cache: AnimatableInstanceCache = GeckoLibUtil.createInstanceCache(this)
@@ -18,13 +20,13 @@ abstract class RemoteEgoWeaponGeoItem : RemoteEgoWeaponItem, GeoItem {
 
 	constructor(
 		itemProperties: Properties,
-		egoWeaponBuilder: Builder,
+		egoWeaponBuilder: IRemoteEgoWeaponItem.Builder,
 		modPath: ResourceLocation
 	) : this(itemProperties, egoWeaponBuilder, GeoItemModel(modPath), GuiGeoItemModel(modPath))
 
 	constructor(
 		itemProperties: Properties,
-		egoWeaponBuilder: Builder,
+		egoWeaponBuilder: IRemoteEgoWeaponItem.Builder,
 		geoModel: GeoModel<RemoteEgoWeaponGeoItem>,
 		guiModel: GeoModel<RemoteEgoWeaponGeoItem>?
 	) : super(itemProperties, egoWeaponBuilder) {
@@ -32,8 +34,8 @@ abstract class RemoteEgoWeaponGeoItem : RemoteEgoWeaponItem, GeoItem {
 		this.guiModel = guiModel
 	}
 
-	override fun createGeoRenderer(rendererConsumer: (GeoRenderProvider) -> Unit) {
-		rendererConsumer(GeoItemRenderProvider(this.model, this.guiModel))
+	override fun createGeoRenderer(consumer: Consumer<GeoRenderProvider>) {
+		consumer.accept(GeoItemRenderProvider(this.model, this.guiModel))
 	}
 
 	override fun registerControllers(controllerRegistrar: AnimatableManager.ControllerRegistrar) {}

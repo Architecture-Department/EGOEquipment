@@ -8,7 +8,6 @@ import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem
 import architecture.goldenboughs_lib.client.renderer.GeoItemRenderProvider
 import architecture.goldenboughs_lib.mixin.world.entity.LivingEntityAccessorMixin
 import net.minecraft.resources.ResourceLocation
-import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.item.ItemStack
 import software.bernie.geckolib.animatable.client.GeoRenderProvider
@@ -16,6 +15,7 @@ import software.bernie.geckolib.animation.AnimatableManager
 import software.bernie.geckolib.animation.AnimationController
 import software.bernie.geckolib.animation.PlayState
 import software.bernie.geckolib.model.GeoModel
+import java.util.function.Consumer
 
 class RedEyesTachiItem : MeleeEgoWeaponGeoItem {
 	constructor(
@@ -42,8 +42,8 @@ class RedEyesTachiItem : MeleeEgoWeaponGeoItem {
 	}
 
 	@Suppress("UNCHECKED_CAST")
-	override fun createGeoRenderer(rendererConsumer: (GeoRenderProvider) -> Unit) {
-		rendererConsumer(
+	override fun createGeoRenderer(consumer: Consumer<GeoRenderProvider>) {
+		consumer.accept(
 			GeoItemRenderProvider(
 				model as GeoModel<RedEyesTachiItem>,
 				guiModel as GeoModel<RedEyesTachiItem>?,
@@ -66,10 +66,10 @@ class RedEyesTachiItem : MeleeEgoWeaponGeoItem {
 			val effectDuration = effect.duration
 			val increase = 10
 			val max = 100
-			(effect as MobEffectInstanceAccessorMixin).ego_equipment$setDuration(
+			(effect as MobEffectInstanceAccessorMixin).`ego_equipment$setDuration`(
 			(effectDuration + increase).coerceIn(0, Math.max(effectDuration, max))
 			)
-			(attacker as LivingEntityAccessorMixin).goldenboughs_lib$onEffectUpdated(effect, true, attacker)
+			(attacker as LivingEntityAccessorMixin).`goldenboughs_lib$onEffectUpdated`(effect, true, attacker)
 		}
 	}
 }

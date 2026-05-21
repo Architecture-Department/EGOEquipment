@@ -13,6 +13,7 @@ import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.animation.AnimatableManager
 import software.bernie.geckolib.model.GeoModel
 import software.bernie.geckolib.util.GeckoLibUtil
+import java.util.function.Consumer
 
 class AxeEgoWeaponGeoItem : AxeEgoWeaponItem, GeoItem {
 	private val cache: AnimatableInstanceCache = GeckoLibUtil.createInstanceCache(this)
@@ -38,8 +39,8 @@ class AxeEgoWeaponGeoItem : AxeEgoWeaponItem, GeoItem {
 	}
 
 	override fun registerControllers(controllerRegistrar: AnimatableManager.ControllerRegistrar) {}
-	override fun createGeoRenderer(rendererConsumer: (GeoRenderProvider) -> Unit) {
-		rendererConsumer(GeoItemRenderProvider(this.model, this.guiModel))
+	override fun createGeoRenderer(consumer: Consumer<GeoRenderProvider>) {
+		consumer.accept(GeoItemRenderProvider(this.model, this.guiModel))
 	}
 
 	override fun getAnimatableInstanceCache(): AnimatableInstanceCache = cache

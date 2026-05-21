@@ -5,9 +5,10 @@ import architecture.ego_equipment.core.EGOEquipment
 import architecture.ego_equipment.init.EGOEquipmentParticleTypes
 import architecture.ego_equipment.init.EGOEquipmentSoundEvents
 import architecture.goldenboughs_lib.api.LcDamageType
+import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
 import architecture.goldenboughs_lib.init.LibDamageSources
-import architecture.goldenboughs_lib.util.LcDamageTypeUtil
-import architecture.goldenboughs_lib.util.LcLevelUtil
+import architecture.goldenboughs_lib.util.LcDamageTypeUtil.getLcDamageType
+import architecture.goldenboughs_lib.util.LcLevelUtil.getLevel
 import net.minecraft.core.particles.SimpleParticleType
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.server.level.ServerLevel
@@ -20,10 +21,8 @@ import net.minecraft.world.entity.player.Player
 import net.minecraft.world.entity.projectile.ProjectileUtil
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.ClipContext
-import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.EntityHitResult
 import net.minecraft.world.phys.HitResult
-import net.minecraft.world.phys.Vec3
 import software.bernie.geckolib.model.GeoModel
 
 class SolemnLamentWeaponItem : GunEgoWeaponItem {
@@ -44,14 +43,14 @@ class SolemnLamentWeaponItem : GunEgoWeaponItem {
 
 	constructor(
 		itemProperties: Properties,
-		egoWeaponBuilder: Builder,
+		egoWeaponBuilder: IRemoteEgoWeaponItem.Builder,
 		geoModel: GeoModel<RemoteEgoWeaponGeoItem>,
 		guiModel: GeoModel<RemoteEgoWeaponGeoItem>?
 	) : super(itemProperties, egoWeaponBuilder, geoModel, guiModel)
 
 	constructor(
 		itemProperties: Properties,
-		egoWeaponBuilder: Builder,
+		egoWeaponBuilder: IRemoteEgoWeaponItem.Builder,
 		modPath: ResourceLocation
 	) : super(itemProperties, egoWeaponBuilder, modPath)
 
@@ -72,13 +71,13 @@ class SolemnLamentWeaponItem : GunEgoWeaponItem {
 		var isBlack = false
 		val hitResult = getHitResult(world, shooterEntity, handUsed, weaponItem)
 
-		val lcDamageColorDamageType = LcDamageTypeUtil.getLcDamageType(weaponItem)
+		val lcDamageColorDamageType = weaponItem.getLcDamageType()
 		if (hitResult is EntityHitResult) {
 			val entity = hitResult.entity
 			val damageSources = LibDamageSources.remoteDamage(shooterEntity)
-			damageSources.goldenboughs_lib$setWeaponItem(weaponItem)
-			damageSources.goldenboughs_lib$setDamageLevel(LcLevelUtil.getLevel(weaponItem))
-			damageSources.goldenboughs_lib$setLcDamageType(lcDamageColorDamageType)
+			damageSources.`goldenboughs_lib$setWeaponItem`(weaponItem)
+			damageSources.`goldenboughs_lib$setDamageLevel`(weaponItem.getLevel())
+			damageSources.`goldenboughs_lib$setLcDamageType`(lcDamageColorDamageType)
 			entity.hurt(damageSources, getDamage(shooterEntity, weaponItem, handUsed))
 		}
 

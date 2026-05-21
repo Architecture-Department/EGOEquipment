@@ -4,7 +4,7 @@ import architecture.ego_equipment.common.item.weapon.remote.gun.MagicBulletWeapo
 import architecture.ego_equipment.core.EGOEquipment
 import architecture.goldenboughs_lib.api.world.item.IGunWeapon
 import architecture.goldenboughs_lib.client.gui.hudlayers.BasicHudLayer
-import architecture.goldenboughs_lib.client.gui.widget.ImageProgressBar
+import architecture.goldenboughs_lib.client.gui.widget.ImageProgressBar.Companion.renderProgressBar
 import architecture.goldenboughs_lib.util.GunWeaponUtil
 import net.minecraft.client.AttackIndicatorStatus
 import net.minecraft.client.DeltaTracker
@@ -12,7 +12,6 @@ import net.minecraft.client.gui.GuiGraphics
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.entity.HumanoidArm
-import net.minecraft.world.item.Item
 
 class GunChargeUpHudLayer private constructor(
 	private val attackIndicatorStatus: AttackIndicatorStatus
@@ -41,8 +40,8 @@ class GunChargeUpHudLayer private constructor(
 	}
 
 	override fun renderDrawLayer(guiGraphics: GuiGraphics, deltaTracker: DeltaTracker) {
-		val mainHandItem = playerThrow.mainHandItem
-		val offHandItem = playerThrow.offhandItem
+		val mainHandItem = getPlayerThrow().mainHandItem
+		val offHandItem = getPlayerThrow().offhandItem
 		val mainHandItemItem = mainHandItem.item
 		val offHandItemItem = offHandItem.item
 		val isMainArmRight = humanoidArm == HumanoidArm.RIGHT
@@ -54,12 +53,12 @@ class GunChargeUpHudLayer private constructor(
 					val x = leftPos + (if (isMainArmRight) -16 / 2 + 15 else -16 / 2 - 15)
 					guiGraphics.blitSprite(REMOTE_BOTTOM, x, y, 16, 16)
 					val texture = if (mainHandItemItem is MagicBulletWeaponItem) REMOTE_MAGIC_BULLET else REMOTE_GUN
-					ImageProgressBar.renderProgressBar(guiGraphics, texture, x, y, 16, 16, mainHandValue, 1, true, true)
+					guiGraphics.renderProgressBar(texture, x, y, 16, 16, mainHandValue, 1f, true, true)
 				}
 				if (offHandValue > 0 && !offHandItem.isEmpty && offHandItemItem is IGunWeapon) {
 					val x = leftPos + (if (!isMainArmRight) -16 / 2 + 15 else -16 / 2 - 15)
 					guiGraphics.blitSprite(REMOTE_BOTTOM, x, y, 16, 16)
-					ImageProgressBar.renderProgressBar(guiGraphics, REMOTE_GUN, x, y, 16, 16, offHandValue, 1, true, true)
+					guiGraphics.renderProgressBar(REMOTE_GUN, x, y, 16, 16, offHandValue, 1f, true, true)
 				}
 			}
 
@@ -68,12 +67,12 @@ class GunChargeUpHudLayer private constructor(
 					val x = leftPos + (if (!isMainArmRight) -91 - 29 else 91)
 					guiGraphics.blitSprite(BIG_REMOTE_BOTTOM, x, y, 32, 32)
 					val texture = if (mainHandItemItem is MagicBulletWeaponItem) BIG_REMOTE_MAGIC_BULLET else BIG_REMOTE_GUN
-					ImageProgressBar.renderProgressBar(guiGraphics, texture, x, y, 32, 32, mainHandValue, 1, true, true)
+					guiGraphics.renderProgressBar(texture, x, y, 32, 32, mainHandValue, 1f, true, true)
 				}
 				if (offHandValue > 0 && !offHandItem.isEmpty && offHandItemItem is IGunWeapon) {
 					val x = leftPos + (if (isMainArmRight) -91 - 29 else 91)
 					guiGraphics.blitSprite(BIG_REMOTE_BOTTOM, x, y, 32, 32)
-					ImageProgressBar.renderProgressBar(guiGraphics, BIG_REMOTE_GUN, x, y, 32, 32, offHandValue, 1, true, true)
+					guiGraphics.renderProgressBar(BIG_REMOTE_GUN, x, y, 32, 32, offHandValue, 1f, true, true)
 				}
 			}
 
@@ -84,17 +83,17 @@ class GunChargeUpHudLayer private constructor(
 	override fun init(guiGraphics: GuiGraphics, deltaTracker: DeltaTracker) {
 		super.init(guiGraphics, deltaTracker)
 
-		val mainVal = GunWeaponUtil.getChargeUpPercentage(playerThrow, InteractionHand.MAIN_HAND)
+		val mainVal = GunWeaponUtil.getChargeUpPercentage(getPlayerThrow(), InteractionHand.MAIN_HAND)
 		if (mainHandValue != mainVal) {
 			mainHandValue = mainVal
 		}
 
-		val offVal = GunWeaponUtil.getChargeUpPercentage(playerThrow, InteractionHand.OFF_HAND)
+		val offVal = GunWeaponUtil.getChargeUpPercentage(getPlayerThrow(), InteractionHand.OFF_HAND)
 		if (offHandValue != offVal) {
 			offHandValue = offVal
 		}
 
-		val mainArm = playerThrow.mainArm
+		val mainArm = getPlayerThrow().mainArm
 		if (mainArm != humanoidArm) {
 			humanoidArm = mainArm
 		}

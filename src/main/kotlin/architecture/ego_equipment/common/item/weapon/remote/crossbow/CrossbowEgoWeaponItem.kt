@@ -6,7 +6,6 @@ import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.entity.LivingEntity
-import net.minecraft.world.entity.projectile.AbstractArrow
 import net.minecraft.world.entity.projectile.Projectile
 import net.minecraft.world.item.ArrowItem
 import net.minecraft.world.item.CrossbowItem
@@ -14,7 +13,7 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Items
 import net.minecraft.world.level.Level
 
-open class CrossbowEgoWeaponItem(
+class CrossbowEgoWeaponItem(
 	itemProperties: Properties,
 	builder: IRemoteEgoWeaponItem.Builder
 ) : CrossbowItem(IEgoWeaponItem.add(itemProperties, builder)), IRemoteEgoWeaponItem {
@@ -28,7 +27,7 @@ open class CrossbowEgoWeaponItem(
 	override fun createProjectile(
 		world: Level, shooterEntity: LivingEntity, weaponItem: ItemStack,
 		ammoItem: ItemStack?, isCrit: Boolean
-	): Projectile = if (this.createProjectile != null)
+	): Projectile = if (this.createProjectile != null && ammoItem != null)
 		this.createProjectile.createProjectile(world, shooterEntity, weaponItem, ammoItem)
 	else
 		super.createProjectile(world, shooterEntity, weaponItem, Items.ARROW.defaultInstance, isCrit)
@@ -42,17 +41,17 @@ open class CrossbowEgoWeaponItem(
 		world.addFreshEntity(projectile)
 	}
 
-	protected open fun createProjectile(
+	protected fun createProjectile(
 		world: Level, shooterEntity: LivingEntity, weaponItem: ItemStack,
 		ammoItem: ItemStack?
 	): Projectile {
-		if (this.createProjectile != null) {
+		if (this.createProjectile != null && ammoItem != null) {
 			return this.createProjectile.createProjectile(world, shooterEntity, weaponItem, ammoItem)
 		}
 		val ammo1 = Items.ARROW.defaultInstance
 		val arrowitem = ammo1.item as? ArrowItem ?: Items.ARROW as ArrowItem
 		val abstractarrow = arrowitem.createArrow(world, ammo1, shooterEntity, weaponItem)
-		abstractarrow.setCritArrow(true)
+		abstractarrow.isCritArrow = true
 		return customArrow(abstractarrow, ammo1, weaponItem)
 	}
 

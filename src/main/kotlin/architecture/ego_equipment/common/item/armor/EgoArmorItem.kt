@@ -19,8 +19,9 @@ import software.bernie.geckolib.animatable.client.GeoRenderProvider
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.animation.AnimatableManager
 import software.bernie.geckolib.util.GeckoLibUtil
+import java.util.function.Consumer
 
-open class EgoArmorItem(
+class EgoArmorItem(
 	armorMaterial: Holder<ArmorMaterial>,
 	armorType: Type,
 	itemProperties: Properties,
@@ -38,8 +39,8 @@ open class EgoArmorItem(
 
 	override fun registerControllers(controllerRegistrar: AnimatableManager.ControllerRegistrar) {}
 
-	override fun createGeoRenderer(consumer: (GeoRenderProvider) -> Unit) {
-		consumer(renderProvider)
+	override fun createGeoRenderer(consumer: Consumer<GeoRenderProvider>) {
+		consumer.accept(renderProvider)
 	}
 
 	override fun getAnimatableInstanceCache(): AnimatableInstanceCache = cache
@@ -93,7 +94,7 @@ open class EgoArmorItem(
 				attributeBuilder,
 				Attributes.ARMOR,
 				id,
-				armorMaterial.getDefense(armorType),
+				armorMaterial.getDefense(armorType).toDouble(),
 				AttributeModifier.Operation.ADD_VALUE,
 				equipmentSlotGroup
 			)
@@ -101,7 +102,7 @@ open class EgoArmorItem(
 				attributeBuilder,
 				Attributes.ARMOR_TOUGHNESS,
 				id,
-				armorMaterial.toughness(),
+				armorMaterial.toughness().toDouble(),
 				AttributeModifier.Operation.ADD_VALUE,
 				equipmentSlotGroup
 			)
@@ -109,7 +110,7 @@ open class EgoArmorItem(
 				attributeBuilder,
 				Attributes.KNOCKBACK_RESISTANCE,
 				id,
-				armorMaterial.knockbackResistance(),
+				armorMaterial.knockbackResistance().toDouble(),
 				AttributeModifier.Operation.ADD_VALUE,
 				equipmentSlotGroup
 			)

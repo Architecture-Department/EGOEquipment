@@ -13,7 +13,7 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.item.ItemDisplayContext
 import net.minecraft.world.item.ItemStack
-import software.bernie.geckolib.cache.object.BakedGeoModel
+import software.bernie.geckolib.cache.`object`.BakedGeoModel
 import software.bernie.geckolib.model.GeoModel
 import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer
 
@@ -35,7 +35,7 @@ class RedEyesTachiItemWeaponRenderer(
 	init {
 		val weaponRenderer = this
 		addRenderLayer(object : AutoGlowingGeoLayer<RedEyesTachiItem>(this) {
-			override fun getRenderType(animatable: RedEyesTachiItem, bufferSource: MultiBufferSource?): RenderType {
+			override fun getRenderType(animatable: RedEyesTachiItem, bufferSource: MultiBufferSource?): RenderType? {
 				if (weaponRenderer.renderPerspective != ItemDisplayContext.GUI) {
 					return RenderType.eyes(GLOWMASK_TEXTURE)
 				}
@@ -76,8 +76,13 @@ class RedEyesTachiItemWeaponRenderer(
 	}
 
 	override fun renderByItem(
-		livingEntity: LivingEntity?, itemStack: ItemStack, displayContext: ItemDisplayContext,
-		poseStack: PoseStack, bufferSource: MultiBufferSource, combinedLight: Int, combinedOverlay: Int
+		livingEntity: LivingEntity,
+		itemStack: ItemStack,
+		displayContext: ItemDisplayContext,
+		poseStack: PoseStack,
+		bufferSource: MultiBufferSource,
+		combinedLight: Int,
+		combinedOverlay: Int
 	) {
 		extracted(livingEntity, displayContext)
 		super.renderByItem(livingEntity, itemStack, displayContext, poseStack, bufferSource, combinedLight, combinedOverlay)

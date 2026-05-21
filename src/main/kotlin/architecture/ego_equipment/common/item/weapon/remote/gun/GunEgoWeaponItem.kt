@@ -3,6 +3,7 @@ package architecture.ego_equipment.common.item.weapon.remote.gun
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem
 import architecture.goldenboughs_lib.api.DelayTaskHolder
 import architecture.goldenboughs_lib.api.world.item.IGunWeapon
+import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
 import architecture.goldenboughs_lib.util.GunWeaponUtil
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.server.level.ServerLevel
@@ -21,14 +22,14 @@ abstract class GunEgoWeaponItem : RemoteEgoWeaponGeoItem, IGunWeapon {
 
 	constructor(
 		itemProperties: Properties,
-		egoWeaponBuilder: Builder,
+		egoWeaponBuilder: IRemoteEgoWeaponItem.Builder,
 		geoModel: GeoModel<RemoteEgoWeaponGeoItem>,
 		guiModel: GeoModel<RemoteEgoWeaponGeoItem>?
 	) : super(itemProperties, egoWeaponBuilder, geoModel, guiModel)
 
 	constructor(
 		itemProperties: Properties,
-		egoWeaponBuilder: Builder,
+		egoWeaponBuilder: IRemoteEgoWeaponItem.Builder,
 		modPath: ResourceLocation
 	) : super(itemProperties, egoWeaponBuilder, modPath)
 
@@ -69,7 +70,7 @@ abstract class GunEgoWeaponItem : RemoteEgoWeaponGeoItem, IGunWeapon {
 
 	override fun isGunAim(player: Player, itemStack: ItemStack): Boolean = false
 
-	protected open fun gunAim(playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand) {
+	protected fun gunAim(playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand) {
 		GunWeaponUtil.resetChargeUp(playerEntity, handUsed)
 		GunWeaponUtil.setIsAttack(playerEntity, true, handUsed)
 	}
@@ -84,7 +85,7 @@ abstract class GunEgoWeaponItem : RemoteEgoWeaponGeoItem, IGunWeapon {
 		onStopUsing(stack, entity)
 	}
 
-	protected open fun onStopUsing(stack: ItemStack, entity: LivingEntity) {
+	protected fun onStopUsing(stack: ItemStack, entity: LivingEntity) {
 		if (entity !is ServerPlayer) {
 			return
 		}
@@ -93,7 +94,7 @@ abstract class GunEgoWeaponItem : RemoteEgoWeaponGeoItem, IGunWeapon {
 		}
 	}
 
-	protected open fun gunEndAim(playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand) {
+	protected fun gunEndAim(playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand) {
 		GunWeaponUtil.setIsAttack(playerEntity, true, handUsed)
 		GunWeaponUtil.resetChargeUp(playerEntity, handUsed)
 	}
@@ -117,11 +118,11 @@ abstract class GunEgoWeaponItem : RemoteEgoWeaponGeoItem, IGunWeapon {
 		return gunAimShootExecute(playerEntity, itemStack, handUsed, chargeUpPercentage)
 	}
 
-	protected open fun gunBasEAimShootCondition(
+	protected fun gunBasEAimShootCondition(
 		playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand, chargeUpPercentage: Float
 	): Boolean = chargeUpPercentage >= 1f
 
-	protected open fun gunAimShootExecute(
+	protected fun gunAimShootExecute(
 		playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand, chargeUpPercentage: Float
 	): Boolean {
 		if (playerEntity.level() is ServerLevel) {
@@ -163,7 +164,7 @@ abstract class GunEgoWeaponItem : RemoteEgoWeaponGeoItem, IGunWeapon {
 		projectile.shootFromRotation(shooter, shooter.xRot, shooter.yRot + angle, 0.0F, velocity, inaccuracy)
 	}
 
-	protected open fun onProjectileShot(
+	protected fun onProjectileShot(
 		stack: ItemStack,
 		shooter: LivingEntity,
 		hand: InteractionHand,
@@ -171,7 +172,7 @@ abstract class GunEgoWeaponItem : RemoteEgoWeaponGeoItem, IGunWeapon {
 	) {
 	}
 
-	protected open fun getProjectileFactory(): ProjectileFactory? = null
+	protected fun getProjectileFactory(): ProjectileFactory? = null
 
 	override fun gunShoot(playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand): Boolean {
 		val chargeUpPercentage = GunWeaponUtil.getChargeUpPercentage(playerEntity, handUsed)
@@ -197,7 +198,7 @@ abstract class GunEgoWeaponItem : RemoteEgoWeaponGeoItem, IGunWeapon {
 		return true
 	}
 
-	protected open fun gunShootExecute(
+	protected fun gunShootExecute(
 		playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand, serverLevel: ServerLevel
 	): Int {
 		val factory = getProjectileFactory()
@@ -220,7 +221,7 @@ abstract class GunEgoWeaponItem : RemoteEgoWeaponGeoItem, IGunWeapon {
 		return 0
 	}
 
-	protected open fun gunShootCondition(
+	protected fun gunShootCondition(
 		playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand, chargeUpPercentage: Float
 	): Boolean = GunWeaponUtil.isAttack(playerEntity, handUsed)
 

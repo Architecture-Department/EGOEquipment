@@ -7,7 +7,7 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.SwordItem
 import net.minecraft.world.item.Tier
 
-open class SwordsEgoWeaponItem(
+class SwordsEgoWeaponItem(
 	tier: Tier,
 	itemProperties: Properties,
 	builder: IMeleeEgoWeaponItem.Builder

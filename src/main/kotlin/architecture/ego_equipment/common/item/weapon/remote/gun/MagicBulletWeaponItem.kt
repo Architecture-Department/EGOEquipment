@@ -3,6 +3,7 @@ package architecture.ego_equipment.common.item.weapon.remote.gun
 import architecture.ego_equipment.common.entity.projectile.MagicBulletEntity
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem
 import architecture.ego_equipment.core.EGOEquipment
+import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
 import architecture.goldenboughs_lib.util.GunWeaponUtil
 import architecture.goldenboughs_lib.util.PiercingUtil
 import net.minecraft.resources.ResourceLocation
@@ -30,14 +31,14 @@ class MagicBulletWeaponItem : GunEgoWeaponItem {
 
 	constructor(
 		itemProperties: Properties,
-		egoWeaponBuilder: Builder,
+		egoWeaponBuilder: IRemoteEgoWeaponItem.Builder,
 		geoModel: GeoModel<RemoteEgoWeaponGeoItem>,
 		guiModel: GeoModel<RemoteEgoWeaponGeoItem>?
 	) : super(itemProperties, egoWeaponBuilder, geoModel, guiModel)
 
 	constructor(
 		itemProperties: Properties,
-		egoWeaponBuilder: Builder,
+		egoWeaponBuilder: IRemoteEgoWeaponItem.Builder,
 		modPath: ResourceLocation
 	) : super(itemProperties, egoWeaponBuilder, modPath)
 
@@ -80,9 +81,6 @@ class MagicBulletWeaponItem : GunEgoWeaponItem {
 		}
 		super.gunEndAim(playerEntity, itemStack, handUsed)
 	}
-
-	override fun gunShootExecuteTick(player: Player, stack: ItemStack, handUsed: InteractionHand): Int =
-		super.gunShootExecuteTick(player, stack, handUsed)
 
 	override fun getProjectileFactory(): ProjectileFactory = ProjectileFactory { level, shooter, itemStack, handUsed ->
 		val magicBullet = MagicBulletEntity(level, shooter)

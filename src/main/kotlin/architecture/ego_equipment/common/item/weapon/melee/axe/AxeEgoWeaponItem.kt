@@ -7,7 +7,7 @@ import net.minecraft.world.item.AxeItem
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Tier
 
-open class AxeEgoWeaponItem(
+class AxeEgoWeaponItem(
 	tier: Tier,
 	itemProperties: Properties,
 	builder: IMeleeEgoWeaponItem.Builder

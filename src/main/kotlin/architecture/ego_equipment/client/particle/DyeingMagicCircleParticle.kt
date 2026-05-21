@@ -1,6 +1,7 @@
 package architecture.ego_equipment.client.particle
 
 import architecture.ego_equipment.init.EGOEquipmentParticleTypes
+import architecture.goldenboughs_lib.api.AllOpe
 import architecture.goldenboughs_lib.client.LibParticleRenderTypes
 import com.mojang.blaze3d.vertex.VertexConsumer
 import com.mojang.serialization.Codec
@@ -19,28 +20,35 @@ import net.minecraft.network.codec.StreamCodec
 import net.minecraft.util.Mth
 import org.joml.Quaternionf
 
-open class DyeingMagicCircleParticle(
-	sprite: TextureAtlasSprite,
-	level: ClientLevel,
-	x: Double, y: Double, z: Double,
-	var xRot: Float,
-	var yRot: Float,
-	var color: Int,
-	radius: Float,
-	particleLifeTime: Int
-) : TextureSheetParticle(level, x, y, z) {
+open class DyeingMagicCircleParticle : TextureSheetParticle {
 
-	init {
+	var xRot: Float
+	var yRot: Float
+	var color: Int = 0xFFFFFF
+		set(value) {
+			field = value
+			setColor((value shl 24).toFloat(), (value shl 16).toFloat(), (value shl 8).toFloat())
+		}
+
+	constructor(
+		sprite: TextureAtlasSprite,
+		level: ClientLevel,
+		x: Double,
+		y: Double,
+		z: Double,
+		xRot: Float,
+		yRot: Float,
+		color: Int,
+		radius: Float,
+		particleLifeTime: Int
+	) : super(level, x, y, z) {
+		this.xRot = xRot
+		this.yRot = yRot
+		this.color = color
 		lifetime = particleLifeTime
 		setSprite(sprite)
 		quadSize = radius
 		setSize(radius, radius)
-		setColor(color)
-	}
-
-	fun setColor(color: Int) {
-		this.color = color
-		setColor(color shl 24, color shl 16, color shl 8)
 	}
 
 	override fun render(buffer: VertexConsumer, renderInfo: Camera, partialTicks: Float) {
@@ -54,6 +62,7 @@ open class DyeingMagicCircleParticle(
 
 	override fun getRenderType(): ParticleRenderType = LibParticleRenderTypes.MAGIC_CIRCLE_PARTICLE
 
+	@AllOpe
 	open class Builder(
 		protected val xRot: Float,
 		protected val yRot: Float
@@ -81,6 +90,7 @@ open class DyeingMagicCircleParticle(
 			Options(this.xRot, this.yRot, this.color, this.radius, this.particleLifeTime, index)
 	}
 
+	@AllOpe
 	data class Options(
 		val xRot: Float, val yRot: Float, val color: Int,
 		val radius: Float, val particleLifeTime: Int, val index: Int
@@ -108,7 +118,7 @@ open class DyeingMagicCircleParticle(
 			)
 		}
 
-		override fun getType(): ParticleType<Options> = EGOEquipmentParticleTypes.DYEING_MAGIC_CIRCLE.get()
+		override fun getType(): ParticleType<*> = EGOEquipmentParticleTypes.DYEING_MAGIC_CIRCLE.get()
 	}
 
 	open class Provider(private val sprite: SpriteSet) : ParticleProvider<Options> {

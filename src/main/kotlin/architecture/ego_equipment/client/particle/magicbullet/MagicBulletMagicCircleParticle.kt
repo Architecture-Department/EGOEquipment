@@ -12,7 +12,6 @@ import net.minecraft.client.particle.ParticleEngine
 import net.minecraft.client.particle.ParticleProvider
 import net.minecraft.client.particle.SpriteSet
 import net.minecraft.client.renderer.texture.TextureAtlasSprite
-import net.minecraft.core.particles.ParticleOptions
 import net.minecraft.core.particles.ParticleType
 import net.minecraft.network.codec.ByteBufCodecs
 import net.minecraft.network.codec.StreamCodec
@@ -41,10 +40,20 @@ class MagicBulletMagicCircleParticle(
 			Options(this.xRot, this.yRot, this.radius, this.particleLifeTime, index)
 	}
 
-	data class Options(
-		val xRot: Float, val yRot: Float, val radius: Float,
-		val particleLifeTime: Int, val index: Int
-	) : ParticleOptions {
+	class Options(
+		override val xRot: Float,
+		override val yRot: Float,
+		override val radius: Float,
+		override val particleLifeTime: Int,
+		override val index: Int
+	) : DyeingMagicCircleParticle.Options(
+		xRot,
+		yRot,
+		-1,
+		radius,
+		particleLifeTime, index
+	) {
+
 		companion object {
 			val CODEC: MapCodec<Options> = RecordCodecBuilder.mapCodec { instance ->
 				instance.group(
@@ -66,7 +75,7 @@ class MagicBulletMagicCircleParticle(
 			)
 		}
 
-		override fun getType(): ParticleType<Options> = EGOEquipmentParticleTypes.MAGIC_BULLET_MAGIC_CIRCLE.get()
+		override fun getType(): ParticleType<*> = EGOEquipmentParticleTypes.MAGIC_BULLET_MAGIC_CIRCLE.get()
 	}
 
 	class Provider(sprite: SpriteSet) : ParticleProvider<Options> {

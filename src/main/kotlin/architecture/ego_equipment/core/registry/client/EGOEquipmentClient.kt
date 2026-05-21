@@ -11,11 +11,14 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent
 import net.neoforged.neoforge.client.gui.ConfigurationScreen
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory
 
-@Mod(value = [EGOEquipment.ID], dist = [Dist.CLIENT])
+@Mod(value = EGOEquipment.ID, dist = [Dist.CLIENT])
 @EventBusSubscriber(modid = EGOEquipment.ID, value = [Dist.CLIENT])
 class EGOEquipmentClient(container: ModContainer) {
 	init {
-		container.registerExtensionPoint(IConfigScreenFactory::class.java, ConfigurationScreen::new)
+		container.registerExtensionPoint(
+			IConfigScreenFactory::class.java,
+			IConfigScreenFactory(::ConfigurationScreen)
+		)
 	}
 
 	companion object {

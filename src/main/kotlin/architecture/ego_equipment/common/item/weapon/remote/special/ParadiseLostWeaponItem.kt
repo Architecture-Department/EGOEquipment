@@ -2,9 +2,9 @@ package architecture.ego_equipment.common.item.weapon.remote.special
 
 import architecture.ego_equipment.common.entity.projectile.ParadiseLostSpikeweed
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem
+import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
 import net.minecraft.client.Minecraft
 import net.minecraft.core.BlockPos
-import net.minecraft.nbt.CompoundTag
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.world.InteractionHand
@@ -15,9 +15,7 @@ import net.minecraft.world.entity.player.Player
 import net.minecraft.world.entity.projectile.Projectile
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.Level
-import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.phys.AABB
-import net.minecraft.world.phys.Vec3
 import net.minecraft.world.phys.shapes.VoxelShape
 import software.bernie.geckolib.model.GeoModel
 
@@ -155,14 +153,14 @@ class ParadiseLostWeaponItem : RemoteEgoWeaponGeoItem {
 
 	constructor(
 		itemProperties: Properties,
-		egoWeaponBuilder: Builder,
+		egoWeaponBuilder: IRemoteEgoWeaponItem.Builder,
 		geoModel: GeoModel<RemoteEgoWeaponGeoItem>,
 		guiModel: GeoModel<RemoteEgoWeaponGeoItem>?
 	) : super(itemProperties, egoWeaponBuilder, geoModel, guiModel)
 
 	constructor(
 		itemProperties: Properties,
-		egoWeaponBuilder: Builder,
+		egoWeaponBuilder: IRemoteEgoWeaponItem.Builder,
 		modPath: ResourceLocation
 	) : super(itemProperties, egoWeaponBuilder, modPath)
 

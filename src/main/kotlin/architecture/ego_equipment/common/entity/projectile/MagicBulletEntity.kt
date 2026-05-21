@@ -11,7 +11,6 @@ import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.level.Level
 import net.minecraft.world.phys.BlockHitResult
 import net.minecraft.world.phys.EntityHitResult
-import net.minecraft.world.phys.Vec3
 
 class MagicBulletEntity : BulletEntity {
 	private var damage: Float = 0f
@@ -82,7 +81,7 @@ class MagicBulletEntity : BulletEntity {
 
 	override fun tick() {
 		val config = PiercingUtil.getPiercingConfig(this)
-		if (config != null && config.isWallPassThroughEnabled()) {
+		if (config != null && config.isWallPassThroughEnabled) {
 			noPhysics = true
 		}
 		flyingTicks++
@@ -121,7 +120,7 @@ class MagicBulletEntity : BulletEntity {
 
 	override fun onHitBlock(result: BlockHitResult) {
 		val config = PiercingUtil.getPiercingConfig(this)
-		if (config != null && config.isWallPassThroughEnabled()) {
+		if (config != null && config.isWallPassThroughEnabled) {
 			return
 		}
 		super.onHitBlock(result)

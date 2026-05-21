@@ -40,7 +40,7 @@ object EGOEquipmentSoundEvents {
 	)
 
 	private fun registerForHolder(id: String, zhName: String, location: String): DeferredHolder<SoundEvent, SoundEvent> {
-		val register = REGISTRY.register(id) { SoundEvent.createVariableRangeEvent(EGOEquipment.modRl(location)) }
+		val register = REGISTRY.register(id) { -> SoundEvent.createVariableRangeEvent(EGOEquipment.modRl(location)) }
 		ZhCn.addI18nSoundEventText(zhName, register)
 		return register
 	}

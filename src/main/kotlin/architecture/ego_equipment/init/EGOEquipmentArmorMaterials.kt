@@ -11,7 +11,7 @@ import net.minecraft.world.item.ArmorMaterial
 import net.minecraft.world.item.Items
 import net.minecraft.world.item.crafting.Ingredient
 import net.neoforged.neoforge.registries.DeferredRegister
-import java.util.EnumMap
+import java.util.*
 
 object EGOEquipmentArmorMaterials {
 	val REGISTRY: DeferredRegister<ArmorMaterial> = EGOEquipment.modRegister(BuiltInRegistries.ARMOR_MATERIAL)
@@ -77,11 +77,11 @@ object EGOEquipmentArmorMaterials {
 		equipSound: Holder<SoundEvent>, toughness: Float, knockbackResistance: Float,
 		repairIngridient: () -> Ingredient, layers: List<ArmorMaterial.Layer>
 	): Holder<ArmorMaterial> {
-		val enummap = EnumMap(ArmorItem.Type::class.java)
+		val enummap = EnumMap<ArmorItem.Type, Int>(ArmorItem.Type::class.java)
 		for (armoritemType in ArmorItem.Type.entries) {
 			enummap[armoritemType] = defense[armoritemType]
 		}
-		return REGISTRY.register(id) {
+		return REGISTRY.register(id) { ->
 			ArmorMaterial(enummap, enchantmentValue, equipSound, repairIngridient, layers, toughness, knockbackResistance)
 		}
 	}

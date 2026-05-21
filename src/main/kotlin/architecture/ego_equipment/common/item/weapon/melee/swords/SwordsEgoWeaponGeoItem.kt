@@ -13,10 +13,15 @@ import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.animation.AnimatableManager
 import software.bernie.geckolib.model.GeoModel
 import software.bernie.geckolib.util.GeckoLibUtil
+import java.util.function.Consumer
 
-class SwordsEgoWeaponGeoItem : SwordsEgoWeaponItem, GeoItem {
-	protected val model: GeoModel<MeleeEgoWeaponGeoItem>
-	protected val guiModel: GeoModel<MeleeEgoWeaponGeoItem>?
+class SwordsEgoWeaponGeoItem(
+	tier: Tier,
+	itemProperties: Properties,
+	egoWeaponBuilder: IMeleeEgoWeaponItem.Builder,
+	val model: GeoModel<MeleeEgoWeaponGeoItem>,
+	val guiModel: GeoModel<MeleeEgoWeaponGeoItem>?
+) : SwordsEgoWeaponItem(tier, itemProperties, egoWeaponBuilder), GeoItem {
 	private val cache: AnimatableInstanceCache = GeckoLibUtil.createInstanceCache(this)
 
 	constructor(
@@ -26,20 +31,9 @@ class SwordsEgoWeaponGeoItem : SwordsEgoWeaponItem, GeoItem {
 		modPath: ResourceLocation
 	) : this(tier, itemProperties, egoWeaponBuilder, GeoItemModel(modPath), GuiGeoItemModel(modPath))
 
-	constructor(
-		tier: Tier,
-		itemProperties: Properties,
-		egoWeaponBuilder: IMeleeEgoWeaponItem.Builder,
-		geoModel: GeoModel<MeleeEgoWeaponGeoItem>,
-		guiModel: GeoModel<MeleeEgoWeaponGeoItem>?
-	) : super(tier, itemProperties, egoWeaponBuilder) {
-		this.model = geoModel
-		this.guiModel = guiModel
-	}
-
 	override fun registerControllers(controllerRegistrar: AnimatableManager.ControllerRegistrar) {}
-	override fun createGeoRenderer(rendererConsumer: (GeoRenderProvider) -> Unit) {
-		rendererConsumer(GeoItemRenderProvider(this.model, this.guiModel))
+	override fun createGeoRenderer(consumer: Consumer<GeoRenderProvider>) {
+		consumer.accept(GeoItemRenderProvider(this.model, this.guiModel))
 	}
 
 	override fun getAnimatableInstanceCache(): AnimatableInstanceCache = cache

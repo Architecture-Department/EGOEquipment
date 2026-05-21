@@ -8,15 +8,16 @@ import net.minecraft.world.entity.EntityType
 import net.minecraft.world.item.Item
 import net.neoforged.fml.loading.FMLEnvironment
 import org.jetbrains.annotations.ApiStatus
+import java.util.function.Supplier
 
 @ApiStatus.Internal
 class ZhCn(output: PackOutput) : DatagenI18n(output, EGOEquipment.ID, "zh_cn") {
 
 	companion object {
-		private val ITEMS: MutableMap<() -> Item, String> = HashMap()
-		private val SOUND_EVENT: MutableMap<() -> SoundEvent, String> = HashMap()
+		private val ITEMS: MutableMap<Supplier<out Item>, String> = HashMap()
+		private val SOUND_EVENT: MutableMap<Supplier<out SoundEvent>, String> = HashMap()
 		private val MAP: MutableMap<String, String> = HashMap()
-		private val ENTITY: MutableMap<() -> EntityType<*>, String> = HashMap()
+		private val ENTITY: MutableMap<Supplier<out EntityType<*>>, String> = HashMap()
 
 		@JvmStatic
 		fun addI18nText(zhCn: String, key: String) {
@@ -26,21 +27,21 @@ class ZhCn(output: PackOutput) : DatagenI18n(output, EGOEquipment.ID, "zh_cn") {
 		}
 
 		@JvmStatic
-		fun addI18nItemText(zhName: String, deferredItem: () -> Item) {
+		fun addI18nItemText(zhName: String, deferredItem: Supplier<out Item>) {
 			if (!FMLEnvironment.production) {
 				ITEMS[deferredItem] = zhName
 			}
 		}
 
 		@JvmStatic
-		fun addI18nSoundEventText(zhName: String, supplier: () -> SoundEvent) {
+		fun addI18nSoundEventText(zhName: String, supplier: Supplier<out SoundEvent>) {
 			if (!FMLEnvironment.production) {
 				SOUND_EVENT[supplier] = zhName
 			}
 		}
 
 		@JvmStatic
-		fun addI18nEntityTypeText(zhName: String, supplier: () -> EntityType<*>) {
+		fun addI18nEntityTypeText(zhName: String, supplier: Supplier<out EntityType<*>>) {
 			if (!FMLEnvironment.production) {
 				ENTITY[supplier] = zhName
 			}
