@@ -13,7 +13,6 @@ import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent
 @EventBusSubscriber(modid = EGOEquipment.ID, value = [Dist.CLIENT])
 object ParticleProvidersRegistry {
 	@SubscribeEvent
-	@JvmStatic
 	fun registry(event: RegisterParticleProvidersEvent) {
 		event.registerSpriteSet(
 			EGOEquipmentParticleTypes.DYEING_MAGIC_CIRCLE.get(),

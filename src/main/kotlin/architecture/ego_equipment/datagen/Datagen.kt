@@ -14,7 +14,6 @@ import net.neoforged.neoforge.data.event.GatherDataEvent
 @EventBusSubscriber(modid = EGOEquipment.ID)
 object Datagen {
 	@SubscribeEvent
-	@JvmStatic
 	fun gatherData(event: GatherDataEvent) {
 		val generator = event.generator
 		val output = generator.packOutput

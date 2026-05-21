@@ -12,7 +12,6 @@ import net.neoforged.neoforge.client.gui.VanillaGuiLayers
 @EventBusSubscriber(modid = EGOEquipment.ID, value = [Dist.CLIENT])
 object GuiLayerRegistry {
 	@SubscribeEvent
-	@JvmStatic
 	fun register(event: RegisterGuiLayersEvent) {
 		event.registerAbove(
 			VanillaGuiLayers.CROSSHAIR,

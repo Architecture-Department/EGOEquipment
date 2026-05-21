@@ -11,7 +11,6 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent
 @EventBusSubscriber(modid = EGOEquipment.ID, value = [Dist.CLIENT])
 object EntityRenderersRegistry {
 	@SubscribeEvent
-	@JvmStatic
 	fun registry(event: EntityRenderersEvent.RegisterRenderers) {
 		event.registerEntityRenderer(EGOEquipmentProjectileEntityTypes.MAGIC_BULLET_ENTITY.get(), ::MagicBulletRenderer)
 	}

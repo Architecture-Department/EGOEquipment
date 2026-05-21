@@ -12,7 +12,6 @@ import net.neoforged.fml.common.EventBusSubscriber
 object ClientEvents {
 
 	@SubscribeEvent
-	@JvmStatic
 	fun addChopFlavorLayer(event: ChopFlavorLayerEvent) {
 		event.add(
 			EGOEquipment.modRl("red_eyes_tachi"),

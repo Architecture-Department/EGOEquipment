@@ -12,7 +12,6 @@ import net.neoforged.neoforge.client.event.RenderPlayerEvent
 object PlayerRenderEvents {
 
 	@SubscribeEvent
-	@JvmStatic
 	fun playerRender(event: RenderPlayerEvent.Post) {
 		val multiBufferSource = event.multiBufferSource
 		val partialTick = event.partialTick

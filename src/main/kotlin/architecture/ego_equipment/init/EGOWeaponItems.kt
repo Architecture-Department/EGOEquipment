@@ -1432,26 +1432,27 @@ object EGOWeaponItems {
 				as DeferredItem<I>
 		}
 
+		@Suppress("UNCHECKED_CAST")
 		private fun <I : Item> getRemoteItemFactory(type: RemoteTemplateType): BiFunction<Item.Properties, IEgoItem.Builder<*>, I> =
 			when (type) {
-				RemoteTemplateType.CANNON -> { p: Item.Properties, b: IEgoItem.Builder<*> ->
-					CannonEgoWeaponItem(p, b as IRemoteEgoWeaponItem.Builder, modelPath)
+				RemoteTemplateType.CANNON -> BiFunction { p: Item.Properties, b: IEgoItem.Builder<*> ->
+					CannonEgoWeaponItem(p, b as IRemoteEgoWeaponItem.Builder, modelPath) as I
 				}
 
-				RemoteTemplateType.PISTOL -> { p: Item.Properties, b: IEgoItem.Builder<*> ->
-					PistolEgoWeaponItem(p, b as IRemoteEgoWeaponItem.Builder, modelPath)
+				RemoteTemplateType.PISTOL -> BiFunction { p: Item.Properties, b: IEgoItem.Builder<*> ->
+					PistolEgoWeaponItem(p, b as IRemoteEgoWeaponItem.Builder, modelPath) as I
 				}
 
-				RemoteTemplateType.RIFLE -> { p: Item.Properties, b: IEgoItem.Builder<*> ->
-					RifleEgoWeaponItem(p, b as IRemoteEgoWeaponItem.Builder, modelPath)
+				RemoteTemplateType.RIFLE -> BiFunction { p: Item.Properties, b: IEgoItem.Builder<*> ->
+					RifleEgoWeaponItem(p, b as IRemoteEgoWeaponItem.Builder, modelPath) as I
 				}
 
-				RemoteTemplateType.CROSSBOW -> { p: Item.Properties, b: IEgoItem.Builder<*> ->
-					CrossbowEgoWeaponGeoItem(p, b as IRemoteEgoWeaponItem.Builder, modelPath)
+				RemoteTemplateType.CROSSBOW -> BiFunction { p: Item.Properties, b: IEgoItem.Builder<*> ->
+					CrossbowEgoWeaponGeoItem(p, b as IRemoteEgoWeaponItem.Builder, modelPath) as I
 				}
 
 				else -> throw IllegalStateException("Unsupported remote template type: $type")
-			} as BiFunction<Item.Properties, IEgoItem.Builder<*>, I>
+			}
 
 		private fun validateRequiredFields() {
 			if (id == null || zhName == null || lcLevel == null || properties == null) {
@@ -1494,38 +1495,39 @@ object EGOWeaponItems {
 			return register(id!!, zhName!!, lcLevel!!, type, properties!!, weaponBuilder, getMeleeItemFactory())
 		}
 
+		@Suppress("UNCHECKED_CAST")
 		private fun <I : Item> getMeleeItemFactory(): BiFunction<Item.Properties, IEgoItem.Builder<*>, I> =
 			when (templateType) {
-				MeleeTemplateType.AXE -> { p: Item.Properties, b: IEgoItem.Builder<*> ->
-					AxeEgoWeaponGeoItem(getSimpleTier(weaponBuilder), p, b as IMeleeEgoWeaponItem.Builder, modelPath)
+				MeleeTemplateType.AXE -> BiFunction { p: Item.Properties, b: IEgoItem.Builder<*> ->
+					AxeEgoWeaponGeoItem(getSimpleTier(weaponBuilder), p, b as IMeleeEgoWeaponItem.Builder, modelPath) as I
 				}
 
-				MeleeTemplateType.FIST -> { p: Item.Properties, b: IEgoItem.Builder<*> ->
-					FistEgoWeaponItem(p, b as IMeleeEgoWeaponItem.Builder, modelPath)
+				MeleeTemplateType.FIST -> BiFunction { p: Item.Properties, b: IEgoItem.Builder<*> ->
+					FistEgoWeaponItem(p, b as IMeleeEgoWeaponItem.Builder, modelPath) as I
 				}
 
-				MeleeTemplateType.HAMMER -> { p: Item.Properties, b: IEgoItem.Builder<*> ->
-					HammerEgoWeaponItem(p, b as IMeleeEgoWeaponItem.Builder, modelPath)
+				MeleeTemplateType.HAMMER -> BiFunction { p: Item.Properties, b: IEgoItem.Builder<*> ->
+					HammerEgoWeaponItem(p, b as IMeleeEgoWeaponItem.Builder, modelPath) as I
 				}
 
-				MeleeTemplateType.KNIFE -> { p: Item.Properties, b: IEgoItem.Builder<*> ->
-					KnifeEgoWeaponItem(p, b as IMeleeEgoWeaponItem.Builder, modelPath)
+				MeleeTemplateType.KNIFE -> BiFunction { p: Item.Properties, b: IEgoItem.Builder<*> ->
+					KnifeEgoWeaponItem(p, b as IMeleeEgoWeaponItem.Builder, modelPath) as I
 				}
 
-				MeleeTemplateType.MACE -> { p: Item.Properties, b: IEgoItem.Builder<*> ->
-					MaceEgoWeaponItem(p, b as IMeleeEgoWeaponItem.Builder, modelPath)
+				MeleeTemplateType.MACE -> BiFunction { p: Item.Properties, b: IEgoItem.Builder<*> ->
+					MaceEgoWeaponItem(p, b as IMeleeEgoWeaponItem.Builder, modelPath) as I
 				}
 
-				MeleeTemplateType.SPEAR -> { p: Item.Properties, b: IEgoItem.Builder<*> ->
-					SpearEgoWeaponItem(p, b as IMeleeEgoWeaponItem.Builder, modelPath)
+				MeleeTemplateType.SPEAR -> BiFunction { p: Item.Properties, b: IEgoItem.Builder<*> ->
+					SpearEgoWeaponItem(p, b as IMeleeEgoWeaponItem.Builder, modelPath) as I
 				}
 
-				MeleeTemplateType.SWORDS -> { p: Item.Properties, b: IEgoItem.Builder<*> ->
-					SwordsEgoWeaponGeoItem(getSimpleTier(weaponBuilder), p, b as IMeleeEgoWeaponItem.Builder, modelPath)
+				MeleeTemplateType.SWORDS -> BiFunction { p: Item.Properties, b: IEgoItem.Builder<*> ->
+					SwordsEgoWeaponGeoItem(getSimpleTier(weaponBuilder), p, b as IMeleeEgoWeaponItem.Builder, modelPath) as I
 				}
 
 				null -> throw IllegalStateException("Template type is null")
-			} as BiFunction<Item.Properties, IEgoItem.Builder<*>, I>
+			}
 
 		private fun getSimpleTier(b: IMeleeEgoWeaponItem.Builder) =
 			SimpleTier(
