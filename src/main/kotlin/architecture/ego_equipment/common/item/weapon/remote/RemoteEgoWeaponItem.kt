@@ -88,7 +88,6 @@ abstract class RemoteEgoWeaponItem : ProjectileWeaponItem, IItemUsageReq, IRemot
 
 	override fun getSupportedHeldProjectiles(itemStack: ItemStack): Predicate<ItemStack> = Predicate { false }
 
-	@Suppress("deprecation")
 	override fun getSupportedHeldProjectiles(): Predicate<ItemStack> = Predicate { false }
 
 	override fun getAllSupportedProjectiles(itemStack: ItemStack): Predicate<ItemStack> = Predicate { false }

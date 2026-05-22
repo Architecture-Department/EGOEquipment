@@ -150,7 +150,7 @@ class ParadiseLostSpikeweed(
 			return target.hurt(getDamageSource(theSoul, livingentity), damage)
 		}
 
-		return !livingentity!!.isAlliedTo(target) && target.hurt(getDamageSource(theSoul, livingentity), damage)
+		return !livingentity.isAlliedTo(target) && target.hurt(getDamageSource(theSoul, livingentity), damage)
 	}
 
 	private fun getDamageSource(

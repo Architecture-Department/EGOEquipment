@@ -34,7 +34,7 @@ class GunChargeUpHudLayer private constructor(
 	private var humanoidArm: HumanoidArm = HumanoidArm.RIGHT
 
 	init {
-		if (attackIndicatorStatus == null || attackIndicatorStatus == AttackIndicatorStatus.OFF) {
+		if (attackIndicatorStatus == AttackIndicatorStatus.OFF) {
 			throw IllegalStateException("Unexpected value: $attackIndicatorStatus")
 		}
 	}

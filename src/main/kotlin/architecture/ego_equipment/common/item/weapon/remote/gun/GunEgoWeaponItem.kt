@@ -110,12 +110,12 @@ abstract class GunEgoWeaponItem : RemoteEgoWeaponGeoItem, IGunWeapon {
 
 	override fun isGunAimMove(player: Player, itemStack: ItemStack): Boolean = true
 
-	override fun gunAimShoot(playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand): Boolean {
-		val chargeUpPercentage = GunWeaponUtil.getChargeUpPercentage(playerEntity, handUsed)
-		if (!gunBasEAimShootCondition(playerEntity, itemStack, handUsed, chargeUpPercentage)) {
+	override fun gunAimShoot(player: Player, stack: ItemStack, handUsed: InteractionHand): Boolean {
+		val chargeUpPercentage = GunWeaponUtil.getChargeUpPercentage(player, handUsed)
+		if (!gunBasEAimShootCondition(player, stack, handUsed, chargeUpPercentage)) {
 			return false
 		}
-		return gunAimShootExecute(playerEntity, itemStack, handUsed, chargeUpPercentage)
+		return gunAimShootExecute(player, stack, handUsed, chargeUpPercentage)
 	}
 
 	protected fun gunBasEAimShootCondition(
@@ -174,27 +174,27 @@ abstract class GunEgoWeaponItem : RemoteEgoWeaponGeoItem, IGunWeapon {
 
 	protected fun getProjectileFactory(): ProjectileFactory? = null
 
-	override fun gunShoot(playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand): Boolean {
-		val chargeUpPercentage = GunWeaponUtil.getChargeUpPercentage(playerEntity, handUsed)
-		if (!gunShootCondition(playerEntity, itemStack, handUsed, chargeUpPercentage)) {
+	override fun gunShoot(player: Player, stack: ItemStack, handUsed: InteractionHand): Boolean {
+		val chargeUpPercentage = GunWeaponUtil.getChargeUpPercentage(player, handUsed)
+		if (!gunShootCondition(player, stack, handUsed, chargeUpPercentage)) {
 			return false
 		}
 
-		if (playerEntity.level() is ServerLevel) {
-			val serverLevel = playerEntity.level() as ServerLevel
-			val gunShootExecuteTick = gunShootExecuteTick(playerEntity, itemStack, handUsed)
-			DelayTaskHolder.of(playerEntity).addTask(
+		if (player.level() is ServerLevel) {
+			val serverLevel = player.level() as ServerLevel
+			val gunShootExecuteTick = gunShootExecuteTick(player, stack, handUsed)
+			DelayTaskHolder.of(player).addTask(
 				handUsed, DelayTaskHolder.createTaskBilder()
 					.tickRun { tick, maxTick, _ ->
-						gunShootTickRun(tick, gunShootExecuteTick, maxTick, playerEntity, itemStack, handUsed)
+						gunShootTickRun(tick, gunShootExecuteTick, maxTick, player, stack, handUsed)
 					}
-					.resultRun { gunShootExecute(playerEntity, itemStack, handUsed, serverLevel) }
+					.resultRun { gunShootExecute(player, stack, handUsed, serverLevel) }
 					.removedTick(gunShootExecuteTick)
 					.build())
 		}
 
-		GunWeaponUtil.setIsAttack(playerEntity, false, handUsed)
-		GunWeaponUtil.resetChargeUp(playerEntity, handUsed)
+		GunWeaponUtil.setIsAttack(player, false, handUsed)
+		GunWeaponUtil.resetChargeUp(player, handUsed)
 		return true
 	}
 

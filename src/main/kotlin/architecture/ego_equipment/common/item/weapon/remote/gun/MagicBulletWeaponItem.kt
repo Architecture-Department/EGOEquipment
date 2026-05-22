@@ -73,7 +73,7 @@ class MagicBulletWeaponItem : GunEgoWeaponItem {
 		}
 	}
 
-	override fun isGunAim(playerEntity: Player, itemStack: ItemStack): Boolean = true
+	override fun isGunAim(player: Player, itemStack: ItemStack): Boolean = true
 
 	override fun gunEndAim(playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand) {
 		if (playerEntity !is ServerPlayer) {
