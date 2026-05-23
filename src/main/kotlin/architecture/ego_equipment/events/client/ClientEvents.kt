@@ -1,4 +1,4 @@
-package architecture.ego_equipment.events
+package architecture.ego_equipment.events.client
 
 import architecture.ego_equipment.client.gui.hudlayers.RedEyesTachiChopFlavor
 import architecture.ego_equipment.core.EGOEquipment
