@@ -16,6 +16,7 @@ import software.bernie.geckolib.animation.AnimationController
 import software.bernie.geckolib.animation.PlayState
 import software.bernie.geckolib.model.GeoModel
 import java.util.function.Consumer
+import kotlin.math.max
 
 class RedEyesTachiItem : MeleeEgoWeaponGeoItem {
 	constructor(
@@ -66,10 +67,9 @@ class RedEyesTachiItem : MeleeEgoWeaponGeoItem {
 			val effectDuration = effect.duration
 			val increase = 10
 			val max = 100
-			(effect as MobEffectInstanceAccessorMixin).`ego_equipment$setDuration`(
-				(effectDuration + increase).coerceIn(0, Math.max(effectDuration, max))
-			)
-			(attacker as LivingEntityAccessorMixin).`goldenboughs_lib$onEffectUpdated`(effect, true, attacker)
+			val value = (effectDuration + increase).coerceIn(0, max(effectDuration, max))
+			(effect as MobEffectInstanceAccessorMixin).setDuration(value)
+			(attacker as LivingEntityAccessorMixin).callOnEffectUpdated(effect, true, attacker)
 		}
 	}
 }
