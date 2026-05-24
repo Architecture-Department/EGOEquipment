@@ -1,6 +1,8 @@
 package architecture.ego_equipment.core
 
 import architecture.ego_equipment.init.*
+import architecture.ego_equipment.init.item.EGOArmorItems
+import architecture.ego_equipment.init.item.EGOEquipmentItems
 import architecture.goldenboughs_lib.core.Lib
 import architecture.goldenboughs_lib.eventexecute.client.EntityRenderEventExecute
 import architecture.goldenboughs_lib.util.LibUtil.rlOf
@@ -31,14 +33,13 @@ object EGOEquipment {
 		val modContainer = LOADING_CONTEXT.activeContainer
 		val modBus = MOD_BUS
 
-		EGOArmorItems.REGISTRY.register(modBus)
 		EGOEquipmentArmorMaterials.REGISTRY.register(modBus)
 		EGOEquipmentMobEffects.REGISTRY.register(modBus)
 		EGOEquipmentSoundEvents.REGISTRY.register(modBus)
-		EGOWeaponItems.REGISTRY.register(modBus)
 		EGOEquipmentParticleTypes.REGISTRY.register(modBus)
 		EGOEquipmentCreativeModeTabs.REGISTRY.register(modBus)
 		EGOEquipmentProjectileEntityTypes.REGISTRY.register(modBus)
+		EGOEquipmentItems.register(modBus)
 		EntityRenderEventExecute.add(EGOArmorItems.IN_THE_NAME_OF_LOVE_AND_HATE)
 		EntityRenderEventExecute.add(EGOArmorItems.MAGIC_BULLET)
 	}

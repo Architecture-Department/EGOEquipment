@@ -1,8 +1,8 @@
 package architecture.ego_equipment.datagen
 
 import architecture.ego_equipment.core.EGOEquipment
-import architecture.ego_equipment.init.EGOArmorItems
-import architecture.ego_equipment.init.EGOWeaponItems
+import architecture.ego_equipment.init.item.EGOArmorItems
+import architecture.ego_equipment.init.item.EGOWeaponItems
 import architecture.goldenboughs_lib.util.LibUtil.rlOf
 import architecture.goldenboughs_lib.util.client.DatagenItemModelUtil.geoItem
 import architecture.goldenboughs_lib.util.client.DatagenItemModelUtil.withExistingParent

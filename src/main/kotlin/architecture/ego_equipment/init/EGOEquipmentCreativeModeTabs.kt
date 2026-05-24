@@ -2,6 +2,8 @@ package architecture.ego_equipment.init
 
 import architecture.ego_equipment.core.EGOEquipment
 import architecture.ego_equipment.datagen.i18n.ZhCn
+import architecture.ego_equipment.init.item.EGOArmorItems
+import architecture.ego_equipment.init.item.EGOWeaponItems
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceKey

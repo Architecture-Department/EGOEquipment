@@ -1,6 +1,7 @@
 package architecture.ego_equipment.init
 
 import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.init.item.EGOWeaponItems
 import architecture.goldenboughs_lib.common.mobeffect.MobEffectExpand
 import architecture.goldenboughs_lib.datagen.i18n.LibZhCn
 import net.minecraft.core.Holder

@@ -1,4 +1,4 @@
-package architecture.ego_equipment.init
+package architecture.ego_equipment.init.item
 
 import architecture.ego_equipment.common.item.weapon.melee.MeleeEgoWeaponItem
 import architecture.ego_equipment.common.item.weapon.melee.axe.AxeEgoWeaponGeoItem
@@ -42,7 +42,7 @@ import java.util.function.BiFunction
 import java.util.function.Function
 
 object EGOWeaponItems {
-	val REGISTRY = DeferredRegister.createItems(EGOEquipment.ID)
+	val REGISTRY: DeferredRegister.Items = DeferredRegister.createItems(EGOEquipment.ID)
 
 	//region ZAYIN
 	val SODA = onRemote<RemoteEgoWeaponItem>()

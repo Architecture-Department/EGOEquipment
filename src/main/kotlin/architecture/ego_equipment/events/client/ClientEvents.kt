@@ -2,7 +2,7 @@ package architecture.ego_equipment.events.client
 
 import architecture.ego_equipment.client.gui.hudlayers.RedEyesTachiChopFlavor
 import architecture.ego_equipment.core.EGOEquipment
-import architecture.ego_equipment.init.EGOWeaponItems
+import architecture.ego_equipment.init.item.EGOWeaponItems
 import architecture.goldenboughs_lib.event.ChopFlavorLayerEvent
 import net.neoforged.api.distmarker.Dist
 import net.neoforged.bus.api.SubscribeEvent
