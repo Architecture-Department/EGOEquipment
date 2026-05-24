@@ -28,6 +28,7 @@ import architecture.goldenboughs_lib.api.world.item.IEgoItem
 import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem
 import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
 import architecture.goldenboughs_lib.util.LcLevelUtil
+import architecture.goldenboughs_lib.util.LibUtil.rlOf
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.BlockTags
 import net.minecraft.tags.TagKey
@@ -1370,7 +1371,7 @@ object EGOWeaponItems {
 		protected var zhName: String? = null
 		protected var lcLevel: LcLevel? = null
 		protected var properties: Item.Properties? = null
-		protected var modelPath: ResourceLocation = ResourceLocation.parse("")
+		protected var modelPath: ResourceLocation = rlOf("")
 
 		fun id(id: String): I {
 			this.id = id; return this as I

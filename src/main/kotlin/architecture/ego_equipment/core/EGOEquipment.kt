@@ -3,6 +3,7 @@ package architecture.ego_equipment.core
 import architecture.ego_equipment.init.*
 import architecture.goldenboughs_lib.core.Lib
 import architecture.goldenboughs_lib.eventexecute.client.EntityRenderEventExecute
+import architecture.goldenboughs_lib.util.LibUtil.rlOf
 import net.minecraft.core.Registry
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
@@ -50,7 +51,7 @@ object EGOEquipment {
 	@JvmStatic
 	@Contract("_ -> new")
 	fun modRl(name: String): ResourceLocation {
-		return ResourceLocation.fromNamespaceAndPath(ID, name)
+		return rlOf(ID, name)
 	}
 
 	@JvmStatic

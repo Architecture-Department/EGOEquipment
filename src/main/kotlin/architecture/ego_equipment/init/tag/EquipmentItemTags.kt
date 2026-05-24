@@ -1,6 +1,7 @@
 package architecture.ego_equipment.init.tag
 
 import architecture.ego_equipment.core.EGOEquipment
+import architecture.goldenboughs_lib.util.LibUtil.rlOf
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.ItemTags
 import net.minecraft.tags.TagKey
@@ -21,7 +22,7 @@ object EquipmentItemTags {
 	private fun createTag(location: ResourceLocation): TagKey<Item> = ItemTags.create(location)
 
 	@Suppress("unused")
-	private fun createCTag(name: String): TagKey<Item> = createTag(ResourceLocation.fromNamespaceAndPath("c", name))
+	private fun createCTag(name: String): TagKey<Item> = createTag(rlOf("c", name))
 
 	@Suppress("unused")
 	private fun createMcTag(name: String): TagKey<Item> = createTag(ResourceLocation.withDefaultNamespace(name))
