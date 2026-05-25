@@ -23,7 +23,7 @@ class RedEyesTachiItem : MeleeEgoWeaponGeoItem {
 		egoWeaponBuilder: IMeleeEgoWeaponItem.Builder,
 		geoModel: GeoModel<MeleeEgoWeaponGeoItem>,
 		guiModel: GeoModel<MeleeEgoWeaponGeoItem>?
-	) : super(itemProperties, egoWeaponBuilder, geoModel, guiModel)
+	) : super(itemProperties, egoWeaponBuilder, geoModel)
 
 	constructor(
 		itemProperties: Properties,
@@ -46,7 +46,6 @@ class RedEyesTachiItem : MeleeEgoWeaponGeoItem {
 		consumer.accept(
 			GeoItemRenderProvider(
 				model as GeoModel<RedEyesTachiItem>,
-				guiModel as GeoModel<RedEyesTachiItem>?,
 				::RedEyesTachiItemWeaponRenderer
 			)
 		)

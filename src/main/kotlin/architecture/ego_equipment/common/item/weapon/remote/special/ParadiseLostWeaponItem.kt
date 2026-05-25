@@ -156,7 +156,7 @@ class ParadiseLostWeaponItem : RemoteEgoWeaponGeoItem {
 		egoWeaponBuilder: IRemoteEgoWeaponItem.Builder,
 		geoModel: GeoModel<RemoteEgoWeaponGeoItem>,
 		guiModel: GeoModel<RemoteEgoWeaponGeoItem>?
-	) : super(itemProperties, egoWeaponBuilder, geoModel, guiModel)
+	) : super(itemProperties, egoWeaponBuilder, geoModel)
 
 	constructor(
 		itemProperties: Properties,

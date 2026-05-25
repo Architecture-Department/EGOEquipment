@@ -2,7 +2,6 @@ package architecture.ego_equipment.common.item.weapon.melee
 
 import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem
 import architecture.goldenboughs_lib.client.model.item.GeoItemModel
-import architecture.goldenboughs_lib.client.model.item.GuiGeoItemModel
 import architecture.goldenboughs_lib.client.renderer.GeoItemRenderProvider
 import net.minecraft.resources.ResourceLocation
 import software.bernie.geckolib.animatable.GeoItem
@@ -17,7 +16,6 @@ abstract class MeleeEgoWeaponGeoItem(
 	itemProperties: Properties,
 	egoWeaponBuilder: IMeleeEgoWeaponItem.Builder,
 	protected val model: GeoModel<MeleeEgoWeaponGeoItem>,
-	protected val guiModel: GeoModel<MeleeEgoWeaponGeoItem>?
 ) : MeleeEgoWeaponItem(itemProperties, egoWeaponBuilder), GeoItem {
 	private val cache: AnimatableInstanceCache = GeckoLibUtil.createInstanceCache(this)
 
@@ -25,12 +23,12 @@ abstract class MeleeEgoWeaponGeoItem(
 		itemProperties: Properties,
 		egoWeaponBuilder: IMeleeEgoWeaponItem.Builder,
 		modPath: ResourceLocation
-	) : this(itemProperties, egoWeaponBuilder, GeoItemModel(modPath), GuiGeoItemModel(modPath))
+	) : this(itemProperties, egoWeaponBuilder, GeoItemModel(modPath))
 
 	override fun registerControllers(controllerRegistrar: AnimatableManager.ControllerRegistrar) {}
 
 	override fun createGeoRenderer(consumer: Consumer<GeoRenderProvider>) {
-		consumer.accept(GeoItemRenderProvider(model, guiModel))
+		consumer.accept(GeoItemRenderProvider(model))
 	}
 
 	override fun getAnimatableInstanceCache(): AnimatableInstanceCache = cache

@@ -1,18 +1,17 @@
 package architecture.ego_equipment.datagen
 
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.datagen.i18n.ZhCn
 import architecture.ego_equipment.datagen.tag.DatagenBlockTag
 import architecture.ego_equipment.datagen.tag.DatagenItemTag
-import architecture.goldenboughs_lib.util.buildClient
-import architecture.goldenboughs_lib.util.buildServer
+import architecture.goldenboughs_lib.util.datagen.buildClient
+import architecture.goldenboughs_lib.util.datagen.buildServer
 import net.minecraft.core.RegistrySetBuilder
 import net.minecraft.data.DataGenerator
 import net.minecraft.data.DataProvider
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.data.event.GatherDataEvent
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 @EventBusSubscriber(modid = EGOEquipmentConstants.ID)
 object Datagen {

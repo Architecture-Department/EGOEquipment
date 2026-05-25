@@ -4,9 +4,9 @@ import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.item.EGOArmorItems
 import architecture.ego_equipment.init.item.EGOWeaponItems
 import architecture.goldenboughs_lib.util.LibUtil.rlOf
-import architecture.goldenboughs_lib.util.client.DatagenItemModelUtil.geoItem
-import architecture.goldenboughs_lib.util.client.DatagenItemModelUtil.withExistingParent
-import architecture.goldenboughs_lib.util.client.ModelProviderUtil.extendWithFolder
+import architecture.goldenboughs_lib.util.datagen.ItemModelUtil.geoItem
+import architecture.goldenboughs_lib.util.datagen.ItemModelUtil.withExistingParent
+import architecture.goldenboughs_lib.util.datagen.ModelProviderUtil.extendWithFolder
 import net.minecraft.data.PackOutput
 import net.minecraft.resources.ResourceLocation
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider
@@ -26,6 +26,7 @@ class DatagenItemModel(output: PackOutput, existingFileHelper: ExistingFileHelpe
 			if (!existingFileHelper.exists(outputLoc, MODEL)) {
 				geoItem(item)
 			}
+			withExistingParent("item/weapon/", "", "gui/", "", item)
 		}
 	}
 }

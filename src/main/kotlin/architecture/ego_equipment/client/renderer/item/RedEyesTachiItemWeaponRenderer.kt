@@ -1,7 +1,7 @@
 package architecture.ego_equipment.client.renderer.item
 
 import architecture.ego_equipment.common.item.weapon.melee.special.RedEyesTachiItem
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentMobEffects
 import architecture.goldenboughs_lib.client.renderer.GeoItemRendererExpand
 import com.mojang.blaze3d.vertex.PoseStack
@@ -16,12 +16,10 @@ import net.minecraft.world.item.ItemStack
 import software.bernie.geckolib.cache.`object`.BakedGeoModel
 import software.bernie.geckolib.model.GeoModel
 import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class RedEyesTachiItemWeaponRenderer(
 	model: GeoModel<RedEyesTachiItem>,
-	guiModel: GeoModel<RedEyesTachiItem>?
-) : GeoItemRendererExpand<RedEyesTachiItem>(model, guiModel) {
+) : GeoItemRendererExpand<RedEyesTachiItem>(model) {
 
 	companion object {
 		val GLOWMASK_TEXTURE: ResourceLocation =

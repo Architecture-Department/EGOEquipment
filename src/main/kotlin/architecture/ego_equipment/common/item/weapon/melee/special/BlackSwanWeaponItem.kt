@@ -11,7 +11,7 @@ class BlackSwanWeaponItem : MeleeEgoWeaponGeoItem {
 		egoWeaponBuilder: IMeleeEgoWeaponItem.Builder,
 		geoModel: GeoModel<MeleeEgoWeaponGeoItem>,
 		guiModel: GeoModel<MeleeEgoWeaponGeoItem>?
-	) : super(itemProperties, egoWeaponBuilder, geoModel, guiModel)
+	) : super(itemProperties, egoWeaponBuilder, geoModel)
 
 	constructor(
 		itemProperties: Properties,

@@ -1,13 +1,12 @@
 package architecture.ego_equipment.common.item.weapon.remote.special
 
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.projectile.Projectile
 import software.bernie.geckolib.model.GeoModel
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class InTheNameOfLoveAndHateWeaponItem : RemoteEgoWeaponGeoItem {
 	companion object {
@@ -39,7 +38,7 @@ class InTheNameOfLoveAndHateWeaponItem : RemoteEgoWeaponGeoItem {
 		egoWeaponBuilder: IRemoteEgoWeaponItem.Builder,
 		geoModel: GeoModel<RemoteEgoWeaponGeoItem>,
 		guiModel: GeoModel<RemoteEgoWeaponGeoItem>?
-	) : super(itemProperties, egoWeaponBuilder, geoModel, guiModel)
+	) : super(itemProperties, egoWeaponBuilder, geoModel)
 
 	constructor(
 		itemProperties: Properties,
