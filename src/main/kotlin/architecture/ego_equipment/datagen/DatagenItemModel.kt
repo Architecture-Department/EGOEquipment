@@ -16,7 +16,7 @@ class DatagenItemModel(output: PackOutput, existingFileHelper: ExistingFileHelpe
 	ItemModelProvider(output, EGOEquipmentConstants.ID, existingFileHelper) {
 
 	override fun registerModels() {
-		withExistingParent("item/armor/", EGOArmorItems.REGISTRY)
+		withExistingParent(pathPrefix = "item/armor/", registry = EGOArmorItems.REGISTRY)
 		EGOWeaponItems.REGISTRY.entries.map { it.get() }.forEach { item ->
 			val path = item.toString()
 			val rl = if (path.contains(":")) rlOf(path)
