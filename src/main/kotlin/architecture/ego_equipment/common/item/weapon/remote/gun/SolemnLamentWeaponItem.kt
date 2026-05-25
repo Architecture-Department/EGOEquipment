@@ -24,21 +24,22 @@ import net.minecraft.world.level.ClipContext
 import net.minecraft.world.phys.EntityHitResult
 import net.minecraft.world.phys.HitResult
 import software.bernie.geckolib.model.GeoModel
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class SolemnLamentWeaponItem : GunEgoWeaponItem {
 	companion object {
-		val STANDBY: ResourceLocation = EGOEquipment.modRl("solemn_lament_weapon.standby")
-		val GALLOP: ResourceLocation = EGOEquipment.modRl("solemn_lament_weapon.gallop")
-		val SHOOTING: ResourceLocation = EGOEquipment.modRl("solemn_lament_weapon.shooting")
-		val SHOOTING1: ResourceLocation = EGOEquipment.modRl("solemn_lament_weapon.shooting1")
-		val SHOOTING2: ResourceLocation = EGOEquipment.modRl("solemn_lament_weapon.shooting2")
-		val SHOOTING3: ResourceLocation = EGOEquipment.modRl("solemn_lament_weapon.shooting3")
-		val TWIN_STANDBY: ResourceLocation = EGOEquipment.modRl("solemn_lament_weapon.twin.standby")
-		val TWIN_GALLOP: ResourceLocation = EGOEquipment.modRl("solemn_lament_weapon.twin.gallop")
-		val TWIN_SHOOTING: ResourceLocation = EGOEquipment.modRl("solemn_lament_weapon.twin.shooting")
-		val TWIN_SHOOTING1: ResourceLocation = EGOEquipment.modRl("solemn_lament_weapon.twin.shooting1")
-		val TWIN_SHOOTING2: ResourceLocation = EGOEquipment.modRl("solemn_lament_weapon.twin.shooting2")
-		val TWIN_SHOOTING3: ResourceLocation = EGOEquipment.modRl("solemn_lament_weapon.twin.shooting3")
+		val STANDBY: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.standby")
+		val GALLOP: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.gallop")
+		val SHOOTING: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.shooting")
+		val SHOOTING1: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.shooting1")
+		val SHOOTING2: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.shooting2")
+		val SHOOTING3: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.shooting3")
+		val TWIN_STANDBY: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.twin.standby")
+		val TWIN_GALLOP: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.twin.gallop")
+		val TWIN_SHOOTING: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.twin.shooting")
+		val TWIN_SHOOTING1: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.twin.shooting1")
+		val TWIN_SHOOTING2: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.twin.shooting2")
+		val TWIN_SHOOTING3: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.twin.shooting3")
 	}
 
 	constructor(
@@ -54,9 +55,9 @@ class SolemnLamentWeaponItem : GunEgoWeaponItem {
 		modPath: ResourceLocation
 	) : super(itemProperties, egoWeaponBuilder, modPath)
 
-	override fun gunShoot(playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand): Boolean {
-		val isShoot = super.gunShoot(playerEntity, itemStack, handUsed)
-		if (!isShoot || playerEntity !is ServerPlayer) {
+	override fun gunShoot(player: Player, stack: ItemStack, handUsed: InteractionHand): Boolean {
+		val isShoot = super.gunShoot(player, stack, handUsed)
+		if (!isShoot || player !is ServerPlayer) {
 			return isShoot
 		}
 		return true

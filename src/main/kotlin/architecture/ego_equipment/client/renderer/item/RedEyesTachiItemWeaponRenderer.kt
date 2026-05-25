@@ -16,6 +16,7 @@ import net.minecraft.world.item.ItemStack
 import software.bernie.geckolib.cache.`object`.BakedGeoModel
 import software.bernie.geckolib.model.GeoModel
 import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class RedEyesTachiItemWeaponRenderer(
 	model: GeoModel<RedEyesTachiItem>,
@@ -23,10 +24,12 @@ class RedEyesTachiItemWeaponRenderer(
 ) : GeoItemRendererExpand<RedEyesTachiItem>(model, guiModel) {
 
 	companion object {
-		val GLOWMASK_TEXTURE: ResourceLocation = EGOEquipment.modRl("textures/geo/item/weapon/red_eyes_tachi_glowmask.png")
+		val GLOWMASK_TEXTURE: ResourceLocation =
+			EGOEquipmentConstants.modRl("textures/geo/item/weapon/red_eyes_tachi_glowmask.png")
 		val GEO_HUNTIOG_TEXTURE: ResourceLocation =
-			EGOEquipment.modRl("textures/geo/item/weapon/red_eyes_tachi_hunting.png")
-		val HUNTIOG_TEXTURE: ResourceLocation = EGOEquipment.modRl("textures/item/weapon/red_eyes_tachi_hunting.png")
+			EGOEquipmentConstants.modRl("textures/geo/item/weapon/red_eyes_tachi_hunting.png")
+		val HUNTIOG_TEXTURE: ResourceLocation =
+			EGOEquipmentConstants.modRl("textures/item/weapon/red_eyes_tachi_hunting.png")
 	}
 
 	private var isHunting: Boolean = false

@@ -3,7 +3,6 @@ package architecture.ego_equipment.common.item.weapon.melee.special
 import architecture.ego_equipment.client.renderer.item.RedEyesTachiItemWeaponRenderer
 import architecture.ego_equipment.common.item.weapon.melee.MeleeEgoWeaponGeoItem
 import architecture.ego_equipment.init.EGOEquipmentMobEffects
-import architecture.ego_equipment.mixin.MobEffectInstanceAccessorMixin
 import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem
 import architecture.goldenboughs_lib.client.renderer.GeoItemRenderProvider
 import architecture.goldenboughs_lib.mixin.world.entity.LivingEntityAccessorMixin
@@ -68,7 +67,7 @@ class RedEyesTachiItem : MeleeEgoWeaponGeoItem {
 			val increase = 10
 			val max = 100
 			val value = (effectDuration + increase).coerceIn(0, max(effectDuration, max))
-			(effect as MobEffectInstanceAccessorMixin).setDuration(value)
+			effect.duration = value
 			(attacker as LivingEntityAccessorMixin).callOnEffectUpdated(effect, true, attacker)
 		}
 	}

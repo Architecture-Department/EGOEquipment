@@ -7,8 +7,9 @@ import net.neoforged.api.distmarker.Dist
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.client.event.RenderPlayerEvent
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
-@EventBusSubscriber(modid = EGOEquipment.ID, value = [Dist.CLIENT])
+@EventBusSubscriber(modid = EGOEquipmentConstants.ID, value = [Dist.CLIENT])
 object PlayerRenderEvents {
 
 	@SubscribeEvent

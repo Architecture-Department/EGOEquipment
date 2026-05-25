@@ -6,9 +6,10 @@ import net.minecraft.core.RegistrySetBuilder
 import net.minecraft.data.PackOutput
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider
 import java.util.concurrent.CompletableFuture
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class ModDatagenDatapackBuiltinEntries(
 	output: PackOutput,
 	registries: CompletableFuture<HolderLookup.Provider>,
 	datapackEntriesBuilder: RegistrySetBuilder
-) : DatapackBuiltinEntriesProvider(output, registries, datapackEntriesBuilder, setOf(EGOEquipment.ID))
+) : DatapackBuiltinEntriesProvider(output, registries, datapackEntriesBuilder, setOf(EGOEquipmentConstants.ID))

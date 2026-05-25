@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.ItemTags
 import net.minecraft.tags.TagKey
 import net.minecraft.world.item.Item
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 object EquipmentItemTags {
 	val EGO_ARMOUR: TagKey<Item> = createTag("ego/armour")
@@ -17,7 +18,7 @@ object EquipmentItemTags {
 	val MELEE: TagKey<Item> = createTag("weapon_type/melee")
 	val GUN: TagKey<Item> = createTag("weapon_type/gun")
 
-	private fun createTag(name: String): TagKey<Item> = createTag(EGOEquipment.modRl(name))
+	private fun createTag(name: String): TagKey<Item> = createTag(EGOEquipmentConstants.modRl(name))
 
 	private fun createTag(location: ResourceLocation): TagKey<Item> = ItemTags.create(location)
 

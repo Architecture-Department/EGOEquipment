@@ -8,9 +8,10 @@ import net.minecraft.sounds.SoundEvent
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 import net.neoforged.neoforge.common.data.SoundDefinition
 import net.neoforged.neoforge.common.data.SoundDefinitionsProvider
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class DatagenSoundDefinitionsProvider(output: PackOutput, existingFileHelper: ExistingFileHelper) :
-	SoundDefinitionsProvider(output, EGOEquipment.ID, existingFileHelper) {
+	SoundDefinitionsProvider(output, EGOEquipmentConstants.ID, existingFileHelper) {
 
 	companion object {
 		@JvmStatic

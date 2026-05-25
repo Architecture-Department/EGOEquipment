@@ -29,6 +29,7 @@ import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.animation.AnimatableManager
 import software.bernie.geckolib.renderer.GeoEntityRenderer
 import software.bernie.geckolib.util.GeckoLibUtil
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class ParadiseLostSpikeweed(
 	entityType: EntityType<*>,
@@ -262,9 +263,12 @@ class ParadiseLostSpikeweed(
 	}
 
 	class TrainingRabbitsRenderer(context: EntityRendererProvider.Context) :
-		GeoEntityRenderer<ParadiseLostSpikeweed>(context, GeoEntityModel(EGOEquipment.modRl("paradise_lost_spikeweed"))) {
+		GeoEntityRenderer<ParadiseLostSpikeweed>(
+			context,
+			GeoEntityModel(EGOEquipmentConstants.modRl("paradise_lost_spikeweed"))
+		) {
 
 		override fun getTextureLocation(animatable: ParadiseLostSpikeweed): ResourceLocation =
-			GeoModelExpand.texturePath(EGOEquipment.modRl("paradise_lost_spikeweed"))
+			GeoModelExpand.texturePath(EGOEquipmentConstants.modRl("paradise_lost_spikeweed"))
 	}
 }

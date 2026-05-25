@@ -7,14 +7,15 @@ import architecture.goldenboughs_lib.event.ChopFlavorLayerEvent
 import net.neoforged.api.distmarker.Dist
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
-@EventBusSubscriber(modid = EGOEquipment.ID, value = [Dist.CLIENT])
+@EventBusSubscriber(modid = EGOEquipmentConstants.ID, value = [Dist.CLIENT])
 object ClientEvents {
 
 	@SubscribeEvent
 	fun addChopFlavorLayer(event: ChopFlavorLayerEvent) {
 		event.add(
-			EGOEquipment.modRl("red_eyes_tachi"),
+			EGOEquipmentConstants.modRl("red_eyes_tachi"),
 			{ itemStack -> itemStack.`is`(EGOWeaponItems.RED_EYES_TACHI) },
 			RedEyesTachiChopFlavor()
 		)

@@ -15,18 +15,21 @@ import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.Level
 import software.bernie.geckolib.model.GeoModel
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class MagicBulletWeaponItem : GunEgoWeaponItem {
 	companion object {
-		val STANDBY: ResourceLocation = EGOEquipment.modRl("magic_bullet_weapon.standby")
-		val GALLOP: ResourceLocation = EGOEquipment.modRl("magic_bullet_weapon.gallop")
-		val SHOOTING: ResourceLocation = EGOEquipment.modRl("magic_bullet_weapon.shooting")
-		val SHOOTING_AIM: ResourceLocation = EGOEquipment.modRl("magic_bullet_weapon.shooting.aim")
-		val SHOOTING_AIM_CYCLE: ResourceLocation = EGOEquipment.modRl("magic_bullet_weapon.shooting.aim.cycle")
-		val SHOOTING_AIM_LAUNCH: ResourceLocation = EGOEquipment.modRl("magic_bullet_weapon.shooting.aim.launch")
-		val SHOOTING_AIM_TERMINATE: ResourceLocation = EGOEquipment.modRl("magic_bullet_weapon.shooting.aim.terminate")
-		val SHOOTING_AIM_CHARGEUP: ResourceLocation = EGOEquipment.modRl("magic_bullet_weapon.shooting.aim.chargeup")
-		val SHOOTING_CYCLE: ResourceLocation = EGOEquipment.modRl("magic_bullet_weapon.shooting.cycle")
+		val STANDBY: ResourceLocation = EGOEquipmentConstants.modRl("magic_bullet_weapon.standby")
+		val GALLOP: ResourceLocation = EGOEquipmentConstants.modRl("magic_bullet_weapon.gallop")
+		val SHOOTING: ResourceLocation = EGOEquipmentConstants.modRl("magic_bullet_weapon.shooting")
+		val SHOOTING_AIM: ResourceLocation = EGOEquipmentConstants.modRl("magic_bullet_weapon.shooting.aim")
+		val SHOOTING_AIM_CYCLE: ResourceLocation = EGOEquipmentConstants.modRl("magic_bullet_weapon.shooting.aim.cycle")
+		val SHOOTING_AIM_LAUNCH: ResourceLocation = EGOEquipmentConstants.modRl("magic_bullet_weapon.shooting.aim.launch")
+		val SHOOTING_AIM_TERMINATE: ResourceLocation =
+			EGOEquipmentConstants.modRl("magic_bullet_weapon.shooting.aim.terminate")
+		val SHOOTING_AIM_CHARGEUP: ResourceLocation =
+			EGOEquipmentConstants.modRl("magic_bullet_weapon.shooting.aim.chargeup")
+		val SHOOTING_CYCLE: ResourceLocation = EGOEquipmentConstants.modRl("magic_bullet_weapon.shooting.cycle")
 	}
 
 	constructor(

@@ -22,7 +22,7 @@ import net.neoforged.neoforge.registries.DeferredRegister
 import software.bernie.geckolib.animatable.client.GeoRenderProvider
 
 object EGOArmorItems {
-	val REGISTRY: DeferredRegister.Items = DeferredRegister.createItems(EGOEquipment.ID)
+	val REGISTRY: DeferredRegister.Items = DeferredRegister.createItems(EGOEquipmentConstants.ID)
 
 	//region ZAYIN
 	val PENITENCE = onArmor()
@@ -403,7 +403,7 @@ object EGOArmorItems {
 			val zhName = zhName ?: throw IllegalStateException("zhName is required")
 			val lcLevel = lcLevel ?: throw IllegalStateException("lcLevel is required")
 			val renderProvider = GeoArmourRenderProvider(
-				ModGeoArmorModel(modelPath ?: EGOEquipment.modRl(id))
+				ModGeoArmorModel(modelPath ?: EGOEquipmentConstants.modRl(id))
 			)
 
 			return registerSuit(

@@ -12,8 +12,9 @@ import net.minecraft.data.DataProvider
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.data.event.GatherDataEvent
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
-@EventBusSubscriber(modid = EGOEquipment.ID)
+@EventBusSubscriber(modid = EGOEquipmentConstants.ID)
 object Datagen {
 	@SubscribeEvent
 	fun gatherData(event: GatherDataEvent) {

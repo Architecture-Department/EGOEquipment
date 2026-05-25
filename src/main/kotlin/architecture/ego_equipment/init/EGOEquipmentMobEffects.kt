@@ -14,9 +14,10 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier
 import net.minecraft.world.entity.ai.attributes.Attributes
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 object EGOEquipmentMobEffects {
-	val REGISTRY: DeferredRegister<MobEffect> = EGOEquipment.modRegister(BuiltInRegistries.MOB_EFFECT)
+	val REGISTRY: DeferredRegister<MobEffect> = EGOEquipmentConstants.modRegister(BuiltInRegistries.MOB_EFFECT)
 
 	val RED_EYES_HUNTING: Holder<MobEffect> = register("red_eyes_hunting", "赤瞳-狩猎", { category, color ->
 		object : MobEffectExpand(category, color) {
@@ -61,7 +62,7 @@ object EGOEquipmentMobEffects {
 		name: String, zhCnText: String, supplier: () -> T, function: (T, ResourceLocation) -> MobEffect
 	): DeferredHolder<MobEffect, T> = register(name, zhCnText) {
 		val apply = supplier()
-		function(apply, EGOEquipment.modRl(name))
+		function(apply, EGOEquipmentConstants.modRl(name))
 		apply
 	}
 
@@ -79,7 +80,7 @@ object EGOEquipmentMobEffects {
 		function: (T, ResourceLocation) -> MobEffect
 	): DeferredHolder<MobEffect, T> = register(name, zhCnText) {
 		val apply = biFunction(category, color)
-		function(apply, EGOEquipment.modRl(name))
+		function(apply, EGOEquipmentConstants.modRl(name))
 		apply
 	}
 }

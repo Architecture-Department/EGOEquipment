@@ -8,13 +8,14 @@ import net.minecraft.client.DeltaTracker
 import net.minecraft.client.gui.GuiGraphics
 import net.minecraft.client.player.LocalPlayer
 import net.minecraft.resources.ResourceLocation
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class RedEyesTachiChopFlavor : ChopFlavorLayer.ChopFlavorBar() {
 	companion object {
-		val BOTTOM: ResourceLocation = EGOEquipment.modRl("chop_flavor/red_eyes_tachi/bottom")
-		val BOTTOM_GLOWMASK: ResourceLocation = EGOEquipment.modRl("chop_flavor/red_eyes_tachi/bottom_glowmask")
-		val SCABBARD: ResourceLocation = EGOEquipment.modRl("chop_flavor/red_eyes_tachi/scabbard")
-		val SCABBARD_ACTION: ResourceLocation = EGOEquipment.modRl("chop_flavor/red_eyes_tachi/scabbard_action")
+		val BOTTOM: ResourceLocation = EGOEquipmentConstants.modRl("chop_flavor/red_eyes_tachi/bottom")
+		val BOTTOM_GLOWMASK: ResourceLocation = EGOEquipmentConstants.modRl("chop_flavor/red_eyes_tachi/bottom_glowmask")
+		val SCABBARD: ResourceLocation = EGOEquipmentConstants.modRl("chop_flavor/red_eyes_tachi/scabbard")
+		val SCABBARD_ACTION: ResourceLocation = EGOEquipmentConstants.modRl("chop_flavor/red_eyes_tachi/scabbard_action")
 		const val WIDTH = 32
 		const val HEIGHT = 16
 	}

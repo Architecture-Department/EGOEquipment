@@ -1,6 +1,6 @@
 package architecture.ego_equipment.datagen
 
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.item.EGOArmorItems
 import architecture.ego_equipment.init.item.EGOWeaponItems
 import architecture.goldenboughs_lib.util.LibUtil.rlOf
@@ -13,10 +13,10 @@ import net.neoforged.neoforge.client.model.generators.ItemModelProvider
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 
 class DatagenItemModel(output: PackOutput, existingFileHelper: ExistingFileHelper) :
-	ItemModelProvider(output, EGOEquipment.ID, existingFileHelper) {
+	ItemModelProvider(output, EGOEquipmentConstants.ID, existingFileHelper) {
 
 	override fun registerModels() {
-		withExistingParent(EGOArmorItems.REGISTRY, "item/armor/")
+		withExistingParent("item/armor/", EGOArmorItems.REGISTRY)
 		EGOWeaponItems.REGISTRY.entries.map { it.get() }.forEach { item ->
 			val path = item.toString()
 			val rl = if (path.contains(":")) rlOf(path)

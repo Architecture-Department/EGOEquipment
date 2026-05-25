@@ -7,6 +7,7 @@ import net.minecraft.data.PackOutput
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 import net.neoforged.neoforge.common.data.ParticleDescriptionProvider
 import java.util.function.Supplier
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class DatagenParticle(output: PackOutput, fileHelper: ExistingFileHelper) :
 	ParticleDescriptionProvider(output, fileHelper) {
@@ -29,10 +30,10 @@ class DatagenParticle(output: PackOutput, fileHelper: ExistingFileHelper) :
 	}
 
 	private fun <T : ParticleType<*>> sprite(type: Supplier<T>, name: String) {
-		sprite(type.get(), EGOEquipment.modRl(name))
+		sprite(type.get(), EGOEquipmentConstants.modRl(name))
 	}
 
 	private fun <T : ParticleType<*>> sprite(type: Supplier<T>, vararg names: String) {
-		spriteSet(type.get(), names.map { EGOEquipment.modRl(it) }.toList())
+		spriteSet(type.get(), names.map { EGOEquipmentConstants.modRl(it) }.toList())
 	}
 }

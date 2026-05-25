@@ -12,18 +12,19 @@ import net.minecraft.client.gui.GuiGraphics
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.entity.HumanoidArm
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class GunChargeUpHudLayer private constructor(
 	private val attackIndicatorStatus: AttackIndicatorStatus
 ) : BasicHudLayer() {
 
 	companion object {
-		val REMOTE_BOTTOM: ResourceLocation = EGOEquipment.modRl("hud_bar/remote_bottom")
-		val REMOTE_GUN: ResourceLocation = EGOEquipment.modRl("hud_bar/remote_gun")
-		val REMOTE_MAGIC_BULLET: ResourceLocation = EGOEquipment.modRl("hud_bar/remote_magic_bullet")
-		val BIG_REMOTE_BOTTOM: ResourceLocation = EGOEquipment.modRl("hud_bar/big_remote_bottom")
-		val BIG_REMOTE_GUN: ResourceLocation = EGOEquipment.modRl("hud_bar/big_remote_gun")
-		val BIG_REMOTE_MAGIC_BULLET: ResourceLocation = EGOEquipment.modRl("hud_bar/big_remote_magic_bullet")
+		val REMOTE_BOTTOM: ResourceLocation = EGOEquipmentConstants.modRl("hud_bar/remote_bottom")
+		val REMOTE_GUN: ResourceLocation = EGOEquipmentConstants.modRl("hud_bar/remote_gun")
+		val REMOTE_MAGIC_BULLET: ResourceLocation = EGOEquipmentConstants.modRl("hud_bar/remote_magic_bullet")
+		val BIG_REMOTE_BOTTOM: ResourceLocation = EGOEquipmentConstants.modRl("hud_bar/big_remote_bottom")
+		val BIG_REMOTE_GUN: ResourceLocation = EGOEquipmentConstants.modRl("hud_bar/big_remote_gun")
+		val BIG_REMOTE_MAGIC_BULLET: ResourceLocation = EGOEquipmentConstants.modRl("hud_bar/big_remote_magic_bullet")
 
 		val INSTANCE_CROSSHAIR: GunChargeUpHudLayer = GunChargeUpHudLayer(AttackIndicatorStatus.CROSSHAIR)
 		val INSTANCE_HOTBAR: GunChargeUpHudLayer = GunChargeUpHudLayer(AttackIndicatorStatus.HOTBAR)

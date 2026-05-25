@@ -3,6 +3,7 @@ package architecture.ego_equipment.init
 import architecture.ego_equipment.client.particle.DyeingMagicCircleParticle
 import architecture.ego_equipment.client.particle.magicbullet.MagicBulletMagicCircleParticle
 import architecture.ego_equipment.core.EGOEquipment
+import architecture.goldenboughs_lib.common.particle.SpecialParticleType
 import com.mojang.serialization.MapCodec
 import net.minecraft.core.particles.ParticleOptions
 import net.minecraft.core.particles.ParticleType
@@ -13,14 +14,18 @@ import net.minecraft.network.codec.StreamCodec
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Supplier
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 object EGOEquipmentParticleTypes {
-	val REGISTRY: DeferredRegister<ParticleType<*>> = EGOEquipment.modRegister(BuiltInRegistries.PARTICLE_TYPE)
+	@JvmField
+	val REGISTRY: DeferredRegister<ParticleType<*>> = EGOEquipmentConstants.modRegister(BuiltInRegistries.PARTICLE_TYPE)
 
+	@JvmField
 	val DYEING_MAGIC_CIRCLE: Supplier<ParticleType<DyeingMagicCircleParticle.Options>> = register(
 		"dyeing_magic_circle", true, DyeingMagicCircleParticle.Options.CODEC, DyeingMagicCircleParticle.Options.STREAM_CODEC
 	)
 
+	@JvmField
 	val MAGIC_BULLET_MAGIC_CIRCLE: Supplier<ParticleType<MagicBulletMagicCircleParticle.Options>> = register(
 		"magic_bullet_magic_circle",
 		true,
@@ -28,9 +33,12 @@ object EGOEquipmentParticleTypes {
 		MagicBulletMagicCircleParticle.Options.STREAM_CODEC
 	)
 
+	@JvmField
 	val SOLEMN_LAMENT_BUTTERFLY_BLACK: DeferredHolder<ParticleType<*>, SimpleParticleType> = registerSimpleParticle(
 		"solemn_lament_butterfly_black", true
 	)
+
+	@JvmField
 	val SOLEMN_LAMENT_BUTTERFLY_WHITE: DeferredHolder<ParticleType<*>, SimpleParticleType> = registerSimpleParticle(
 		"solemn_lament_butterfly_white", true
 	)
@@ -54,13 +62,4 @@ object EGOEquipmentParticleTypes {
 		overrideLimiter: Boolean
 	): DeferredHolder<ParticleType<*>, SimpleParticleType> =
 		register(id) { SimpleParticleType(overrideLimiter) }
-
-	private class SpecialParticleType<T : ParticleOptions>(
-		overrideLimitter: Boolean,
-		private val codec: MapCodec<T>,
-		private val streamCodec: StreamCodec<in RegistryFriendlyByteBuf, T>
-	) : ParticleType<T>(overrideLimitter) {
-		override fun codec(): MapCodec<T> = codec
-		override fun streamCodec(): StreamCodec<in RegistryFriendlyByteBuf, T> = streamCodec
-	}
 }

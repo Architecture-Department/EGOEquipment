@@ -10,9 +10,10 @@ import net.neoforged.neoforge.client.gui.ConfigurationScreen
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory
 import thedarkcolour.kotlinforforge.neoforge.forge.LOADING_CONTEXT
 import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
-@Mod(value = EGOEquipment.ID, dist = [Dist.CLIENT])
-@EventBusSubscriber(modid = EGOEquipment.ID, value = [Dist.CLIENT])
+@Mod(value = EGOEquipmentConstants.ID, dist = [Dist.CLIENT])
+@EventBusSubscriber(modid = EGOEquipmentConstants.ID, value = [Dist.CLIENT])
 object EGOEquipmentClient {
 	init {
 		val modContainer = LOADING_CONTEXT.activeContainer
@@ -26,7 +27,7 @@ object EGOEquipmentClient {
 
 	@SubscribeEvent
 	fun onClientSetup(event: FMLClientSetupEvent) {
-		EGOEquipment.LOGGER.info("HELLO FROM CLIENT SETUP")
-		EGOEquipment.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().user.name)
+		EGOEquipmentConstants.LOGGER.info("HELLO FROM CLIENT SETUP")
+		EGOEquipmentConstants.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().user.name)
 	}
 }

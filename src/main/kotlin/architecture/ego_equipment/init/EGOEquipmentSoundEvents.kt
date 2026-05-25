@@ -6,9 +6,10 @@ import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.sounds.SoundEvent
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 object EGOEquipmentSoundEvents {
-	val REGISTRY: DeferredRegister<SoundEvent> = EGOEquipment.modRegister(BuiltInRegistries.SOUND_EVENT)
+	val REGISTRY: DeferredRegister<SoundEvent> = EGOEquipmentConstants.modRegister(BuiltInRegistries.SOUND_EVENT)
 
 	val ARMOR_EQUIP_ZAYIN: DeferredHolder<SoundEvent, SoundEvent> = registerForHolder(
 		"armor_equip_zayin", "", "item.armor.equip_zayin"
@@ -40,7 +41,8 @@ object EGOEquipmentSoundEvents {
 	)
 
 	private fun registerForHolder(id: String, zhName: String, location: String): DeferredHolder<SoundEvent, SoundEvent> {
-		val register = REGISTRY.register(id) { -> SoundEvent.createVariableRangeEvent(EGOEquipment.modRl(location)) }
+		val register =
+			REGISTRY.register(id) { -> SoundEvent.createVariableRangeEvent(EGOEquipmentConstants.modRl(location)) }
 		ZhCn.addI18nSoundEventText(zhName, register)
 		return register
 	}

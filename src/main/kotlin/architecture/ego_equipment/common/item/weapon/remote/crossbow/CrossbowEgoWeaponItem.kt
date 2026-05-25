@@ -23,16 +23,17 @@ class CrossbowEgoWeaponItem(
 	override fun getDefaultProjectileRange(): Int = attackDistance.toInt()
 
 	fun getProjectileRange(entity: LivingEntity, itemStack: ItemStack, handUsed: InteractionHand): Float = attackDistance
-
 	override fun createProjectile(
-		world: Level, shooterEntity: LivingEntity, weaponItem: ItemStack,
-		ammoItem: ItemStack?, isCrit: Boolean
-	): Projectile = if (this.createProjectile != null && ammoItem != null)
-		this.createProjectile.createProjectile(world, shooterEntity, weaponItem, ammoItem)
-	else
-		super.createProjectile(world, shooterEntity, weaponItem, Items.ARROW.defaultInstance, isCrit)
+		level: Level,
+		shooter: LivingEntity,
+		weapon: ItemStack,
+		ammo: ItemStack,
+		isCrit: Boolean
+	): Projectile =
+		if (this.createProjectile != null) this.createProjectile.createProjectile(level, shooter, weapon, ammo)
+		else super.createProjectile(level, shooter, weapon, Items.ARROW.defaultInstance, isCrit)
 
-	protected fun notConsumingShoot(
+	fun notConsumingShoot(
 		world: ServerLevel, shooterEntity: LivingEntity, handUsed: InteractionHand, weaponItem: ItemStack,
 		projectileVelocity: Float, projectileInaccuracy: Float, targetEntity: LivingEntity?
 	) {

@@ -13,9 +13,10 @@ import net.minecraft.world.entity.MobCategory
 import net.neoforged.bus.api.IEventBus
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 object EGOEquipmentProjectileEntityTypes {
-	val REGISTRY: DeferredRegister<EntityType<*>> = EGOEquipment.modRegister(BuiltInRegistries.ENTITY_TYPE)
+	val REGISTRY: DeferredRegister<EntityType<*>> = EGOEquipmentConstants.modRegister(BuiltInRegistries.ENTITY_TYPE)
 
 	val PARADISE_LOST_SPIKEWEED: DeferredHolder<EntityType<*>, EntityType<ParadiseLostSpikeweed>> = register(
 		"paradise_lost_spikeweed",

@@ -3,31 +3,23 @@ package architecture.ego_equipment.core
 import architecture.ego_equipment.init.*
 import architecture.ego_equipment.init.item.EGOArmorItems
 import architecture.ego_equipment.init.item.EGOEquipmentItems
-import architecture.goldenboughs_lib.core.Lib
+import architecture.goldenboughs_lib.core.LibConstants
 import architecture.goldenboughs_lib.eventexecute.client.EntityRenderEventExecute
-import architecture.goldenboughs_lib.util.LibUtil.rlOf
-import net.minecraft.core.Registry
-import net.minecraft.resources.ResourceKey
-import net.minecraft.resources.ResourceLocation
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.fml.common.Mod
 import net.neoforged.neoforge.event.server.ServerStartingEvent
-import net.neoforged.neoforge.registries.DeferredRegister
-import org.apache.logging.log4j.LogManager
-import org.apache.logging.log4j.Logger
-import org.jetbrains.annotations.Contract
 import thedarkcolour.kotlinforforge.neoforge.forge.LOADING_CONTEXT
 import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
-@Mod(EGOEquipment.ID)
+@Mod(EGOEquipmentConstants.ID)
 @EventBusSubscriber
 object EGOEquipment {
-	const val ID: String = "ego_equipment"
-	const val NAME: String = "E.G.O.Equipment"
-
-	@JvmField
-	val LOGGER: Logger = LogManager.getLogger(ID)
+	@SubscribeEvent
+	fun onServerStarting(event: ServerStartingEvent) {
+		LibConstants.LOGGER.info("HELLO from server starting")
+	}
 
 	init {
 		val modContainer = LOADING_CONTEXT.activeContainer
@@ -42,32 +34,5 @@ object EGOEquipment {
 		EGOEquipmentItems.register(modBus)
 		EntityRenderEventExecute.add(EGOArmorItems.IN_THE_NAME_OF_LOVE_AND_HATE)
 		EntityRenderEventExecute.add(EGOArmorItems.MAGIC_BULLET)
-	}
-
-	@SubscribeEvent
-	fun onServerStarting(event: ServerStartingEvent) {
-		Lib.LOGGER.info("HELLO from server starting")
-	}
-
-	@JvmStatic
-	@Contract("_ -> new")
-	fun modRl(name: String): ResourceLocation {
-		return rlOf(ID, name)
-	}
-
-	@JvmStatic
-	@Contract(pure = true)
-	fun modRlText(name: String): String {
-		return "$ID:$name"
-	}
-
-	@JvmStatic
-	fun <T> modRegister(registry: Registry<T>): DeferredRegister<T> {
-		return DeferredRegister.create<T>(registry, ID)
-	}
-
-	@JvmStatic
-	fun <T> modRegister(registry: ResourceKey<Registry<T>>): DeferredRegister<T> {
-		return DeferredRegister.create<T>(registry, ID)
 	}
 }

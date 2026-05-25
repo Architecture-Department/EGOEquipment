@@ -8,8 +8,9 @@ import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent
 import net.neoforged.neoforge.client.gui.VanillaGuiLayers
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
-@EventBusSubscriber(modid = EGOEquipment.ID, value = [Dist.CLIENT])
+@EventBusSubscriber(modid = EGOEquipmentConstants.ID, value = [Dist.CLIENT])
 object GuiLayerRegistry {
 	@SubscribeEvent
 	fun register(event: RegisterGuiLayersEvent) {

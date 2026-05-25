@@ -11,9 +11,11 @@ import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.ItemStack
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 object EGOEquipmentCreativeModeTabs {
-	val REGISTRY: DeferredRegister<CreativeModeTab> = EGOEquipment.modRegister(BuiltInRegistries.CREATIVE_MODE_TAB)
+	val REGISTRY: DeferredRegister<CreativeModeTab> =
+		EGOEquipmentConstants.modRegister(BuiltInRegistries.CREATIVE_MODE_TAB)
 
 	val EGO_WEAPON: DeferredHolder<CreativeModeTab, CreativeModeTab> = register(
 		"ego_weapon", "E.G.O武器"
@@ -61,7 +63,7 @@ object EGOEquipmentCreativeModeTabs {
 		zhCn: String,
 		displayItemsGenerator: CreativeModeTab.DisplayItemsGenerator
 	): CreativeModeTab.Builder {
-		val key = "itemGroup.${EGOEquipment.ID}.$name"
+		val key = "itemGroup.${EGOEquipmentConstants.ID}.$name"
 		ZhCn.addI18nText(zhCn, key)
 		return CreativeModeTab.builder()
 			.title(Component.translatable(key))

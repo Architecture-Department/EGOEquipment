@@ -12,9 +12,10 @@ import net.minecraft.world.item.Items
 import net.minecraft.world.item.crafting.Ingredient
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.*
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 object EGOEquipmentArmorMaterials {
-	val REGISTRY: DeferredRegister<ArmorMaterial> = EGOEquipment.modRegister(BuiltInRegistries.ARMOR_MATERIAL)
+	val REGISTRY: DeferredRegister<ArmorMaterial> = EGOEquipmentConstants.modRegister(BuiltInRegistries.ARMOR_MATERIAL)
 
 	val ZAYIN: Holder<ArmorMaterial> = register(
 		"zayin", 1, 2, 3, 1, 3, 9,

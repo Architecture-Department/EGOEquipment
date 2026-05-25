@@ -9,9 +9,10 @@ import net.minecraft.world.item.Item
 import net.neoforged.fml.loading.FMLEnvironment
 import org.jetbrains.annotations.ApiStatus
 import java.util.function.Supplier
+import architecture.ego_equipment.core.EGOEquipmentConstants
 
 @ApiStatus.Internal
-class ZhCn(output: PackOutput) : DatagenI18n(output, EGOEquipment.ID, "zh_cn") {
+class ZhCn(output: PackOutput) : DatagenI18n(output, EGOEquipmentConstants.ID, "zh_cn") {
 
 	companion object {
 		private val ITEMS: MutableMap<Supplier<out Item>, String> = HashMap()
@@ -49,7 +50,7 @@ class ZhCn(output: PackOutput) : DatagenI18n(output, EGOEquipment.ID, "zh_cn") {
 	}
 
 	override fun addTranslations() {
-		addPackDescription(EGOEquipment.ID, "E.G.O.装备")
+		addPackDescription(EGOEquipmentConstants.ID, "E.G.O.装备")
 		addItemList(ITEMS)
 		addEntityList(ENTITY)
 		addSoundEventList(SOUND_EVENT)

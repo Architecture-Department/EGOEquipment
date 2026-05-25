@@ -3,7 +3,7 @@
 	"package": "architecture.ego_equipment.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"MobEffectInstanceAccessorMixin"
+		"MobEffectInstanceAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1
