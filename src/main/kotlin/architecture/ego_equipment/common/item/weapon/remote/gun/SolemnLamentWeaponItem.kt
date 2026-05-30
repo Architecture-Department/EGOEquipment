@@ -1,7 +1,7 @@
 package architecture.ego_equipment.common.item.weapon.remote.gun
 
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentParticleTypes
 import architecture.ego_equipment.init.EGOEquipmentSoundEvents
 import architecture.goldenboughs_lib.api.LcDamageType
@@ -24,7 +24,6 @@ import net.minecraft.world.level.ClipContext
 import net.minecraft.world.phys.EntityHitResult
 import net.minecraft.world.phys.HitResult
 import software.bernie.geckolib.model.GeoModel
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class SolemnLamentWeaponItem : GunEgoWeaponItem {
 	companion object {

@@ -1,7 +1,7 @@
 package architecture.ego_equipment.client.gui.hudlayers
 
 import architecture.ego_equipment.common.item.weapon.remote.gun.MagicBulletWeaponItem
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.goldenboughs_lib.api.world.item.IGunWeapon
 import architecture.goldenboughs_lib.client.gui.hudlayers.BasicHudLayer
 import architecture.goldenboughs_lib.client.gui.widget.ImageProgressBar.Companion.renderProgressBar
@@ -12,7 +12,6 @@ import net.minecraft.client.gui.GuiGraphics
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.entity.HumanoidArm
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class GunChargeUpHudLayer private constructor(
 	private val attackIndicatorStatus: AttackIndicatorStatus

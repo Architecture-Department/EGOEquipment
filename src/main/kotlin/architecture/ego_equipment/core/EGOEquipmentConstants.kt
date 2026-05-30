@@ -4,11 +4,11 @@ import architecture.goldenboughs_lib.util.LibUtil.rlOf
 import net.minecraft.core.Registry
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.world.item.Item
+import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
-import net.minecraft.world.item.Item
-import net.neoforged.neoforge.registries.DeferredItem
 import org.jetbrains.annotations.Contract
 
 object EGOEquipmentConstants {

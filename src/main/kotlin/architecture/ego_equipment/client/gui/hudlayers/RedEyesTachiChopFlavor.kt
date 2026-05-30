@@ -1,6 +1,6 @@
 package architecture.ego_equipment.client.gui.hudlayers
 
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentMobEffects
 import architecture.goldenboughs_lib.client.gui.hudlayers.chop_flavor.ChopFlavorLayer
 import architecture.goldenboughs_lib.client.gui.widget.ImageProgressBar.Companion.renderProgressBar
@@ -8,7 +8,6 @@ import net.minecraft.client.DeltaTracker
 import net.minecraft.client.gui.GuiGraphics
 import net.minecraft.client.player.LocalPlayer
 import net.minecraft.resources.ResourceLocation
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class RedEyesTachiChopFlavor : ChopFlavorLayer.ChopFlavorBar() {
 	companion object {

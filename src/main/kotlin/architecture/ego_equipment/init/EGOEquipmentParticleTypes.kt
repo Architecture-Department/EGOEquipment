@@ -2,7 +2,7 @@ package architecture.ego_equipment.init
 
 import architecture.ego_equipment.client.particle.DyeingMagicCircleParticle
 import architecture.ego_equipment.client.particle.magicbullet.MagicBulletMagicCircleParticle
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.goldenboughs_lib.common.particle.SpecialParticleType
 import com.mojang.serialization.MapCodec
 import net.minecraft.core.particles.ParticleOptions
@@ -14,7 +14,6 @@ import net.minecraft.network.codec.StreamCodec
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Supplier
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 object EGOEquipmentParticleTypes {
 	@JvmField

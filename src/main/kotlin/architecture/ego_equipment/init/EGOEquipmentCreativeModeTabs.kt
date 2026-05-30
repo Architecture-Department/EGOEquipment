@@ -1,6 +1,6 @@
 package architecture.ego_equipment.init
 
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.datagen.i18n.ZhCn
 import architecture.ego_equipment.init.item.EGOArmorItems
 import architecture.ego_equipment.init.item.EGOWeaponItems
@@ -11,7 +11,6 @@ import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.ItemStack
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 object EGOEquipmentCreativeModeTabs {
 	val REGISTRY: DeferredRegister<CreativeModeTab> =

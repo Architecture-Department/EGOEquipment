@@ -1,13 +1,12 @@
 package architecture.ego_equipment.datagen
 
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentParticleTypes
 import net.minecraft.core.particles.ParticleType
 import net.minecraft.data.PackOutput
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 import net.neoforged.neoforge.common.data.ParticleDescriptionProvider
 import java.util.function.Supplier
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class DatagenParticle(output: PackOutput, fileHelper: ExistingFileHelper) :
 	ParticleDescriptionProvider(output, fileHelper) {

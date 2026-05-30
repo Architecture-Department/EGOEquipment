@@ -2,7 +2,7 @@ package architecture.ego_equipment.common.item.weapon.remote.gun
 
 import architecture.ego_equipment.common.entity.projectile.MagicBulletEntity
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
 import architecture.goldenboughs_lib.util.GunWeaponUtil
 import architecture.goldenboughs_lib.util.PiercingUtil
@@ -15,7 +15,6 @@ import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.Level
 import software.bernie.geckolib.model.GeoModel
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class MagicBulletWeaponItem : GunEgoWeaponItem {
 	companion object {

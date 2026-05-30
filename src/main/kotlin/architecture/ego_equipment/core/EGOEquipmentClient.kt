@@ -10,7 +10,6 @@ import net.neoforged.neoforge.client.gui.ConfigurationScreen
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory
 import thedarkcolour.kotlinforforge.neoforge.forge.LOADING_CONTEXT
 import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 @Mod(value = EGOEquipmentConstants.ID, dist = [Dist.CLIENT])
 @EventBusSubscriber(modid = EGOEquipmentConstants.ID, value = [Dist.CLIENT])

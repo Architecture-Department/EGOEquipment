@@ -1,10 +1,9 @@
 package architecture.ego_equipment.client.renderer.item
 
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import net.minecraft.client.player.AbstractClientPlayer
 import net.minecraft.client.renderer.MultiBufferSource
 import net.minecraft.client.renderer.RenderType
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 object MagicBulletMagicCircleRenderer {
 	val MAGIC_CIRCLE_16X: RenderType = architecture.goldenboughs_lib.client.LibRenderTypes.magicBulletMagicCircle(

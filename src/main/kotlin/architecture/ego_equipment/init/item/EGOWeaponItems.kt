@@ -18,7 +18,6 @@ import architecture.ego_equipment.common.item.weapon.remote.gun.SolemnLamentWeap
 import architecture.ego_equipment.common.item.weapon.remote.gun.pistol.PinkWeaponItem
 import architecture.ego_equipment.common.item.weapon.remote.gun.rifle.RifleEgoWeaponItem
 import architecture.ego_equipment.common.item.weapon.remote.special.*
-import architecture.ego_equipment.core.EGOEquipment
 import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.datagen.i18n.ZhCn
 import architecture.goldenboughs_lib.api.LcDamageType

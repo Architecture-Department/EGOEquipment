@@ -1,6 +1,6 @@
 package architecture.ego_equipment.datagen
 
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentSoundEvents
 import net.minecraft.data.PackOutput
 import net.minecraft.resources.ResourceLocation
@@ -8,7 +8,6 @@ import net.minecraft.sounds.SoundEvent
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 import net.neoforged.neoforge.common.data.SoundDefinition
 import net.neoforged.neoforge.common.data.SoundDefinitionsProvider
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class DatagenSoundDefinitionsProvider(output: PackOutput, existingFileHelper: ExistingFileHelper) :
 	SoundDefinitionsProvider(output, EGOEquipmentConstants.ID, existingFileHelper) {

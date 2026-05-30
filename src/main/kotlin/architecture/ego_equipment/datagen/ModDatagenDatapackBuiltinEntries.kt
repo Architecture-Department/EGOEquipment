@@ -1,12 +1,11 @@
 package architecture.ego_equipment.datagen
 
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import net.minecraft.core.HolderLookup
 import net.minecraft.core.RegistrySetBuilder
 import net.minecraft.data.PackOutput
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider
 import java.util.concurrent.CompletableFuture
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class ModDatagenDatapackBuiltinEntries(
 	output: PackOutput,

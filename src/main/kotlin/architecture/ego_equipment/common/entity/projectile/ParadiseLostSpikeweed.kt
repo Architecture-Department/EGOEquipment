@@ -1,6 +1,6 @@
 package architecture.ego_equipment.common.entity.projectile
 
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentProjectileEntityTypes
 import architecture.goldenboughs_lib.api.LcDamageType
 import architecture.goldenboughs_lib.api.LcLevel
@@ -29,7 +29,6 @@ import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.animation.AnimatableManager
 import software.bernie.geckolib.renderer.GeoEntityRenderer
 import software.bernie.geckolib.util.GeckoLibUtil
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 class ParadiseLostSpikeweed(
 	entityType: EntityType<*>,

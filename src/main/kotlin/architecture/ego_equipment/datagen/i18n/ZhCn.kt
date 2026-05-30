@@ -1,6 +1,6 @@
 package architecture.ego_equipment.datagen.i18n
 
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.goldenboughs_lib.datagen.i18n.DatagenI18n
 import net.minecraft.data.PackOutput
 import net.minecraft.sounds.SoundEvent
@@ -9,7 +9,6 @@ import net.minecraft.world.item.Item
 import net.neoforged.fml.loading.FMLEnvironment
 import org.jetbrains.annotations.ApiStatus
 import java.util.function.Supplier
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 @ApiStatus.Internal
 class ZhCn(output: PackOutput) : DatagenI18n(output, EGOEquipmentConstants.ID, "zh_cn") {

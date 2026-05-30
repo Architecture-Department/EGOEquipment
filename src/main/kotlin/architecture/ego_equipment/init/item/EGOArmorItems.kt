@@ -1,7 +1,6 @@
 package architecture.ego_equipment.init.item
 
 import architecture.ego_equipment.common.item.armor.EgoArmorItem
-import architecture.ego_equipment.core.EGOEquipment
 import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.datagen.i18n.ZhCn
 import architecture.ego_equipment.init.EGOEquipmentArmorMaterials

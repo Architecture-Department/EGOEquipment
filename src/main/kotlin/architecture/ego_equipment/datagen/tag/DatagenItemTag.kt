@@ -1,6 +1,5 @@
 package architecture.ego_equipment.datagen.tag
 
-import architecture.ego_equipment.core.EGOEquipment
 import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.tag.EquipmentItemTags
 import architecture.goldenboughs_lib.init.LibItems

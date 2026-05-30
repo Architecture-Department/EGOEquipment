@@ -1,12 +1,11 @@
 package architecture.ego_equipment.init.tag
 
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.goldenboughs_lib.util.LibUtil.rlOf
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.ItemTags
 import net.minecraft.tags.TagKey
 import net.minecraft.world.item.Item
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 object EquipmentItemTags {
 	val EGO_ARMOUR: TagKey<Item> = createTag("ego/armour")

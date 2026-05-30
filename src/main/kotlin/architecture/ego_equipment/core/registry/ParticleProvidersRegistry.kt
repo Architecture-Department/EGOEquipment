@@ -3,13 +3,12 @@ package architecture.ego_equipment.core.registry
 import architecture.ego_equipment.client.particle.DyeingMagicCircleParticle
 import architecture.ego_equipment.client.particle.magicbullet.MagicBulletMagicCircleParticle
 import architecture.ego_equipment.client.particle.solemnlament.ButterflyParticle
-import architecture.ego_equipment.core.EGOEquipment
+import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentParticleTypes
 import net.neoforged.api.distmarker.Dist
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent
-import architecture.ego_equipment.core.EGOEquipmentConstants
 
 @EventBusSubscriber(modid = EGOEquipmentConstants.ID, value = [Dist.CLIENT])
 object ParticleProvidersRegistry {
