@@ -1,4 +1,4 @@
-package architecture.ego_equipment.core.registry
+package architecture.ego_equipment.events.registry
 
 import architecture.ego_equipment.client.gui.hudlayers.GunChargeUpHudLayer
 import architecture.ego_equipment.core.EGOEquipmentConstants

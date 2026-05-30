@@ -1,4 +1,4 @@
-package architecture.ego_equipment.core.registry.client
+package architecture.ego_equipment.events.registry.client
 
 import architecture.ego_equipment.client.renderer.entity.MagicBulletRenderer
 import architecture.ego_equipment.core.EGOEquipmentConstants
