@@ -1,4 +1,4 @@
-package architecture.ego_equipment.init.item
+﻿package architecture.ego_equipment.init.item
 
 import architecture.ego_equipment.common.item.weapon.melee.MeleeEgoWeaponItem
 import architecture.ego_equipment.common.item.weapon.melee.axe.AxeEgoWeaponGeoItem
@@ -20,13 +20,13 @@ import architecture.ego_equipment.common.item.weapon.remote.gun.rifle.RifleEgoWe
 import architecture.ego_equipment.common.item.weapon.remote.special.*
 import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.datagen.i18n.ZhCn
-import architecture.goldenboughs_lib.api.LcDamageType
-import architecture.goldenboughs_lib.api.LcLevel
-import architecture.goldenboughs_lib.api.virtue.VirtueRating
 import architecture.goldenboughs_lib.api.world.item.IEgoItem
 import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem
 import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
-import architecture.goldenboughs_lib.util.LcLevelUtil
+import architecture.goldenboughs_lib.module.lc_damage.api.LcDamageType
+import architecture.goldenboughs_lib.module.lc_damage.api.LcLevel
+import architecture.goldenboughs_lib.module.lc_damage.util.LcLevelUtil
+import architecture.goldenboughs_lib.module.virtue.api.VirtueRating
 import architecture.goldenboughs_lib.util.LibUtil.rlOf
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.BlockTags

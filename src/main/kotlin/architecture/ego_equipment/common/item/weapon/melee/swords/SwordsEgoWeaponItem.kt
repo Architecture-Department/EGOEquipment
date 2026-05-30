@@ -1,8 +1,8 @@
-package architecture.ego_equipment.common.item.weapon.melee.swords
+﻿package architecture.ego_equipment.common.item.weapon.melee.swords
 
-import architecture.goldenboughs_lib.api.LcDamageType
 import architecture.goldenboughs_lib.api.world.item.IEgoWeaponItem
 import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem
+import architecture.goldenboughs_lib.module.lc_damage.api.LcDamageType
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.SwordItem
 import net.minecraft.world.item.Tier

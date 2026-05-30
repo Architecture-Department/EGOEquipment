@@ -1,16 +1,16 @@
-package architecture.ego_equipment.init.item
+﻿package architecture.ego_equipment.init.item
 
 import architecture.ego_equipment.common.item.armor.EgoArmorItem
 import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.datagen.i18n.ZhCn
 import architecture.ego_equipment.init.EGOEquipmentArmorMaterials
 import architecture.goldenboughs_lib.api.Armors
-import architecture.goldenboughs_lib.api.LcLevel
 import architecture.goldenboughs_lib.client.model.armor.ModGeoArmorModel
 import architecture.goldenboughs_lib.client.renderer.GeoArmourRenderProvider
-import architecture.goldenboughs_lib.common.data_component.ItemVirtueUsageReq
 import architecture.goldenboughs_lib.init.LibAttributes
-import architecture.goldenboughs_lib.util.LcLevelUtil
+import architecture.goldenboughs_lib.module.lc_damage.api.LcLevel
+import architecture.goldenboughs_lib.module.lc_damage.util.LcLevelUtil
+import architecture.goldenboughs_lib.module.virtue.data_component.ItemVirtueUsageReq
 import net.minecraft.core.Holder
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.ArmorItem

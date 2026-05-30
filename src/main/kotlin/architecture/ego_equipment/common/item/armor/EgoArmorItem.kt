@@ -1,10 +1,10 @@
-package architecture.ego_equipment.common.item.armor
+﻿package architecture.ego_equipment.common.item.armor
 
 import architecture.goldenboughs_lib.api.capability.item.IItemUsageReq
 import architecture.goldenboughs_lib.api.world.item.IEgoItem
-import architecture.goldenboughs_lib.common.data_component.ItemVirtueUsageReq
 import architecture.goldenboughs_lib.init.LibAttributes
 import architecture.goldenboughs_lib.init.LibDataComponentTypes
+import architecture.goldenboughs_lib.module.virtue.data_component.ItemVirtueUsageReq
 import architecture.goldenboughs_lib.util.world.item.ItemBuilderUtil
 import net.minecraft.core.Holder
 import net.minecraft.resources.ResourceLocation

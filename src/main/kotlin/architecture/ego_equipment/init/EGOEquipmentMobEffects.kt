@@ -1,9 +1,9 @@
-package architecture.ego_equipment.init
+﻿package architecture.ego_equipment.init
 
 import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.item.EGOWeaponItems
-import architecture.goldenboughs_lib.common.mobeffect.MobEffectExpand
 import architecture.goldenboughs_lib.datagen.i18n.LibZhCn
+import architecture.goldenboughs_lib.module.shield.mobeffect.MobEffectExpand
 import net.minecraft.core.Holder
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.resources.ResourceLocation

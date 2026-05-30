@@ -1,13 +1,13 @@
-package architecture.ego_equipment.common.entity.projectile
+﻿package architecture.ego_equipment.common.entity.projectile
 
 import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentProjectileEntityTypes
-import architecture.goldenboughs_lib.api.LcDamageType
-import architecture.goldenboughs_lib.api.LcLevel
 import architecture.goldenboughs_lib.client.model.GeoModelExpand
 import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel
 import architecture.goldenboughs_lib.init.LibDamageTypes
-import architecture.goldenboughs_lib.util.RationalityUtil.modifyRationalityValue
+import architecture.goldenboughs_lib.module.lc_damage.api.LcDamageType
+import architecture.goldenboughs_lib.module.lc_damage.api.LcLevel
+import architecture.goldenboughs_lib.module.rationality.util.RationalityUtil.modifyRationalityValue
 import net.minecraft.client.renderer.entity.EntityRendererProvider
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.network.syncher.SynchedEntityData

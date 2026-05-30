@@ -1,11 +1,11 @@
-package architecture.ego_equipment.init
+﻿package architecture.ego_equipment.init
 
 import architecture.ego_equipment.common.entity.projectile.MagicBulletEntity
 import architecture.ego_equipment.common.entity.projectile.ParadiseLostSpikeweed
 import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.datagen.i18n.ZhCn
-import architecture.goldenboughs_lib.api.LcLevel
-import architecture.goldenboughs_lib.util.LcLevelUtil
+import architecture.goldenboughs_lib.module.lc_damage.api.LcLevel
+import architecture.goldenboughs_lib.module.lc_damage.util.LcLevelUtil
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType

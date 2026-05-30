@@ -1,14 +1,14 @@
-package architecture.ego_equipment.common.item.weapon.remote.gun
+﻿package architecture.ego_equipment.common.item.weapon.remote.gun
 
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem
 import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentParticleTypes
 import architecture.ego_equipment.init.EGOEquipmentSoundEvents
-import architecture.goldenboughs_lib.api.LcDamageType
 import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
 import architecture.goldenboughs_lib.init.LibDamageSources
-import architecture.goldenboughs_lib.util.LcDamageTypeUtil.getLcDamageType
-import architecture.goldenboughs_lib.util.LcLevelUtil.getLevel
+import architecture.goldenboughs_lib.module.lc_damage.api.LcDamageType
+import architecture.goldenboughs_lib.module.lc_damage.util.LcDamageTypeUtil.getLcDamageType
+import architecture.goldenboughs_lib.module.lc_damage.util.LcLevelUtil.getLevel
 import net.minecraft.core.particles.SimpleParticleType
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.server.level.ServerLevel
