@@ -12,7 +12,7 @@ import net.neoforged.neoforge.client.event.RenderPlayerEvent
 object PlayerRenderEvents {
 
 	@SubscribeEvent
-	fun playerRender(event: RenderPlayerEvent.Post) {
+	fun onPlayerRenderPost(event: RenderPlayerEvent.Post) {
 		val multiBufferSource = event.multiBufferSource
 		val partialTick = event.partialTick
 		val entity = event.entity as AbstractClientPlayer

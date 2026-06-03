@@ -12,7 +12,7 @@ import net.neoforged.fml.common.EventBusSubscriber
 object ClientEvents {
 
 	@SubscribeEvent
-	fun addChopFlavorLayer(event: ChopFlavorLayerEvent) {
+	fun onAddChopFlavorLayer(event: ChopFlavorLayerEvent) {
 		event.add(
 			EGOEquipmentConstants.modRl("red_eyes_tachi"),
 			{ itemStack -> itemStack.`is`(EGOWeaponItems.RED_EYES_TACHI) },
