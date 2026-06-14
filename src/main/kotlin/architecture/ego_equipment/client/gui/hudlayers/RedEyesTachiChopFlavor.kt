@@ -1,7 +1,7 @@
 package architecture.ego_equipment.client.gui.hudlayers
 
-import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentMobEffects
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import architecture.goldenboughs_lib.client.gui.hudlayers.chop_flavor.ChopFlavorLayer
 import architecture.goldenboughs_lib.client.gui.widget.ImageProgressBar.Companion.renderProgressBar
 import net.minecraft.client.DeltaTracker
@@ -11,10 +11,10 @@ import net.minecraft.resources.ResourceLocation
 
 class RedEyesTachiChopFlavor : ChopFlavorLayer.ChopFlavorBar() {
 	companion object {
-		val BOTTOM: ResourceLocation = EGOEquipmentConstants.modRl("chop_flavor/red_eyes_tachi/bottom")
-		val BOTTOM_GLOWMASK: ResourceLocation = EGOEquipmentConstants.modRl("chop_flavor/red_eyes_tachi/bottom_glowmask")
-		val SCABBARD: ResourceLocation = EGOEquipmentConstants.modRl("chop_flavor/red_eyes_tachi/scabbard")
-		val SCABBARD_ACTION: ResourceLocation = EGOEquipmentConstants.modRl("chop_flavor/red_eyes_tachi/scabbard_action")
+		val BOTTOM: ResourceLocation = EGOEquipmentUtil.modRl("chop_flavor/red_eyes_tachi/bottom")
+		val BOTTOM_GLOWMASK: ResourceLocation = EGOEquipmentUtil.modRl("chop_flavor/red_eyes_tachi/bottom_glowmask")
+		val SCABBARD: ResourceLocation = EGOEquipmentUtil.modRl("chop_flavor/red_eyes_tachi/scabbard")
+		val SCABBARD_ACTION: ResourceLocation = EGOEquipmentUtil.modRl("chop_flavor/red_eyes_tachi/scabbard_action")
 		const val WIDTH = 32
 		const val HEIGHT = 16
 	}

@@ -1,7 +1,7 @@
 package architecture.ego_equipment.common.item.weapon.remote.special
 
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem
-import architecture.ego_equipment.core.EGOEquipmentConstants
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.entity.LivingEntity
@@ -10,27 +10,27 @@ import software.bernie.geckolib.model.GeoModel
 
 class InTheNameOfLoveAndHateWeaponItem : RemoteEgoWeaponGeoItem {
 	companion object {
-		val STANDBY: ResourceLocation = EGOEquipmentConstants.modRl("in_the_name_of_love_and_hate_weapon.standby")
-		val GALLOP: ResourceLocation = EGOEquipmentConstants.modRl("in_the_name_of_love_and_hate_weapon.gallop")
+		val STANDBY: ResourceLocation = EGOEquipmentUtil.modRl("in_the_name_of_love_and_hate_weapon.standby")
+		val GALLOP: ResourceLocation = EGOEquipmentUtil.modRl("in_the_name_of_love_and_hate_weapon.gallop")
 		val NORMAL_SHOOTING: ResourceLocation =
-			EGOEquipmentConstants.modRl("in_the_name_of_love_and_hate_weapon.normal_shooting")
+			EGOEquipmentUtil.modRl("in_the_name_of_love_and_hate_weapon.normal_shooting")
 		val NORMAL_SHOOTING1: ResourceLocation =
-			EGOEquipmentConstants.modRl("in_the_name_of_love_and_hate_weapon.normal_shooting.1")
+			EGOEquipmentUtil.modRl("in_the_name_of_love_and_hate_weapon.normal_shooting.1")
 		val NORMAL_SHOOTING2: ResourceLocation =
-			EGOEquipmentConstants.modRl("in_the_name_of_love_and_hate_weapon.normal_shooting.2")
-		val SKILL: ResourceLocation = EGOEquipmentConstants.modRl("in_the_name_of_love_and_hate_weapon.skill")
-		val SKILL1: ResourceLocation = EGOEquipmentConstants.modRl("in_the_name_of_love_and_hate_weapon.skill.1")
-		val SKILL2: ResourceLocation = EGOEquipmentConstants.modRl("in_the_name_of_love_and_hate_weapon.skill.2")
+			EGOEquipmentUtil.modRl("in_the_name_of_love_and_hate_weapon.normal_shooting.2")
+		val SKILL: ResourceLocation = EGOEquipmentUtil.modRl("in_the_name_of_love_and_hate_weapon.skill")
+		val SKILL1: ResourceLocation = EGOEquipmentUtil.modRl("in_the_name_of_love_and_hate_weapon.skill.1")
+		val SKILL2: ResourceLocation = EGOEquipmentUtil.modRl("in_the_name_of_love_and_hate_weapon.skill.2")
 		val FINISHING_SKILL: ResourceLocation =
-			EGOEquipmentConstants.modRl("in_the_name_of_love_and_hate_weapon.finishing_skill")
+			EGOEquipmentUtil.modRl("in_the_name_of_love_and_hate_weapon.finishing_skill")
 		val FINISHING_SKILL1: ResourceLocation =
-			EGOEquipmentConstants.modRl("in_the_name_of_love_and_hate_weapon.finishing_skill.1")
+			EGOEquipmentUtil.modRl("in_the_name_of_love_and_hate_weapon.finishing_skill.1")
 		val FINISHING_SKILL2: ResourceLocation =
-			EGOEquipmentConstants.modRl("in_the_name_of_love_and_hate_weapon.finishing_skill.2")
+			EGOEquipmentUtil.modRl("in_the_name_of_love_and_hate_weapon.finishing_skill.2")
 		val FINISHING_SKILL3: ResourceLocation =
-			EGOEquipmentConstants.modRl("in_the_name_of_love_and_hate_weapon.finishing_skill.3")
+			EGOEquipmentUtil.modRl("in_the_name_of_love_and_hate_weapon.finishing_skill.3")
 		val FINISHING_SKILL4: ResourceLocation =
-			EGOEquipmentConstants.modRl("in_the_name_of_love_and_hate_weapon.finishing_skill.4")
+			EGOEquipmentUtil.modRl("in_the_name_of_love_and_hate_weapon.finishing_skill.4")
 	}
 
 	constructor(

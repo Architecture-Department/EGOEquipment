@@ -2,8 +2,8 @@
 
 import architecture.ego_equipment.common.entity.projectile.MagicBulletEntity
 import architecture.ego_equipment.common.entity.projectile.ParadiseLostSpikeweed
-import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.datagen.i18n.ZhCn
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import architecture.goldenboughs_lib.module.lc_damage.api.LcLevel
 import architecture.goldenboughs_lib.module.lc_damage.util.LcLevelUtil
 import net.minecraft.core.registries.BuiltInRegistries
@@ -15,7 +15,7 @@ import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
 
 object EGOEquipmentProjectileEntityTypes {
-	val REGISTRY: DeferredRegister<EntityType<*>> = EGOEquipmentConstants.modRegister(BuiltInRegistries.ENTITY_TYPE)
+	val REGISTRY: DeferredRegister<EntityType<*>> = EGOEquipmentUtil.modRegister(BuiltInRegistries.ENTITY_TYPE)
 
 	val PARADISE_LOST_SPIKEWEED: DeferredHolder<EntityType<*>, EntityType<ParadiseLostSpikeweed>> = register(
 		"paradise_lost_spikeweed",

@@ -1,6 +1,6 @@
 package architecture.ego_equipment.datagen.i18n
 
-import architecture.ego_equipment.core.EGOEquipmentConstants
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import architecture.goldenboughs_lib.datagen.i18n.DatagenI18n
 import net.minecraft.data.PackOutput
 import net.minecraft.sounds.SoundEvent
@@ -11,7 +11,7 @@ import org.jetbrains.annotations.ApiStatus
 import java.util.function.Supplier
 
 @ApiStatus.Internal
-class ZhCn(output: PackOutput) : DatagenI18n(output, EGOEquipmentConstants.ID, "zh_cn") {
+class ZhCn(output: PackOutput) : DatagenI18n(output, EGOEquipmentUtil.ID, "zh_cn") {
 
 	companion object {
 		private val ITEMS: MutableMap<Supplier<out Item>, String> = HashMap()
@@ -49,7 +49,7 @@ class ZhCn(output: PackOutput) : DatagenI18n(output, EGOEquipmentConstants.ID, "
 	}
 
 	override fun addTranslations() {
-		addPackDescription(EGOEquipmentConstants.ID, "E.G.O.装备")
+		addPackDescription(EGOEquipmentUtil.ID, "E.G.O.装备")
 		addItemList(ITEMS)
 		addEntityList(ENTITY)
 		addSoundEventList(SOUND_EVENT)

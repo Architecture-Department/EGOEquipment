@@ -1,8 +1,8 @@
 package architecture.ego_equipment.datagen
 
-import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.item.EGOArmorItems
 import architecture.ego_equipment.init.item.EGOWeaponItems
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import architecture.goldenboughs_lib.util.LibUtil.rlOf
 import architecture.goldenboughs_lib.util.datagen.ItemModelUtil.geoItem
 import architecture.goldenboughs_lib.util.datagen.ItemModelUtil.withExistingParent
@@ -13,7 +13,7 @@ import net.neoforged.neoforge.client.model.generators.ItemModelProvider
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 
 class DatagenItemModel(output: PackOutput, existingFileHelper: ExistingFileHelper) :
-	ItemModelProvider(output, EGOEquipmentConstants.ID, existingFileHelper) {
+	ItemModelProvider(output, EGOEquipmentUtil.ID, existingFileHelper) {
 
 	override fun registerModels() {
 		withExistingParent(pathPrefix = "item/armor/", registry = EGOArmorItems.REGISTRY)

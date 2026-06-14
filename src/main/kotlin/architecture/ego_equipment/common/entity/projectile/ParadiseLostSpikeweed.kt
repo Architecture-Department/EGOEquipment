@@ -1,7 +1,7 @@
 ﻿package architecture.ego_equipment.common.entity.projectile
 
-import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentProjectileEntityTypes
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import architecture.goldenboughs_lib.client.model.GeoModelExpand
 import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel
 import architecture.goldenboughs_lib.init.LibDamageTypes
@@ -264,10 +264,10 @@ class ParadiseLostSpikeweed(
 	class TrainingRabbitsRenderer(context: EntityRendererProvider.Context) :
 		GeoEntityRenderer<ParadiseLostSpikeweed>(
 			context,
-			GeoEntityModel(EGOEquipmentConstants.modRl("paradise_lost_spikeweed"))
+			GeoEntityModel(EGOEquipmentUtil.modRl("paradise_lost_spikeweed"))
 		) {
 
 		override fun getTextureLocation(animatable: ParadiseLostSpikeweed): ResourceLocation =
-			GeoModelExpand.texturePath(EGOEquipmentConstants.modRl("paradise_lost_spikeweed"))
+			GeoModelExpand.texturePath(EGOEquipmentUtil.modRl("paradise_lost_spikeweed"))
 	}
 }

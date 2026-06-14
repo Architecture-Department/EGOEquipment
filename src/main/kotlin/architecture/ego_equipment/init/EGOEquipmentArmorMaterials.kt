@@ -1,6 +1,6 @@
 package architecture.ego_equipment.init
 
-import architecture.ego_equipment.core.EGOEquipmentConstants
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import net.minecraft.Util
 import net.minecraft.core.Holder
 import net.minecraft.core.registries.BuiltInRegistries
@@ -14,7 +14,7 @@ import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.*
 
 object EGOEquipmentArmorMaterials {
-	val REGISTRY: DeferredRegister<ArmorMaterial> = EGOEquipmentConstants.modRegister(BuiltInRegistries.ARMOR_MATERIAL)
+	val REGISTRY: DeferredRegister<ArmorMaterial> = EGOEquipmentUtil.modRegister(BuiltInRegistries.ARMOR_MATERIAL)
 
 	val ZAYIN: Holder<ArmorMaterial> = register(
 		"zayin", 1, 2, 3, 1, 3, 9,

@@ -1,9 +1,9 @@
 ﻿package architecture.ego_equipment.common.item.weapon.remote.gun
 
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem
-import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentParticleTypes
 import architecture.ego_equipment.init.EGOEquipmentSoundEvents
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
 import architecture.goldenboughs_lib.init.LibDamageSources
 import architecture.goldenboughs_lib.module.lc_damage.api.LcDamageType
@@ -27,18 +27,18 @@ import software.bernie.geckolib.model.GeoModel
 
 class SolemnLamentWeaponItem : GunEgoWeaponItem {
 	companion object {
-		val STANDBY: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.standby")
-		val GALLOP: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.gallop")
-		val SHOOTING: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.shooting")
-		val SHOOTING1: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.shooting1")
-		val SHOOTING2: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.shooting2")
-		val SHOOTING3: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.shooting3")
-		val TWIN_STANDBY: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.twin.standby")
-		val TWIN_GALLOP: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.twin.gallop")
-		val TWIN_SHOOTING: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.twin.shooting")
-		val TWIN_SHOOTING1: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.twin.shooting1")
-		val TWIN_SHOOTING2: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.twin.shooting2")
-		val TWIN_SHOOTING3: ResourceLocation = EGOEquipmentConstants.modRl("solemn_lament_weapon.twin.shooting3")
+		val STANDBY: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.standby")
+		val GALLOP: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.gallop")
+		val SHOOTING: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.shooting")
+		val SHOOTING1: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.shooting1")
+		val SHOOTING2: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.shooting2")
+		val SHOOTING3: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.shooting3")
+		val TWIN_STANDBY: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.twin.standby")
+		val TWIN_GALLOP: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.twin.gallop")
+		val TWIN_SHOOTING: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.twin.shooting")
+		val TWIN_SHOOTING1: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.twin.shooting1")
+		val TWIN_SHOOTING2: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.twin.shooting2")
+		val TWIN_SHOOTING3: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.twin.shooting3")
 	}
 
 	constructor(

@@ -3,8 +3,9 @@ package architecture.ego_equipment.core
 import architecture.ego_equipment.init.*
 import architecture.ego_equipment.init.item.EGOArmorItems
 import architecture.ego_equipment.init.item.EGOEquipmentItems
-import architecture.goldenboughs_lib.core.LibConstants
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import architecture.goldenboughs_lib.eventexecute.client.EntityRenderEventExecute
+import architecture.goldenboughs_lib.util.LibUtil
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.fml.common.Mod
@@ -12,12 +13,12 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent
 import thedarkcolour.kotlinforforge.neoforge.forge.LOADING_CONTEXT
 import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
 
-@Mod(EGOEquipmentConstants.ID)
+@Mod(EGOEquipmentUtil.ID)
 @EventBusSubscriber
 object EGOEquipment {
 	@SubscribeEvent
 	fun onServerStarting(event: ServerStartingEvent) {
-		LibConstants.LOGGER.info("HELLO from server starting")
+		LibUtil.LOGGER.info("HELLO from server starting")
 	}
 
 	init {

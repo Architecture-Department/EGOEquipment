@@ -1,9 +1,9 @@
 package architecture.ego_equipment.init
 
-import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.datagen.i18n.ZhCn
 import architecture.ego_equipment.init.item.EGOArmorItems
 import architecture.ego_equipment.init.item.EGOWeaponItems
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceKey
@@ -14,7 +14,7 @@ import net.neoforged.neoforge.registries.DeferredRegister
 
 object EGOEquipmentCreativeModeTabs {
 	val REGISTRY: DeferredRegister<CreativeModeTab> =
-		EGOEquipmentConstants.modRegister(BuiltInRegistries.CREATIVE_MODE_TAB)
+		EGOEquipmentUtil.modRegister(BuiltInRegistries.CREATIVE_MODE_TAB)
 
 	val EGO_WEAPON: DeferredHolder<CreativeModeTab, CreativeModeTab> = register(
 		"ego_weapon", "E.G.O武器"
@@ -62,7 +62,7 @@ object EGOEquipmentCreativeModeTabs {
 		zhCn: String,
 		displayItemsGenerator: CreativeModeTab.DisplayItemsGenerator
 	): CreativeModeTab.Builder {
-		val key = "itemGroup.${EGOEquipmentConstants.ID}.$name"
+		val key = "itemGroup.${EGOEquipmentUtil.ID}.$name"
 		ZhCn.addI18nText(zhCn, key)
 		return CreativeModeTab.builder()
 			.title(Component.translatable(key))

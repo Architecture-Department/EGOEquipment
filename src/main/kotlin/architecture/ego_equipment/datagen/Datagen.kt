@@ -1,9 +1,9 @@
 package architecture.ego_equipment.datagen
 
-import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.datagen.i18n.ZhCn
 import architecture.ego_equipment.datagen.tag.DatagenBlockTag
 import architecture.ego_equipment.datagen.tag.DatagenItemTag
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import architecture.goldenboughs_lib.util.datagen.buildClient
 import architecture.goldenboughs_lib.util.datagen.buildServer
 import net.minecraft.core.RegistrySetBuilder
@@ -13,7 +13,7 @@ import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.data.event.GatherDataEvent
 
-@EventBusSubscriber(modid = EGOEquipmentConstants.ID)
+@EventBusSubscriber(modid = EGOEquipmentUtil.ID)
 object Datagen {
 	@SubscribeEvent
 	fun gatherData(event: GatherDataEvent) {

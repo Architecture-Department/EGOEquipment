@@ -1,7 +1,7 @@
 ﻿package architecture.ego_equipment.init
 
-import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.item.EGOWeaponItems
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import architecture.goldenboughs_lib.datagen.i18n.LibZhCn
 import architecture.goldenboughs_lib.module.shield.mobeffect.MobEffectExpand
 import net.minecraft.core.Holder
@@ -16,7 +16,7 @@ import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
 
 object EGOEquipmentMobEffects {
-	val REGISTRY: DeferredRegister<MobEffect> = EGOEquipmentConstants.modRegister(BuiltInRegistries.MOB_EFFECT)
+	val REGISTRY: DeferredRegister<MobEffect> = EGOEquipmentUtil.modRegister(BuiltInRegistries.MOB_EFFECT)
 
 	val RED_EYES_HUNTING: Holder<MobEffect> = register("red_eyes_hunting", "赤瞳-狩猎", { category, color ->
 		object : MobEffectExpand(category, color) {
@@ -61,7 +61,7 @@ object EGOEquipmentMobEffects {
 		name: String, zhCnText: String, supplier: () -> T, function: (T, ResourceLocation) -> MobEffect
 	): DeferredHolder<MobEffect, T> = register(name, zhCnText) {
 		val apply = supplier()
-		function(apply, EGOEquipmentConstants.modRl(name))
+		function(apply, EGOEquipmentUtil.modRl(name))
 		apply
 	}
 
@@ -79,7 +79,7 @@ object EGOEquipmentMobEffects {
 		function: (T, ResourceLocation) -> MobEffect
 	): DeferredHolder<MobEffect, T> = register(name, zhCnText) {
 		val apply = biFunction(category, color)
-		function(apply, EGOEquipmentConstants.modRl(name))
+		function(apply, EGOEquipmentUtil.modRl(name))
 		apply
 	}
 }

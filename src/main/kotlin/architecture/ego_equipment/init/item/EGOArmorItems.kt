@@ -1,9 +1,9 @@
 ﻿package architecture.ego_equipment.init.item
 
 import architecture.ego_equipment.common.item.armor.EgoArmorItem
-import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.datagen.i18n.ZhCn
 import architecture.ego_equipment.init.EGOEquipmentArmorMaterials
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import architecture.goldenboughs_lib.api.Armors
 import architecture.goldenboughs_lib.client.model.armor.ModGeoArmorModel
 import architecture.goldenboughs_lib.client.renderer.GeoArmourRenderProvider
@@ -21,7 +21,7 @@ import net.neoforged.neoforge.registries.DeferredRegister
 import software.bernie.geckolib.animatable.client.GeoRenderProvider
 
 object EGOArmorItems {
-	val REGISTRY: DeferredRegister.Items = DeferredRegister.createItems(EGOEquipmentConstants.ID)
+	val REGISTRY: DeferredRegister.Items = DeferredRegister.createItems(EGOEquipmentUtil.ID)
 
 	//region ZAYIN
 	val PENITENCE = onArmor()
@@ -402,7 +402,7 @@ object EGOArmorItems {
 			val zhName = zhName ?: throw IllegalStateException("zhName is required")
 			val lcLevel = lcLevel ?: throw IllegalStateException("lcLevel is required")
 			val renderProvider = GeoArmourRenderProvider(
-				ModGeoArmorModel(modelPath ?: EGOEquipmentConstants.modRl(id))
+				ModGeoArmorModel(modelPath ?: EGOEquipmentUtil.modRl(id))
 			)
 
 			return registerSuit(
@@ -494,12 +494,12 @@ object EGOArmorItems {
 		}
 		LcLevelUtil.addItemLcLevelCapability(lcLevel, deferredItem)
 		when (armorItemType) {
-			ArmorItem.Type.CHESTPLATE -> EGOEquipmentConstants.CHEST_ARMOR.add(deferredItem)
-			ArmorItem.Type.LEGGINGS -> EGOEquipmentConstants.LEG_ARMOR.add(deferredItem)
-			ArmorItem.Type.BOOTS -> EGOEquipmentConstants.FOOT_ARMOR.add(deferredItem)
+			ArmorItem.Type.CHESTPLATE -> EGOEquipmentUtil.CHEST_ARMOR.add(deferredItem)
+			ArmorItem.Type.LEGGINGS -> EGOEquipmentUtil.LEG_ARMOR.add(deferredItem)
+			ArmorItem.Type.BOOTS -> EGOEquipmentUtil.FOOT_ARMOR.add(deferredItem)
 			else -> {}
 		}
-		EGOEquipmentConstants.EGO_ARMOUR.add(deferredItem)
+		EGOEquipmentUtil.EGO_ARMOUR.add(deferredItem)
 		ZhCn.addI18nItemText(zhName) { deferredItem.get() }
 		return deferredItem
 	}

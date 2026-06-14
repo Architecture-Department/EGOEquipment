@@ -1,8 +1,8 @@
 package architecture.ego_equipment.client.renderer.item
 
 import architecture.ego_equipment.common.item.weapon.melee.special.RedEyesTachiItem
-import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentMobEffects
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import architecture.goldenboughs_lib.client.renderer.GeoItemRendererExpand
 import com.mojang.blaze3d.vertex.PoseStack
 import com.mojang.blaze3d.vertex.VertexConsumer
@@ -23,11 +23,11 @@ class RedEyesTachiItemWeaponRenderer(
 
 	companion object {
 		val GLOWMASK_TEXTURE: ResourceLocation =
-			EGOEquipmentConstants.modRl("textures/geo/item/weapon/red_eyes_tachi_glowmask.png")
+			EGOEquipmentUtil.modRl("textures/geo/item/weapon/red_eyes_tachi_glowmask.png")
 		val GEO_HUNTIOG_TEXTURE: ResourceLocation =
-			EGOEquipmentConstants.modRl("textures/geo/item/weapon/red_eyes_tachi_hunting.png")
+			EGOEquipmentUtil.modRl("textures/geo/item/weapon/red_eyes_tachi_hunting.png")
 		val HUNTIOG_TEXTURE: ResourceLocation =
-			EGOEquipmentConstants.modRl("textures/item/weapon/red_eyes_tachi_hunting.png")
+			EGOEquipmentUtil.modRl("textures/item/weapon/red_eyes_tachi_hunting.png")
 	}
 
 	private var isHunting: Boolean = false

@@ -1,7 +1,7 @@
 package architecture.ego_equipment.datagen
 
-import architecture.ego_equipment.core.EGOEquipmentConstants
 import architecture.ego_equipment.init.EGOEquipmentParticleTypes
+import architecture.ego_equipment.util.EGOEquipmentUtil
 import net.minecraft.core.particles.ParticleType
 import net.minecraft.data.PackOutput
 import net.neoforged.neoforge.common.data.ExistingFileHelper
@@ -29,10 +29,10 @@ class DatagenParticle(output: PackOutput, fileHelper: ExistingFileHelper) :
 	}
 
 	private fun <T : ParticleType<*>> sprite(type: Supplier<T>, name: String) {
-		sprite(type.get(), EGOEquipmentConstants.modRl(name))
+		sprite(type.get(), EGOEquipmentUtil.modRl(name))
 	}
 
 	private fun <T : ParticleType<*>> sprite(type: Supplier<T>, vararg names: String) {
-		spriteSet(type.get(), names.map { EGOEquipmentConstants.modRl(it) }.toList())
+		spriteSet(type.get(), names.map { EGOEquipmentUtil.modRl(it) }.toList())
 	}
 }
