@@ -10,7 +10,6 @@ import net.neoforged.neoforge.client.event.RenderPlayerEvent
 
 @EventBusSubscriber(modid = EGOEquipmentUtil.ID, value = [Dist.CLIENT])
 object PlayerRenderEvents {
-
 	@SubscribeEvent
 	fun onPlayerRenderPost(event: RenderPlayerEvent.Post) {
 		val multiBufferSource = event.multiBufferSource

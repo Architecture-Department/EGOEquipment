@@ -10,7 +10,6 @@ import net.neoforged.fml.common.EventBusSubscriber
 
 @EventBusSubscriber(modid = EGOEquipmentUtil.ID, value = [Dist.CLIENT])
 object ClientEvents {
-
 	@SubscribeEvent
 	fun onAddChopFlavorLayer(event: ChopFlavorLayerEvent) {
 		event.add(
