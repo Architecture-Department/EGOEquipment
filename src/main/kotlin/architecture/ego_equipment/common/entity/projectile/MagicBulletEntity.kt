@@ -1,6 +1,6 @@
 package architecture.ego_equipment.common.entity.projectile
 
-import architecture.ego_equipment.init.EGOEquipmentProjectileEntityTypes
+import architecture.ego_equipment.init.EgoEquipProjectileEntityTypes
 import architecture.goldenboughs_lib.common.entiy.projectile.BulletEntity
 import architecture.goldenboughs_lib.init.LibDamageSources
 import architecture.goldenboughs_lib.init.LibDamageTypes
@@ -22,7 +22,7 @@ class MagicBulletEntity : BulletEntity {
 	}
 
 	constructor(level: Level, shooter: LivingEntity) : super(
-		EGOEquipmentProjectileEntityTypes.MAGIC_BULLET_ENTITY.get(), shooter, level
+		EgoEquipProjectileEntityTypes.MAGIC_BULLET_ENTITY.get(), shooter, level
 	) {
 		isNoGravity = true
 	}

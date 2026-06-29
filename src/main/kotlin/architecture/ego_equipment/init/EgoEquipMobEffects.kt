@@ -1,7 +1,7 @@
 ﻿package architecture.ego_equipment.init
 
-import architecture.ego_equipment.init.item.EGOWeaponItems
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.init.item.EgoWeaponItems
+import architecture.ego_equipment.util.EgoEquipUtil
 import architecture.goldenboughs_lib.datagen.i18n.LibZhCn
 import architecture.goldenboughs_lib.module.shield.mobeffect.MobEffectExpand
 import net.minecraft.core.Holder
@@ -15,14 +15,14 @@ import net.minecraft.world.entity.ai.attributes.Attributes
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
 
-object EGOEquipmentMobEffects {
-	val REGISTRY: DeferredRegister<MobEffect> = EGOEquipmentUtil.modRegister(BuiltInRegistries.MOB_EFFECT)
+object EgoEquipMobEffects {
+	val REGISTRY: DeferredRegister<MobEffect> = EgoEquipUtil.modRegister(BuiltInRegistries.MOB_EFFECT)
 
 	val RED_EYES_HUNTING: Holder<MobEffect> = register("red_eyes_hunting", "赤瞳-狩猎", { category, color ->
 		object : MobEffectExpand(category, color) {
 			override fun applyEffectTick(livingEntity: LivingEntity, amplifier: Int): Boolean {
-				if (livingEntity.mainHandItem.`is`(EGOWeaponItems.RED_EYES_TACHI) ||
-					livingEntity.offhandItem.`is`(EGOWeaponItems.RED_EYES_TACHI)
+				if (livingEntity.mainHandItem.`is`(EgoWeaponItems.RED_EYES_TACHI) ||
+					livingEntity.offhandItem.`is`(EgoWeaponItems.RED_EYES_TACHI)
 				) {
 					return super.applyEffectTick(livingEntity, amplifier)
 				}
@@ -61,7 +61,7 @@ object EGOEquipmentMobEffects {
 		name: String, zhCnText: String, supplier: () -> T, function: (T, ResourceLocation) -> MobEffect
 	): DeferredHolder<MobEffect, T> = register(name, zhCnText) {
 		val apply = supplier()
-		function(apply, EGOEquipmentUtil.modRl(name))
+		function(apply, EgoEquipUtil.modRl(name))
 		apply
 	}
 
@@ -79,7 +79,7 @@ object EGOEquipmentMobEffects {
 		function: (T, ResourceLocation) -> MobEffect
 	): DeferredHolder<MobEffect, T> = register(name, zhCnText) {
 		val apply = biFunction(category, color)
-		function(apply, EGOEquipmentUtil.modRl(name))
+		function(apply, EgoEquipUtil.modRl(name))
 		apply
 	}
 }

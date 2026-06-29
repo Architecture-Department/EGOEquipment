@@ -2,8 +2,8 @@
 
 import architecture.ego_equipment.common.item.armor.EgoArmorItem
 import architecture.ego_equipment.datagen.i18n.ZhCn
-import architecture.ego_equipment.init.EGOEquipmentArmorMaterials
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.init.EgoEquipArmorMaterials
+import architecture.ego_equipment.util.EgoEquipUtil
 import architecture.goldenboughs_lib.api.Armors
 import architecture.goldenboughs_lib.client.model.armor.ModGeoArmorModel
 import architecture.goldenboughs_lib.client.renderer.GeoArmourRenderProvider
@@ -20,8 +20,8 @@ import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import software.bernie.geckolib.animatable.client.GeoRenderProvider
 
-object EGOArmorItems {
-	val REGISTRY: DeferredRegister.Items = DeferredRegister.createItems(EGOEquipmentUtil.ID)
+object EgoArmorItems {
+	val REGISTRY: DeferredRegister.Items = DeferredRegister.createItems(EgoEquipUtil.ID)
 
 	//region ZAYIN
 	val PENITENCE = onArmor()
@@ -350,11 +350,11 @@ object EGOArmorItems {
 
 	@JvmStatic
 	fun getArmorMaterialHolder(lcLevel: LcLevel): Holder<ArmorMaterial> = when (lcLevel) {
-		LcLevel.ZAYIN -> EGOEquipmentArmorMaterials.ZAYIN
-		LcLevel.TETH -> EGOEquipmentArmorMaterials.TETH
-		LcLevel.HE -> EGOEquipmentArmorMaterials.HE
-		LcLevel.WAW -> EGOEquipmentArmorMaterials.WAW
-		LcLevel.ALEPH -> EGOEquipmentArmorMaterials.ALEPH
+		LcLevel.ZAYIN -> EgoEquipArmorMaterials.ZAYIN
+		LcLevel.TETH -> EgoEquipArmorMaterials.TETH
+		LcLevel.HE -> EgoEquipArmorMaterials.HE
+		LcLevel.WAW -> EgoEquipArmorMaterials.WAW
+		LcLevel.ALEPH -> EgoEquipArmorMaterials.ALEPH
 	}
 
 	private fun onArmor() = EgoArmorBuilder()
@@ -402,7 +402,7 @@ object EGOArmorItems {
 			val zhName = zhName ?: throw IllegalStateException("zhName is required")
 			val lcLevel = lcLevel ?: throw IllegalStateException("lcLevel is required")
 			val renderProvider = GeoArmourRenderProvider(
-				ModGeoArmorModel(modelPath ?: EGOEquipmentUtil.modRl(id))
+				ModGeoArmorModel(modelPath ?: EgoEquipUtil.modRl(id))
 			)
 
 			return registerSuit(
@@ -494,12 +494,12 @@ object EGOArmorItems {
 		}
 		LcLevelUtil.addItemLcLevelCapability(lcLevel, deferredItem)
 		when (armorItemType) {
-			ArmorItem.Type.CHESTPLATE -> EGOEquipmentUtil.CHEST_ARMOR.add(deferredItem)
-			ArmorItem.Type.LEGGINGS -> EGOEquipmentUtil.LEG_ARMOR.add(deferredItem)
-			ArmorItem.Type.BOOTS -> EGOEquipmentUtil.FOOT_ARMOR.add(deferredItem)
+			ArmorItem.Type.CHESTPLATE -> EgoEquipUtil.CHEST_ARMOR.add(deferredItem)
+			ArmorItem.Type.LEGGINGS -> EgoEquipUtil.LEG_ARMOR.add(deferredItem)
+			ArmorItem.Type.BOOTS -> EgoEquipUtil.FOOT_ARMOR.add(deferredItem)
 			else -> {}
 		}
-		EGOEquipmentUtil.EGO_ARMOUR.add(deferredItem)
+		EgoEquipUtil.EGO_ARMOUR.add(deferredItem)
 		ZhCn.addI18nItemText(zhName) { deferredItem.get() }
 		return deferredItem
 	}

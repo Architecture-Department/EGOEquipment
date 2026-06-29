@@ -11,9 +11,9 @@ import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import org.jetbrains.annotations.Contract
 
-object EGOEquipmentUtil {
+object EgoEquipUtil {
 	const val ID: String = "ego_equipment"
-	const val NAME: String = "E.G.O.Equipment"
+	const val NAME: String = "E.G.O.-Equipment"
 
 	@JvmField
 	val LOGGER: Logger = LogManager.getLogger(ID)

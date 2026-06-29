@@ -1,13 +1,13 @@
 package architecture.ego_equipment.init.tag
 
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.util.EgoEquipUtil
 import architecture.goldenboughs_lib.util.LibUtil.rlOf
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.ItemTags
 import net.minecraft.tags.TagKey
 import net.minecraft.world.item.Item
 
-object EquipmentItemTags {
+object EgoEquipItemTags {
 	val EGO_ARMOUR: TagKey<Item> = createTag("ego/armour")
 	val EGO_WEAPON: TagKey<Item> = createTag("ego/weapon")
 	val EGO_TOOL: TagKey<Item> = createTag("ego/tool")
@@ -17,7 +17,7 @@ object EquipmentItemTags {
 	val MELEE: TagKey<Item> = createTag("weapon_type/melee")
 	val GUN: TagKey<Item> = createTag("weapon_type/gun")
 
-	private fun createTag(name: String): TagKey<Item> = createTag(EGOEquipmentUtil.modRl(name))
+	private fun createTag(name: String): TagKey<Item> = createTag(EgoEquipUtil.modRl(name))
 
 	private fun createTag(location: ResourceLocation): TagKey<Item> = ItemTags.create(location)
 

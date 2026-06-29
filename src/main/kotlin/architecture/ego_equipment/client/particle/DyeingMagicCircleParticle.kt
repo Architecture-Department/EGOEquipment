@@ -1,6 +1,6 @@
 package architecture.ego_equipment.client.particle
 
-import architecture.ego_equipment.init.EGOEquipmentParticleTypes
+import architecture.ego_equipment.init.EgoEquipParticleTypes
 import architecture.goldenboughs_lib.api.AllOpe
 import architecture.goldenboughs_lib.client.LibParticleRenderTypes
 import com.mojang.blaze3d.vertex.VertexConsumer
@@ -118,7 +118,7 @@ open class DyeingMagicCircleParticle : TextureSheetParticle {
 			)
 		}
 
-		override fun getType(): ParticleType<*> = EGOEquipmentParticleTypes.DYEING_MAGIC_CIRCLE.get()
+		override fun getType(): ParticleType<*> = EgoEquipParticleTypes.DYEING_MAGIC_CIRCLE.get()
 	}
 
 	open class Provider(private val sprite: SpriteSet) : ParticleProvider<Options> {

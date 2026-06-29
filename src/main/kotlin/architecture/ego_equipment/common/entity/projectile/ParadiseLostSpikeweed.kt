@@ -1,7 +1,7 @@
 ﻿package architecture.ego_equipment.common.entity.projectile
 
-import architecture.ego_equipment.init.EGOEquipmentProjectileEntityTypes
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.init.EgoEquipProjectileEntityTypes
+import architecture.ego_equipment.util.EgoEquipUtil
 import architecture.goldenboughs_lib.client.model.GeoModelExpand
 import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel
 import architecture.goldenboughs_lib.init.LibDamageTypes
@@ -72,7 +72,7 @@ class ParadiseLostSpikeweed(
 			targetNumber: Int,
 			owner: LivingEntity
 		): ParadiseLostSpikeweed {
-			val entity = ParadiseLostSpikeweed(EGOEquipmentProjectileEntityTypes.PARADISE_LOST_SPIKEWEED.get(), level)
+			val entity = ParadiseLostSpikeweed(EgoEquipProjectileEntityTypes.PARADISE_LOST_SPIKEWEED.get(), level)
 			entity.targetNumber = if (targetNumber == 0) 1 else targetNumber
 			entity.setPos(x, y, z)
 			entity.owner = owner
@@ -81,7 +81,7 @@ class ParadiseLostSpikeweed(
 
 		@JvmStatic
 		fun create(level: Level, vec3: Vec3, targetNumber: Int, owner: LivingEntity): ParadiseLostSpikeweed {
-			val entity = ParadiseLostSpikeweed(EGOEquipmentProjectileEntityTypes.PARADISE_LOST_SPIKEWEED.get(), level)
+			val entity = ParadiseLostSpikeweed(EgoEquipProjectileEntityTypes.PARADISE_LOST_SPIKEWEED.get(), level)
 			entity.targetNumber = if (targetNumber == 0) 1 else targetNumber
 			entity.setPos(vec3)
 			entity.owner = owner
@@ -264,10 +264,10 @@ class ParadiseLostSpikeweed(
 	class TrainingRabbitsRenderer(context: EntityRendererProvider.Context) :
 		GeoEntityRenderer<ParadiseLostSpikeweed>(
 			context,
-			GeoEntityModel(EGOEquipmentUtil.modRl("paradise_lost_spikeweed"))
+			GeoEntityModel(EgoEquipUtil.modRl("paradise_lost_spikeweed"))
 		) {
 
 		override fun getTextureLocation(animatable: ParadiseLostSpikeweed): ResourceLocation =
-			GeoModelExpand.texturePath(EGOEquipmentUtil.modRl("paradise_lost_spikeweed"))
+			GeoModelExpand.texturePath(EgoEquipUtil.modRl("paradise_lost_spikeweed"))
 	}
 }

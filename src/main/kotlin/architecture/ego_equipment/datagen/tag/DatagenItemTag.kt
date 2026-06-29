@@ -1,7 +1,7 @@
 package architecture.ego_equipment.datagen.tag
 
-import architecture.ego_equipment.init.tag.EquipmentItemTags
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.init.tag.EgoEquipItemTags
+import architecture.ego_equipment.util.EgoEquipUtil
 import architecture.goldenboughs_lib.init.LibItems
 import architecture.goldenboughs_lib.init.tag.LibItemTags
 import net.minecraft.core.HolderLookup
@@ -21,67 +21,67 @@ class DatagenItemTag(
 	lookupProvider: CompletableFuture<HolderLookup.Provider>,
 	blockTags: CompletableFuture<TagLookup<Block>>,
 	existingFileHelper: ExistingFileHelper
-) : ItemTagsProvider(output, lookupProvider, blockTags, EGOEquipmentUtil.ID, existingFileHelper) {
+) : ItemTagsProvider(output, lookupProvider, blockTags, EgoEquipUtil.ID, existingFileHelper) {
 
 	override fun addTags(provider: HolderLookup.Provider) {
-		addSet(EquipmentItemTags.EGO_ARMOUR, EGOEquipmentUtil.EGO_ARMOUR)
-		addSet(EquipmentItemTags.EGO_TOOL, EGOEquipmentUtil.EGO_TOOL)
-		addSet(EquipmentItemTags.EGO_WEAPON, EGOEquipmentUtil.EGO_WEAPON)
+		addSet(EgoEquipItemTags.EGO_ARMOUR, EgoEquipUtil.EGO_ARMOUR)
+		addSet(EgoEquipItemTags.EGO_TOOL, EgoEquipUtil.EGO_TOOL)
+		addSet(EgoEquipItemTags.EGO_WEAPON, EgoEquipUtil.EGO_WEAPON)
 			.add(LibItems.CHAOS_SWORD.get())
 		tag(LibItemTags.EGO)
 			.addTags(
-				EquipmentItemTags.EGO_ARMOUR,
-				EquipmentItemTags.EGO_WEAPON,
-				EquipmentItemTags.EGO_TOOL
+				EgoEquipItemTags.EGO_ARMOUR,
+				EgoEquipItemTags.EGO_WEAPON,
+				EgoEquipItemTags.EGO_TOOL
 			)
 
-		addSet(ItemTags.HEAD_ARMOR, EGOEquipmentUtil.HEAD_ARMOR)
-		addSet(ItemTags.CHEST_ARMOR, EGOEquipmentUtil.CHEST_ARMOR)
-		addSet(ItemTags.LEG_ARMOR, EGOEquipmentUtil.LEG_ARMOR)
-		addSet(ItemTags.FOOT_ARMOR, EGOEquipmentUtil.FOOT_ARMOR)
+		addSet(ItemTags.HEAD_ARMOR, EgoEquipUtil.HEAD_ARMOR)
+		addSet(ItemTags.CHEST_ARMOR, EgoEquipUtil.CHEST_ARMOR)
+		addSet(ItemTags.LEG_ARMOR, EgoEquipUtil.LEG_ARMOR)
+		addSet(ItemTags.FOOT_ARMOR, EgoEquipUtil.FOOT_ARMOR)
 		tag(Tags.Items.ARMORS)
-			.addTag(EquipmentItemTags.EGO_ARMOUR)
+			.addTag(EgoEquipItemTags.EGO_ARMOUR)
 
-		EGOEquipmentUtil.MELEE.addAll(EGOEquipmentUtil.KNIFE)
-		EGOEquipmentUtil.MELEE.addAll(EGOEquipmentUtil.HAMMER)
-		EGOEquipmentUtil.MELEE.addAll(EGOEquipmentUtil.FIST)
-		EGOEquipmentUtil.MELEE.addAll(EGOEquipmentUtil.SPEAR)
-		EGOEquipmentUtil.MELEE.addAll(EGOEquipmentUtil.MACE)
-		addSet(EquipmentItemTags.MELEE, EGOEquipmentUtil.MELEE)
+		EgoEquipUtil.MELEE.addAll(EgoEquipUtil.KNIFE)
+		EgoEquipUtil.MELEE.addAll(EgoEquipUtil.HAMMER)
+		EgoEquipUtil.MELEE.addAll(EgoEquipUtil.FIST)
+		EgoEquipUtil.MELEE.addAll(EgoEquipUtil.SPEAR)
+		EgoEquipUtil.MELEE.addAll(EgoEquipUtil.MACE)
+		addSet(EgoEquipItemTags.MELEE, EgoEquipUtil.MELEE)
 			.addTag(ItemTags.SWORDS)
 
-		EGOEquipmentUtil.GUN.addAll(EGOEquipmentUtil.CANNON)
-		EGOEquipmentUtil.GUN.addAll(EGOEquipmentUtil.PISTOL)
-		EGOEquipmentUtil.GUN.addAll(EGOEquipmentUtil.RIFLE)
-		addSet(EquipmentItemTags.GUN, EGOEquipmentUtil.GUN)
+		EgoEquipUtil.GUN.addAll(EgoEquipUtil.CANNON)
+		EgoEquipUtil.GUN.addAll(EgoEquipUtil.PISTOL)
+		EgoEquipUtil.GUN.addAll(EgoEquipUtil.RIFLE)
+		addSet(EgoEquipItemTags.GUN, EgoEquipUtil.GUN)
 
-		addSet(EquipmentItemTags.REMOTE, EGOEquipmentUtil.REMOTE).addTags(
+		addSet(EgoEquipItemTags.REMOTE, EgoEquipUtil.REMOTE).addTags(
 			Tags.Items.TOOLS_CROSSBOW,
 			Tags.Items.TOOLS_BOW,
-			EquipmentItemTags.GUN
+			EgoEquipItemTags.GUN
 		)
 
-		addSet(ItemTags.BOW_ENCHANTABLE, EGOEquipmentUtil.BOW)
-		addSet(ItemTags.CROSSBOW_ENCHANTABLE, EGOEquipmentUtil.CROSSBOW)
+		addSet(ItemTags.BOW_ENCHANTABLE, EgoEquipUtil.BOW)
+		addSet(ItemTags.CROSSBOW_ENCHANTABLE, EgoEquipUtil.CROSSBOW)
 
-		addSet(Tags.Items.TOOLS_CROSSBOW, EGOEquipmentUtil.CROSSBOW)
-		addSet(Tags.Items.TOOLS_BOW, EGOEquipmentUtil.BOW)
-		addSet(ItemTags.AXES, EGOEquipmentUtil.AXE)
+		addSet(Tags.Items.TOOLS_CROSSBOW, EgoEquipUtil.CROSSBOW)
+		addSet(Tags.Items.TOOLS_BOW, EgoEquipUtil.BOW)
+		addSet(ItemTags.AXES, EgoEquipUtil.AXE)
 
-		EGOEquipmentUtil.SWORDS.addAll(EGOEquipmentUtil.KNIFE)
-		addSet(ItemTags.SWORDS, EGOEquipmentUtil.SWORDS)
+		EgoEquipUtil.SWORDS.addAll(EgoEquipUtil.KNIFE)
+		addSet(ItemTags.SWORDS, EgoEquipUtil.SWORDS)
 			.add(LibItems.CHAOS_SWORD.get())
-		tag(ItemTags.SWORD_ENCHANTABLE).addTag(EquipmentItemTags.MELEE)
-		tag(ItemTags.BREAKS_DECORATED_POTS).addTag(EquipmentItemTags.MELEE)
-		addSet(EquipmentItemTags.SPECIAL, EGOEquipmentUtil.SPECIAL)
+		tag(ItemTags.SWORD_ENCHANTABLE).addTag(EgoEquipItemTags.MELEE)
+		tag(ItemTags.BREAKS_DECORATED_POTS).addTag(EgoEquipItemTags.MELEE)
+		addSet(EgoEquipItemTags.SPECIAL, EgoEquipUtil.SPECIAL)
 		tag(Tags.Items.TOOLS)
 			.add(LibItems.CREATIVE_RATIONALITY_TOOL.get())
 			.addTags(
-				EquipmentItemTags.EGO_WEAPON,
-				EquipmentItemTags.EGO_TOOL,
-				EquipmentItemTags.SPECIAL,
-				EquipmentItemTags.REMOTE,
-				EquipmentItemTags.MELEE
+				EgoEquipItemTags.EGO_WEAPON,
+				EgoEquipItemTags.EGO_TOOL,
+				EgoEquipItemTags.SPECIAL,
+				EgoEquipItemTags.REMOTE,
+				EgoEquipItemTags.MELEE
 			)
 	}
 

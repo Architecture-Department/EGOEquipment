@@ -2,10 +2,10 @@ package architecture.ego_equipment.init.item
 
 import net.neoforged.bus.api.IEventBus
 
-object EGOEquipmentItems {
+object EgoEquipItems {
 	@JvmStatic
 	fun register(bus: IEventBus) {
-		EGOWeaponItems.REGISTRY.register(bus)
-		EGOArmorItems.REGISTRY.register(bus)
+		EgoWeaponItems.REGISTRY.register(bus)
+		EgoArmorItems.REGISTRY.register(bus)
 	}
 }

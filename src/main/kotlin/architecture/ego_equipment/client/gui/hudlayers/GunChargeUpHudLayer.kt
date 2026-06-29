@@ -1,7 +1,7 @@
 package architecture.ego_equipment.client.gui.hudlayers
 
 import architecture.ego_equipment.common.item.weapon.remote.gun.MagicBulletWeaponItem
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.util.EgoEquipUtil
 import architecture.goldenboughs_lib.api.world.item.IGunWeapon
 import architecture.goldenboughs_lib.client.gui.hudlayers.BasicHudLayer
 import architecture.goldenboughs_lib.client.gui.widget.ImageProgressBar.Companion.renderProgressBar
@@ -18,12 +18,12 @@ class GunChargeUpHudLayer private constructor(
 ) : BasicHudLayer() {
 
 	companion object {
-		val REMOTE_BOTTOM: ResourceLocation = EGOEquipmentUtil.modRl("hud_bar/remote_bottom")
-		val REMOTE_GUN: ResourceLocation = EGOEquipmentUtil.modRl("hud_bar/remote_gun")
-		val REMOTE_MAGIC_BULLET: ResourceLocation = EGOEquipmentUtil.modRl("hud_bar/remote_magic_bullet")
-		val BIG_REMOTE_BOTTOM: ResourceLocation = EGOEquipmentUtil.modRl("hud_bar/big_remote_bottom")
-		val BIG_REMOTE_GUN: ResourceLocation = EGOEquipmentUtil.modRl("hud_bar/big_remote_gun")
-		val BIG_REMOTE_MAGIC_BULLET: ResourceLocation = EGOEquipmentUtil.modRl("hud_bar/big_remote_magic_bullet")
+		val REMOTE_BOTTOM: ResourceLocation = EgoEquipUtil.modRl("hud_bar/remote_bottom")
+		val REMOTE_GUN: ResourceLocation = EgoEquipUtil.modRl("hud_bar/remote_gun")
+		val REMOTE_MAGIC_BULLET: ResourceLocation = EgoEquipUtil.modRl("hud_bar/remote_magic_bullet")
+		val BIG_REMOTE_BOTTOM: ResourceLocation = EgoEquipUtil.modRl("hud_bar/big_remote_bottom")
+		val BIG_REMOTE_GUN: ResourceLocation = EgoEquipUtil.modRl("hud_bar/big_remote_gun")
+		val BIG_REMOTE_MAGIC_BULLET: ResourceLocation = EgoEquipUtil.modRl("hud_bar/big_remote_magic_bullet")
 
 		val INSTANCE_CROSSHAIR: GunChargeUpHudLayer = GunChargeUpHudLayer(AttackIndicatorStatus.CROSSHAIR)
 		val INSTANCE_HOTBAR: GunChargeUpHudLayer = GunChargeUpHudLayer(AttackIndicatorStatus.HOTBAR)

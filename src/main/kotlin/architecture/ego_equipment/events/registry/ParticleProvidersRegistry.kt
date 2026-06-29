@@ -3,31 +3,31 @@ package architecture.ego_equipment.events.registry
 import architecture.ego_equipment.client.particle.DyeingMagicCircleParticle
 import architecture.ego_equipment.client.particle.magicbullet.MagicBulletMagicCircleParticle
 import architecture.ego_equipment.client.particle.solemnlament.ButterflyParticle
-import architecture.ego_equipment.init.EGOEquipmentParticleTypes
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.init.EgoEquipParticleTypes
+import architecture.ego_equipment.util.EgoEquipUtil
 import net.neoforged.api.distmarker.Dist
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent
 
-@EventBusSubscriber(modid = EGOEquipmentUtil.ID, value = [Dist.CLIENT])
+@EventBusSubscriber(modid = EgoEquipUtil.ID, value = [Dist.CLIENT])
 object ParticleProvidersRegistry {
 	@SubscribeEvent
 	fun registry(event: RegisterParticleProvidersEvent) {
 		event.registerSpriteSet(
-			EGOEquipmentParticleTypes.DYEING_MAGIC_CIRCLE.get(),
+			EgoEquipParticleTypes.DYEING_MAGIC_CIRCLE.get(),
 			DyeingMagicCircleParticle::Provider
 		)
 		event.registerSpriteSet(
-			EGOEquipmentParticleTypes.MAGIC_BULLET_MAGIC_CIRCLE.get(),
+			EgoEquipParticleTypes.MAGIC_BULLET_MAGIC_CIRCLE.get(),
 			MagicBulletMagicCircleParticle::Provider
 		)
 		event.registerSpriteSet(
-			EGOEquipmentParticleTypes.SOLEMN_LAMENT_BUTTERFLY_BLACK.get(),
+			EgoEquipParticleTypes.SOLEMN_LAMENT_BUTTERFLY_BLACK.get(),
 			ButterflyParticle::Provider
 		)
 		event.registerSpriteSet(
-			EGOEquipmentParticleTypes.SOLEMN_LAMENT_BUTTERFLY_WHITE.get(),
+			EgoEquipParticleTypes.SOLEMN_LAMENT_BUTTERFLY_WHITE.get(),
 			ButterflyParticle::Provider
 		)
 	}

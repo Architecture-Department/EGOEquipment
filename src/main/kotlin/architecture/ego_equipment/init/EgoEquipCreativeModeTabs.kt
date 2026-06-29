@@ -1,9 +1,9 @@
 package architecture.ego_equipment.init
 
 import architecture.ego_equipment.datagen.i18n.ZhCn
-import architecture.ego_equipment.init.item.EGOArmorItems
-import architecture.ego_equipment.init.item.EGOWeaponItems
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.init.item.EgoArmorItems
+import architecture.ego_equipment.init.item.EgoWeaponItems
+import architecture.ego_equipment.util.EgoEquipUtil
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceKey
@@ -12,23 +12,23 @@ import net.minecraft.world.item.ItemStack
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
 
-object EGOEquipmentCreativeModeTabs {
+object EgoEquipCreativeModeTabs {
 	val REGISTRY: DeferredRegister<CreativeModeTab> =
-		EGOEquipmentUtil.modRegister(BuiltInRegistries.CREATIVE_MODE_TAB)
+		EgoEquipUtil.modRegister(BuiltInRegistries.CREATIVE_MODE_TAB)
 
 	val EGO_WEAPON: DeferredHolder<CreativeModeTab, CreativeModeTab> = register(
 		"ego_weapon", "E.G.O武器"
 	) { name, zhCn ->
-		createCreativeModeTab(name, zhCn, { _, output -> addRegistryItem(EGOWeaponItems.REGISTRY, output) }) {
-			EGOWeaponItems.IN_THE_NAME_OF_LOVE_AND_HATE.get().defaultInstance
+		createCreativeModeTab(name, zhCn, { _, output -> addRegistryItem(EgoWeaponItems.REGISTRY, output) }) {
+			EgoWeaponItems.IN_THE_NAME_OF_LOVE_AND_HATE.get().defaultInstance
 		}
 	}
 
 	val EGO_ARMOR: DeferredHolder<CreativeModeTab, CreativeModeTab> = register(
 		"ego_armor", "E.G.O护甲"
 	) { name, zhCn ->
-		createCreativeModeTab(name, zhCn, { _, output -> addRegistryItem(EGOArmorItems.REGISTRY, output) }) {
-			EGOArmorItems.IN_THE_NAME_OF_LOVE_AND_HATE.chestplate!!.get().defaultInstance
+		createCreativeModeTab(name, zhCn, { _, output -> addRegistryItem(EgoArmorItems.REGISTRY, output) }) {
+			EgoArmorItems.IN_THE_NAME_OF_LOVE_AND_HATE.chestplate!!.get().defaultInstance
 		}
 	}
 
@@ -62,7 +62,7 @@ object EGOEquipmentCreativeModeTabs {
 		zhCn: String,
 		displayItemsGenerator: CreativeModeTab.DisplayItemsGenerator
 	): CreativeModeTab.Builder {
-		val key = "itemGroup.${EGOEquipmentUtil.ID}.$name"
+		val key = "itemGroup.${EgoEquipUtil.ID}.$name"
 		ZhCn.addI18nText(zhCn, key)
 		return CreativeModeTab.builder()
 			.title(Component.translatable(key))

@@ -1,7 +1,7 @@
 package architecture.ego_equipment.client.gui.hudlayers
 
-import architecture.ego_equipment.init.EGOEquipmentMobEffects
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.init.EgoEquipMobEffects
+import architecture.ego_equipment.util.EgoEquipUtil
 import architecture.goldenboughs_lib.client.gui.hudlayers.chop_flavor.ChopFlavorLayer
 import architecture.goldenboughs_lib.client.gui.widget.ImageProgressBar.Companion.renderProgressBar
 import net.minecraft.client.DeltaTracker
@@ -11,10 +11,10 @@ import net.minecraft.resources.ResourceLocation
 
 class RedEyesTachiChopFlavor : ChopFlavorLayer.ChopFlavorBar() {
 	companion object {
-		val BOTTOM: ResourceLocation = EGOEquipmentUtil.modRl("chop_flavor/red_eyes_tachi/bottom")
-		val BOTTOM_GLOWMASK: ResourceLocation = EGOEquipmentUtil.modRl("chop_flavor/red_eyes_tachi/bottom_glowmask")
-		val SCABBARD: ResourceLocation = EGOEquipmentUtil.modRl("chop_flavor/red_eyes_tachi/scabbard")
-		val SCABBARD_ACTION: ResourceLocation = EGOEquipmentUtil.modRl("chop_flavor/red_eyes_tachi/scabbard_action")
+		val BOTTOM: ResourceLocation = EgoEquipUtil.modRl("chop_flavor/red_eyes_tachi/bottom")
+		val BOTTOM_GLOWMASK: ResourceLocation = EgoEquipUtil.modRl("chop_flavor/red_eyes_tachi/bottom_glowmask")
+		val SCABBARD: ResourceLocation = EgoEquipUtil.modRl("chop_flavor/red_eyes_tachi/scabbard")
+		val SCABBARD_ACTION: ResourceLocation = EgoEquipUtil.modRl("chop_flavor/red_eyes_tachi/scabbard_action")
 		const val WIDTH = 32
 		const val HEIGHT = 16
 	}
@@ -30,7 +30,7 @@ class RedEyesTachiChopFlavor : ChopFlavorLayer.ChopFlavorBar() {
 		pose.translate(-WIDTH.toFloat() / 2, 0f, 0f)
 
 		val player: LocalPlayer = ChopFlavorLayer.INSTANCE.getPlayerThrow()
-		val effect = player.getEffect(EGOEquipmentMobEffects.RED_EYES_HUNTING)
+		val effect = player.getEffect(EgoEquipMobEffects.RED_EYES_HUNTING)
 		guiGraphics.blitSprite(BOTTOM, 0, 0, WIDTH, HEIGHT)
 
 		// TODO
@@ -81,7 +81,7 @@ class RedEyesTachiChopFlavor : ChopFlavorLayer.ChopFlavorBar() {
 
 	override fun castSkill() {
 		val player: LocalPlayer = ChopFlavorLayer.INSTANCE.getPlayerThrow()
-		val effect = player.getEffect(EGOEquipmentMobEffects.RED_EYES_HUNTING)
+		val effect = player.getEffect(EgoEquipMobEffects.RED_EYES_HUNTING)
 		if (effect == null) {
 			castSkill = 1
 		}

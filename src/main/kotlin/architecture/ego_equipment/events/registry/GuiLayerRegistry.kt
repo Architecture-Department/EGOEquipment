@@ -1,7 +1,7 @@
 package architecture.ego_equipment.events.registry
 
 import architecture.ego_equipment.client.gui.hudlayers.GunChargeUpHudLayer
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.util.EgoEquipUtil
 import architecture.goldenboughs_lib.client.LibGuiLayers
 import net.neoforged.api.distmarker.Dist
 import net.neoforged.bus.api.SubscribeEvent
@@ -9,7 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent
 import net.neoforged.neoforge.client.gui.VanillaGuiLayers
 
-@EventBusSubscriber(modid = EGOEquipmentUtil.ID, value = [Dist.CLIENT])
+@EventBusSubscriber(modid = EgoEquipUtil.ID, value = [Dist.CLIENT])
 object GuiLayerRegistry {
 	@SubscribeEvent
 	fun register(event: RegisterGuiLayersEvent) {

@@ -1,14 +1,14 @@
 package architecture.ego_equipment.events.client
 
 import architecture.ego_equipment.client.renderer.item.MagicBulletMagicCircleRenderer
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.util.EgoEquipUtil
 import net.minecraft.client.player.AbstractClientPlayer
 import net.neoforged.api.distmarker.Dist
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.client.event.RenderPlayerEvent
 
-@EventBusSubscriber(modid = EGOEquipmentUtil.ID, value = [Dist.CLIENT])
+@EventBusSubscriber(modid = EgoEquipUtil.ID, value = [Dist.CLIENT])
 object PlayerRenderEvents {
 	@SubscribeEvent
 	fun onPlayerRenderPost(event: RenderPlayerEvent.Post) {

@@ -1,8 +1,8 @@
 package architecture.ego_equipment.client.renderer.item
 
 import architecture.ego_equipment.common.item.weapon.melee.special.RedEyesTachiItem
-import architecture.ego_equipment.init.EGOEquipmentMobEffects
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.init.EgoEquipMobEffects
+import architecture.ego_equipment.util.EgoEquipUtil
 import architecture.goldenboughs_lib.client.renderer.GeoItemRendererExpand
 import com.mojang.blaze3d.vertex.PoseStack
 import com.mojang.blaze3d.vertex.VertexConsumer
@@ -23,11 +23,11 @@ class RedEyesTachiItemWeaponRenderer(
 
 	companion object {
 		val GLOWMASK_TEXTURE: ResourceLocation =
-			EGOEquipmentUtil.modRl("textures/geo/item/weapon/red_eyes_tachi_glowmask.png")
+			EgoEquipUtil.modRl("textures/geo/item/weapon/red_eyes_tachi_glowmask.png")
 		val GEO_HUNTIOG_TEXTURE: ResourceLocation =
-			EGOEquipmentUtil.modRl("textures/geo/item/weapon/red_eyes_tachi_hunting.png")
+			EgoEquipUtil.modRl("textures/geo/item/weapon/red_eyes_tachi_hunting.png")
 		val HUNTIOG_TEXTURE: ResourceLocation =
-			EGOEquipmentUtil.modRl("textures/item/weapon/red_eyes_tachi_hunting.png")
+			EgoEquipUtil.modRl("textures/item/weapon/red_eyes_tachi_hunting.png")
 	}
 
 	private var isHunting: Boolean = false
@@ -95,7 +95,7 @@ class RedEyesTachiItemWeaponRenderer(
 			this.livingEntity = Minecraft.getInstance().player
 		}
 
-		if (this.livingEntity != null && this.livingEntity!!.hasEffect(EGOEquipmentMobEffects.RED_EYES_HUNTING)) {
+		if (this.livingEntity != null && this.livingEntity!!.hasEffect(EgoEquipMobEffects.RED_EYES_HUNTING)) {
 			isHunting = true
 		}
 	}

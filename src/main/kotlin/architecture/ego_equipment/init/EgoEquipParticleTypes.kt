@@ -2,7 +2,7 @@ package architecture.ego_equipment.init
 
 import architecture.ego_equipment.client.particle.DyeingMagicCircleParticle
 import architecture.ego_equipment.client.particle.magicbullet.MagicBulletMagicCircleParticle
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.util.EgoEquipUtil
 import architecture.goldenboughs_lib.common.particle.SpecialParticleType
 import com.mojang.serialization.MapCodec
 import net.minecraft.core.particles.ParticleOptions
@@ -15,9 +15,9 @@ import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Supplier
 
-object EGOEquipmentParticleTypes {
+object EgoEquipParticleTypes {
 	@JvmField
-	val REGISTRY: DeferredRegister<ParticleType<*>> = EGOEquipmentUtil.modRegister(BuiltInRegistries.PARTICLE_TYPE)
+	val REGISTRY: DeferredRegister<ParticleType<*>> = EgoEquipUtil.modRegister(BuiltInRegistries.PARTICLE_TYPE)
 
 	@JvmField
 	val DYEING_MAGIC_CIRCLE: Supplier<ParticleType<DyeingMagicCircleParticle.Options>> = register(

@@ -1,6 +1,6 @@
 package architecture.ego_equipment.datagen
 
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.util.EgoEquipUtil
 import net.minecraft.core.HolderLookup
 import net.minecraft.core.RegistrySetBuilder
 import net.minecraft.data.PackOutput
@@ -11,4 +11,4 @@ class ModDatagenDatapackBuiltinEntries(
 	output: PackOutput,
 	registries: CompletableFuture<HolderLookup.Provider>,
 	datapackEntriesBuilder: RegistrySetBuilder
-) : DatapackBuiltinEntriesProvider(output, registries, datapackEntriesBuilder, setOf(EGOEquipmentUtil.ID))
+) : DatapackBuiltinEntriesProvider(output, registries, datapackEntriesBuilder, setOf(EgoEquipUtil.ID))

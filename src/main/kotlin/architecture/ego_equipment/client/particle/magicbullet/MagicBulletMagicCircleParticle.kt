@@ -1,7 +1,7 @@
 package architecture.ego_equipment.client.particle.magicbullet
 
 import architecture.ego_equipment.client.particle.DyeingMagicCircleParticle
-import architecture.ego_equipment.init.EGOEquipmentParticleTypes
+import architecture.ego_equipment.init.EgoEquipParticleTypes
 import com.mojang.serialization.Codec
 import com.mojang.serialization.MapCodec
 import com.mojang.serialization.codecs.RecordCodecBuilder
@@ -75,7 +75,7 @@ class MagicBulletMagicCircleParticle(
 			)
 		}
 
-		override fun getType(): ParticleType<*> = EGOEquipmentParticleTypes.MAGIC_BULLET_MAGIC_CIRCLE.get()
+		override fun getType(): ParticleType<*> = EgoEquipParticleTypes.MAGIC_BULLET_MAGIC_CIRCLE.get()
 	}
 
 	class Provider(sprite: SpriteSet) : ParticleProvider<Options> {

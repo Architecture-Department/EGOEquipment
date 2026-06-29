@@ -1,9 +1,9 @@
 ﻿package architecture.ego_equipment.common.item.weapon.remote.gun
 
 import architecture.ego_equipment.common.item.weapon.remote.RemoteEgoWeaponGeoItem
-import architecture.ego_equipment.init.EGOEquipmentParticleTypes
-import architecture.ego_equipment.init.EGOEquipmentSoundEvents
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.init.EgoEquipParticleTypes
+import architecture.ego_equipment.init.EgoEquipSoundEvents
+import architecture.ego_equipment.util.EgoEquipUtil
 import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem
 import architecture.goldenboughs_lib.init.LibDamageSources
 import architecture.goldenboughs_lib.module.lc_damage.api.LcDamageType
@@ -27,18 +27,18 @@ import software.bernie.geckolib.model.GeoModel
 
 class SolemnLamentWeaponItem : GunEgoWeaponItem {
 	companion object {
-		val STANDBY: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.standby")
-		val GALLOP: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.gallop")
-		val SHOOTING: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.shooting")
-		val SHOOTING1: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.shooting1")
-		val SHOOTING2: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.shooting2")
-		val SHOOTING3: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.shooting3")
-		val TWIN_STANDBY: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.twin.standby")
-		val TWIN_GALLOP: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.twin.gallop")
-		val TWIN_SHOOTING: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.twin.shooting")
-		val TWIN_SHOOTING1: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.twin.shooting1")
-		val TWIN_SHOOTING2: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.twin.shooting2")
-		val TWIN_SHOOTING3: ResourceLocation = EGOEquipmentUtil.modRl("solemn_lament_weapon.twin.shooting3")
+		val STANDBY: ResourceLocation = EgoEquipUtil.modRl("solemn_lament_weapon.standby")
+		val GALLOP: ResourceLocation = EgoEquipUtil.modRl("solemn_lament_weapon.gallop")
+		val SHOOTING: ResourceLocation = EgoEquipUtil.modRl("solemn_lament_weapon.shooting")
+		val SHOOTING1: ResourceLocation = EgoEquipUtil.modRl("solemn_lament_weapon.shooting1")
+		val SHOOTING2: ResourceLocation = EgoEquipUtil.modRl("solemn_lament_weapon.shooting2")
+		val SHOOTING3: ResourceLocation = EgoEquipUtil.modRl("solemn_lament_weapon.shooting3")
+		val TWIN_STANDBY: ResourceLocation = EgoEquipUtil.modRl("solemn_lament_weapon.twin.standby")
+		val TWIN_GALLOP: ResourceLocation = EgoEquipUtil.modRl("solemn_lament_weapon.twin.gallop")
+		val TWIN_SHOOTING: ResourceLocation = EgoEquipUtil.modRl("solemn_lament_weapon.twin.shooting")
+		val TWIN_SHOOTING1: ResourceLocation = EgoEquipUtil.modRl("solemn_lament_weapon.twin.shooting1")
+		val TWIN_SHOOTING2: ResourceLocation = EgoEquipUtil.modRl("solemn_lament_weapon.twin.shooting2")
+		val TWIN_SHOOTING3: ResourceLocation = EgoEquipUtil.modRl("solemn_lament_weapon.twin.shooting3")
 	}
 
 	constructor(
@@ -86,13 +86,13 @@ class SolemnLamentWeaponItem : GunEgoWeaponItem {
 		}
 
 		val particleType: SimpleParticleType =
-			(if (isBlack) EGOEquipmentParticleTypes.SOLEMN_LAMENT_BUTTERFLY_BLACK else EGOEquipmentParticleTypes.SOLEMN_LAMENT_BUTTERFLY_WHITE).get()
+			(if (isBlack) EgoEquipParticleTypes.SOLEMN_LAMENT_BUTTERFLY_BLACK else EgoEquipParticleTypes.SOLEMN_LAMENT_BUTTERFLY_WHITE).get()
 		val hitResultLocationPos = hitResult.location
 		val random = shooterEntity.random
 
 		val position = shooterEntity.position()
 		val soundEvent: SoundEvent =
-			(if (isBlack) EGOEquipmentSoundEvents.SOLEMN_LAMENT_WEAPON_ATTACK_BLACK else EGOEquipmentSoundEvents.SOLEMN_LAMENT_WEAPON_ATTACK_WHITE).value()
+			(if (isBlack) EgoEquipSoundEvents.SOLEMN_LAMENT_WEAPON_ATTACK_BLACK else EgoEquipSoundEvents.SOLEMN_LAMENT_WEAPON_ATTACK_WHITE).value()
 		world.playSound(
 			null,
 			position.x,

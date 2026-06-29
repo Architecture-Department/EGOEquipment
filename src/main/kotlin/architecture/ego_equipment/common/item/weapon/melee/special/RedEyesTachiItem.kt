@@ -2,7 +2,7 @@ package architecture.ego_equipment.common.item.weapon.melee.special
 
 import architecture.ego_equipment.client.renderer.item.RedEyesTachiItemWeaponRenderer
 import architecture.ego_equipment.common.item.weapon.melee.MeleeEgoWeaponGeoItem
-import architecture.ego_equipment.init.EGOEquipmentMobEffects
+import architecture.ego_equipment.init.EgoEquipMobEffects
 import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem
 import architecture.goldenboughs_lib.client.renderer.GeoItemRenderProvider
 import architecture.goldenboughs_lib.mixin.world.entity.LivingEntityAccessor
@@ -52,7 +52,7 @@ class RedEyesTachiItem : MeleeEgoWeaponGeoItem {
 	}
 
 	override fun hurtEnemy(stack: ItemStack, target: LivingEntity, attacker: LivingEntity): Boolean {
-		val effect = attacker.getEffect(EGOEquipmentMobEffects.RED_EYES_HUNTING)
+		val effect = attacker.getEffect(EgoEquipMobEffects.RED_EYES_HUNTING)
 		if (effect != null) {
 			return true
 		}
@@ -60,7 +60,7 @@ class RedEyesTachiItem : MeleeEgoWeaponGeoItem {
 	}
 
 	override fun postHurtEnemy(stack: ItemStack, target: LivingEntity, attacker: LivingEntity) {
-		val effect = attacker.getEffect(EGOEquipmentMobEffects.RED_EYES_HUNTING)
+		val effect = attacker.getEffect(EgoEquipMobEffects.RED_EYES_HUNTING)
 		if (effect != null) {
 			val effectDuration = effect.duration
 			val increase = 10

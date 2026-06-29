@@ -1,6 +1,6 @@
 package architecture.ego_equipment.init
 
-import architecture.ego_equipment.util.EGOEquipmentUtil
+import architecture.ego_equipment.util.EgoEquipUtil
 import net.minecraft.Util
 import net.minecraft.core.Holder
 import net.minecraft.core.registries.BuiltInRegistries
@@ -13,33 +13,33 @@ import net.minecraft.world.item.crafting.Ingredient
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.*
 
-object EGOEquipmentArmorMaterials {
-	val REGISTRY: DeferredRegister<ArmorMaterial> = EGOEquipmentUtil.modRegister(BuiltInRegistries.ARMOR_MATERIAL)
+object EgoEquipArmorMaterials {
+	val REGISTRY: DeferredRegister<ArmorMaterial> = EgoEquipUtil.modRegister(BuiltInRegistries.ARMOR_MATERIAL)
 
 	val ZAYIN: Holder<ArmorMaterial> = register(
 		"zayin", 1, 2, 3, 1, 3, 9,
-		EGOEquipmentSoundEvents.ARMOR_EQUIP_ZAYIN, 0.5F, 0.0F
+		EgoEquipSoundEvents.ARMOR_EQUIP_ZAYIN, 0.5F, 0.0F
 	)
 	val TETH: Holder<ArmorMaterial> = register(
 		"teth", 2, 5, 6, 2, 5, 9,
-		EGOEquipmentSoundEvents.ARMOR_EQUIP_TETH, 1.0F, 0.0F
+		EgoEquipSoundEvents.ARMOR_EQUIP_TETH, 1.0F, 0.0F
 	)
 	val HE: Holder<ArmorMaterial> = register(
 		"he", 3, 6, 8, 3, 11, 9,
-		EGOEquipmentSoundEvents.ARMOR_EQUIP_HE, 2.0F, 0.025F
+		EgoEquipSoundEvents.ARMOR_EQUIP_HE, 2.0F, 0.025F
 	)
 	val WAW: Holder<ArmorMaterial> = register(
 		"waw", 4, 7, 9, 4, 12, 9,
-		EGOEquipmentSoundEvents.ARMOR_EQUIP_WAW, 3.0F, 0.05F
+		EgoEquipSoundEvents.ARMOR_EQUIP_WAW, 3.0F, 0.05F
 	)
 	val ALEPH: Holder<ArmorMaterial> = register(
 		"aleph", 4, 8, 10, 5, 13, 9,
-		EGOEquipmentSoundEvents.ARMOR_EQUIP_ALEPH, 4.0F, 0.1F
+		EgoEquipSoundEvents.ARMOR_EQUIP_ALEPH, 4.0F, 0.1F
 	)
 
 	val SUIT: Holder<ArmorMaterial> = register(
 		"suit", 1, 2, 3, 1, 3, 9,
-		EGOEquipmentSoundEvents.ARMOR_EQUIP_ZAYIN, 0.0F, 0.0F
+		EgoEquipSoundEvents.ARMOR_EQUIP_ZAYIN, 0.0F, 0.0F
 	)
 
 	private fun register(
