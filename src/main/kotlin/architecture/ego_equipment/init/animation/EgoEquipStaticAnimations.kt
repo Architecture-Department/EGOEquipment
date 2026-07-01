@@ -11,6 +11,7 @@ object EgoEquipStaticAnimations {
 	lateinit var LIFE_FOR_A_DAREDEVIL_ATTACK2: Supplier<AttackAnimation?>
 	lateinit var LIFE_FOR_A_DAREDEVIL_ATTACK3: Supplier<AttackAnimation?>
 	lateinit var LIFE_FOR_A_DAREDEVIL_ATTACK4: Supplier<AttackAnimation?>
+	lateinit var LIFE_FOR_A_DAREDEVIL_SPECIAL_ATTACK: Supplier<AttackAnimation?>
 
 	@JvmStatic
 	internal fun register(event: StaticAnimationRegistryEvent) {
@@ -24,5 +25,7 @@ object EgoEquipStaticAnimations {
 		{ AttackAnimation(it, modRl("player/weapon/life_for_a_daredevil/attack3")) }
 		LIFE_FOR_A_DAREDEVIL_ATTACK4 = event.register(modRl("life_for_a_daredevil_attack4"))
 		{ AttackAnimation(it, modRl("player/weapon/life_for_a_daredevil/attack4")) }
+		LIFE_FOR_A_DAREDEVIL_SPECIAL_ATTACK = event.register(modRl("life_for_a_daredevil_special_attack"))
+		{ AttackAnimation(it, modRl("player/weapon/life_for_a_daredevil/special_attack")) }
 	}
 }
