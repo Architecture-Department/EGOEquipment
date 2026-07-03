@@ -51,9 +51,9 @@ class MagicBulletWeaponItem : GunEgoWeaponItem {
 		return super.use(world, playerEntity, handUsed)
 	}
 
-	override fun gunShoot(playerEntity: Player, itemStack: ItemStack, handUsed: InteractionHand): Boolean {
-		val isShoot = super.gunShoot(playerEntity, itemStack, handUsed)
-		if (isShoot && playerEntity is ServerPlayer) {
+	override fun gunShoot(player: Player, stack: ItemStack, handUsed: InteractionHand): Boolean {
+		val isShoot = super.gunShoot(player, stack, handUsed)
+		if (isShoot && player is ServerPlayer) {
 		}
 		return isShoot
 	}
