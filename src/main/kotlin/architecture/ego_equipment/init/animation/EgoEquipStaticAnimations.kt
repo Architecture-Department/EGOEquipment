@@ -1,8 +1,8 @@
 package architecture.ego_equipment.init.animation
 
 import architecture.ego_equipment.util.EgoEquipUtil.modRl
-import architecture.resonator_combat_framework.module.entity_animation.animation.AnimationDef
-import architecture.resonator_combat_framework.module.entity_animation.event.AnimationDefRegistryEvent
+import architecture.resonator_combat_framework.module.animation.AnimationDef
+import architecture.resonator_combat_framework.module.animation.event.AnimationDefRegistryEvent
 import java.util.function.Supplier
 
 object EgoEquipStaticAnimations {

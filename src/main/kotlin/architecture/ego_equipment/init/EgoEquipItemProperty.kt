@@ -6,7 +6,7 @@ import architecture.resonator_combat_framework.combat.AttackAnimationAction
 import architecture.resonator_combat_framework.common.item_property.WeaponProperty
 import architecture.resonator_combat_framework.event.ItemPropertyRegistryEvent
 import architecture.resonator_combat_framework.events.registry.AnimationControllers
-import architecture.resonator_combat_framework.module.entity_state_machine.combat.ActionSequence
+import architecture.resonator_combat_framework.module.combat.ActionSequence
 import java.util.function.Supplier
 
 object EgoEquipItemProperty {
