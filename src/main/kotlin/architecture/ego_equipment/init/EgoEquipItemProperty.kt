@@ -8,7 +8,6 @@ import architecture.resonator_combat_framework.common.item_property.WeaponProper
 import architecture.resonator_combat_framework.event.ItemPropertyRegistryEvent
 import architecture.resonator_combat_framework.events.registry.AnimationControllers
 import architecture.resonator_combat_framework.module.combat.ActionSequence
-import org.joml.Vector3f
 import java.util.function.Supplier
 
 object EgoEquipItemProperty {
@@ -24,14 +23,13 @@ object EgoEquipItemProperty {
 						modRl("attack"),
 						modRl("player/weapon/life_for_a_daredevil/attack"),
 						AnimationControllers.ACTION,
-						1, 4, 2, 0, 10,
-						phases = arrayOf(
-							AttackActionPhase.of(
-								5, 7,
-								JointColliderPair.of(
-									"right_item",
-									Vector3f(0f, 1.1f, 0f),
-									Vector3f(0.1f, 0.55f, 0.1f)
+						windupTick = 4, activeTick = 2, recoveryTick = 0, fadeOutTick = 10, phases = arrayOf(
+							AttackActionPhase(
+								6, 13,
+								maxStrikes = 5,
+								colliderCount = 5,
+								colliders = arrayOf(
+									JointColliderPair("right_item", EgoEquipColliderData.LIFE_FOR_A_DAREDEVIL)
 								)
 							)
 						)
@@ -42,12 +40,12 @@ object EgoEquipItemProperty {
 						AnimationControllers.ACTION,
 						3, 6, 2, 0, 10,
 						phases = arrayOf(
-							AttackActionPhase.of(
-								9, 11,
-								JointColliderPair.of(
-									"right_item",
-									Vector3f(0f, 1.1f, 0f),
-									Vector3f(0.1f, 0.55f, 0.1f)
+							AttackActionPhase(
+								9, 13,
+								maxStrikes = 5,
+								colliderCount = 10,
+								colliders = arrayOf(
+									JointColliderPair("right_item", EgoEquipColliderData.LIFE_FOR_A_DAREDEVIL)
 								)
 							)
 						)
@@ -58,12 +56,20 @@ object EgoEquipItemProperty {
 						AnimationControllers.ACTION,
 						3, 6, 12, 0, 10,
 						phases = arrayOf(
-							AttackActionPhase.of(
-								9, 22,
-								JointColliderPair.of(
-									"right_item",
-									Vector3f(0f, 1.1f, 0f),
-									Vector3f(0.1f, 0.55f, 0.1f)
+							AttackActionPhase(
+								5, 11,
+								maxStrikes = 5,
+								colliderCount = 5,
+								colliders = arrayOf(
+									JointColliderPair("right_item", EgoEquipColliderData.LIFE_FOR_A_DAREDEVIL)
+								)
+							),
+							AttackActionPhase(
+								14, 21,
+								maxStrikes = 5,
+								colliderCount = 5,
+								colliders = arrayOf(
+									JointColliderPair("right_item", EgoEquipColliderData.LIFE_FOR_A_DAREDEVIL)
 								)
 							)
 						)
@@ -74,12 +80,12 @@ object EgoEquipItemProperty {
 						AnimationControllers.ACTION,
 						3, 10, 3, 0, 20,
 						phases = arrayOf(
-							AttackActionPhase.of(
-								13, 16,
-								JointColliderPair.of(
-									"right_item",
-									Vector3f(0f, 1.1f, 0f),
-									Vector3f(0.1f, 0.55f, 0.1f)
+							AttackActionPhase(
+								8, 14,
+								maxStrikes = 5,
+								colliderCount = 5,
+								colliders = arrayOf(
+									JointColliderPair("right_item", EgoEquipColliderData.LIFE_FOR_A_DAREDEVIL)
 								)
 							)
 						)
@@ -90,12 +96,12 @@ object EgoEquipItemProperty {
 						AnimationControllers.ACTION,
 						3, 7, 3, 0, 10,
 						phases = arrayOf(
-							AttackActionPhase.of(
-								10, 13,
-								JointColliderPair.of(
-									"right_item",
-									Vector3f(0f, 1.1f, 0f),
-									Vector3f(0.1f, 0.55f, 0.1f)
+							AttackActionPhase(
+								7, 13,
+								maxStrikes = 5,
+								colliderCount = 5,
+								colliders = arrayOf(
+									JointColliderPair("right_item", EgoEquipColliderData.LIFE_FOR_A_DAREDEVIL)
 								)
 							)
 						)
@@ -106,14 +112,22 @@ object EgoEquipItemProperty {
 					modRl("special_attack"),
 					modRl("player/weapon/life_for_a_daredevil/special_attack"),
 					AnimationControllers.ACTION,
-					3, 22, 32, 0, 5,
+					3, 12, 22, 0, 5,
 					phases = arrayOf(
-						AttackActionPhase.of(
-							25, 57,
-							JointColliderPair.of(
-								"right_item",
-								Vector3f(0f, 1.1f, 0f),
-								Vector3f(0.1f, 0.55f, 0.1f)
+						AttackActionPhase(
+							14, 23,
+							maxStrikes = 10,
+							colliderCount = 10,
+							colliders = arrayOf(
+								JointColliderPair("right_item", EgoEquipColliderData.LIFE_FOR_A_DAREDEVIL)
+							)
+						),
+						AttackActionPhase(
+							26, 37,
+							maxStrikes = 3,
+							colliderCount = 5,
+							colliders = arrayOf(
+								JointColliderPair("right_item", EgoEquipColliderData.LIFE_FOR_A_DAREDEVIL)
 							)
 						)
 					)
