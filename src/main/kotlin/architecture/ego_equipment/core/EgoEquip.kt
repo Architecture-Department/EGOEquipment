@@ -3,6 +3,8 @@ package architecture.ego_equipment.core
 import architecture.ego_equipment.init.*
 import architecture.ego_equipment.init.item.EgoArmorItems
 import architecture.ego_equipment.init.item.EgoEquipItems
+import architecture.ego_equipment.init.itemproperty.EgoEquipActions
+import architecture.ego_equipment.init.itemproperty.EgoEquipItemPropertys
 import architecture.ego_equipment.util.EgoEquipUtil
 import architecture.goldenboughs_lib.eventexecute.client.EntityRenderEventExecute
 import architecture.goldenboughs_lib.util.LibUtil
@@ -34,5 +36,7 @@ object EgoEquip {
 		EgoEquipItems.register(modBus)
 		EntityRenderEventExecute.add(EgoArmorItems.IN_THE_NAME_OF_LOVE_AND_HATE)
 		EntityRenderEventExecute.add(EgoArmorItems.MAGIC_BULLET)
+		EgoEquipActions.REGISTRY.register(modBus)
+		EgoEquipItemPropertys.REGISTRY.register(modBus)
 	}
 }
