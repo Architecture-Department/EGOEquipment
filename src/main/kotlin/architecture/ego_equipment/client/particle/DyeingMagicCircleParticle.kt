@@ -1,7 +1,7 @@
 package architecture.ego_equipment.client.particle
 
 import architecture.ego_equipment.init.EgoEquipParticleTypes
-import architecture.goldenboughs_lib.api.AllOpe
+import architecture.goldenboughs_lib.api.AllOpen
 import architecture.goldenboughs_lib.client.LibParticleRenderTypes
 import com.mojang.blaze3d.vertex.VertexConsumer
 import com.mojang.serialization.Codec
@@ -62,7 +62,7 @@ open class DyeingMagicCircleParticle : TextureSheetParticle {
 
 	override fun getRenderType(): ParticleRenderType = LibParticleRenderTypes.MAGIC_CIRCLE_PARTICLE
 
-	@AllOpe
+	@AllOpen
 	class Builder(
 		protected val xRot: Float,
 		protected val yRot: Float
@@ -90,7 +90,7 @@ open class DyeingMagicCircleParticle : TextureSheetParticle {
 			Options(this.xRot, this.yRot, this.color, this.radius, this.particleLifeTime, index)
 	}
 
-	@AllOpe
+	@AllOpen
 	data class Options(
 		val xRot: Float, val yRot: Float, val color: Int,
 		val radius: Float, val particleLifeTime: Int, val index: Int

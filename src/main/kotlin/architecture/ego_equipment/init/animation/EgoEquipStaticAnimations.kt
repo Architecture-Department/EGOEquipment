@@ -1,6 +1,6 @@
 package architecture.ego_equipment.init.animation
 
-import architecture.resonator_combat_framework.event.AnimationDefRegisterEvent
+import architecture.resonator_combat_framework.event.definition.AnimationDefRegisterEvent
 
 object EgoEquipStaticAnimations {
 	@JvmStatic

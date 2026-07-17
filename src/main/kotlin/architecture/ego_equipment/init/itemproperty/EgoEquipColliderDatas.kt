@@ -1,6 +1,6 @@
 package architecture.ego_equipment.init.itemproperty
 
-import architecture.resonator_combat_framework.collision.OBBCollider
+import architecture.resonator_combat_framework.combat.OBBCollider
 
 /**
  * EGO 武器共享碰撞体数据。
